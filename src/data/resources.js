@@ -1,15 +1,19 @@
 const resources = [
     {
         label: "Syllabus",
-        href: "https://your-syllabus-link.com", // replace with actual link
+        href: "TODO", 
+    },
+    {
+        label: "Style Guide",
+        href: "TODO", 
     },
     {
         label: "JavaScript + VSCode Setup",
-        href: "https://your-setup-guide-link.com", // replace with actual link
+        href: "TODO", 
     },
     {
         label: "AI Policy / Documentation Template",
-        href: "https://your-policy-link.com", // replace with actual link
+        href: "TODO", 
     },
     {
         label: "JavaScript Documentation",
@@ -18,7 +22,7 @@ const resources = [
     },
     {
         label: "Penn Mental Health Resources",
-        href: "https://wellness.upenn.edu/", // change as needed
+        href: "https://wellness.upenn.edu/", 
         external: true,
     },
 ];

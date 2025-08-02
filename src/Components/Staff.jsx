@@ -1,4 +1,5 @@
 import eunsoo_pic from "../assets/eunsoo_ta_pic.jpeg"
+import v_pic from "../assets/v_pic.jpg"
 import { MdMail } from "react-icons/md"; 
 
 const Staff = () => {
@@ -11,7 +12,7 @@ const Staff = () => {
                 <div className="flex flex-wrap justify-center gap-8">
                     <div className="bg-white text-blue-900 rounded-xl shadow-lg w-80 h-[30rem] p-6 flex-center flex-col">
                         <img
-                            src="https://randomuser.me/api/portraits/men/75.jpg"
+                            src={v_pic}
                             alt="Staff photo"
                             className="w-40 h-40 rounded-full mb-4 object-cover border border-indigo-800"
                         />
