@@ -10,14 +10,16 @@ const Staff = () => {
                     <p>Staff</p>
                 </h1>
                 <div className="flex flex-wrap justify-center gap-8">
-                    <div className="bg-white text-blue-900 rounded-xl shadow-lg w-80 h-[30rem] p-6 flex-center flex-col">
-                        <img
-                            src={v_pic}
-                            alt="Staff photo"
-                            className="w-40 h-40 rounded-full mb-4 object-cover border border-indigo-800"
-                        />
+                    <div className="bg-white text-blue-900 rounded-xl shadow-lg w-80 flex items-center flex-col">
+                        <div className="w-full aspect-square overflow-hidden mb-6 rounded-t-xl">
+                            <img
+                                src={v_pic}
+                                alt="Voravich Silapachairueng"
+                                className="inset-0 w-full h-full object-cover object-center"
+                            />
+                        </div>
                         <div className="text-xl font-bold mb-1">Voravich Silapachairueng</div>
-                        <div className="text-indigo-800 font-medium mb-2">Instructor</div>
+                        <div className="text-indigo-800 font-medium mb-2">Lecturer</div>
                         <a
                             href="mailto:voravich@seas.upenn.edu"
                             className="inline-flex items-center gap-1 text-indigo-700 underline hover:text-red-700 transition text-sm mb-2 break-all"
@@ -26,20 +28,20 @@ const Staff = () => {
                             <MdMail className="text-lg" aria-hidden="true" />
                             voravich@seas.upenn.edu
                         </a>
-                        <div className="text-sm text-gray-600 mt-1 overflow-y-auto flex-grow"
-                            style={{maxHeight: '10rem'}}
-                        >
+                        <div className="text-sm text-gray-600 mt-1 fw p-6">
                             Hello! I am an alumni of the MCIT program here at UPenn. I love classic JRPGs, MMORPGs, and simulation games. I also dabble in UI/UX development, game development, and pixel art from time to time. Looking forward to a wonderful semester!
                         </div>
                     </div>
-                    <div className="bg-white text-blue-900 rounded-xl shadow-lg w-80 h-[30rem] p-6 flex-center flex-col">
-                        <img
-                            src={eunsoo_pic}
-                            alt="Staff photo"
-                            className="w-40 h-40 rounded-full mb-4 object-cover border border-indigo-800"
-                        />
+                    <div className="bg-white text-blue-900 rounded-xl shadow-lg w-80 flex items-center flex-col">
+                        <div className="w-full aspect-square overflow-hidden mb-6 rounded-t-xl">
+                            <img
+                                src={eunsoo_pic}
+                                alt="Eunsoo Shin"
+                                className="inset-0 w-full h-full object-cover object-center"
+                            />
+                        </div>
                         <div className="text-xl font-bold mb-1">Eunsoo Shin</div>
-                        <div className="text-indigo-800 font-medium mb-2">Teaching Assistant</div>
+                        <div className="text-indigo-800 font-medium mb-2">TA</div>
                         <a
                             href="mailto:esinx@seas.upenn.edu"
                             className="inline-flex items-center gap-1 text-indigo-700 underline hover:text-red-700 transition text-sm mb-2 break-all"
@@ -48,9 +50,7 @@ const Staff = () => {
                             <MdMail className="text-lg" aria-hidden="true" />
                             esinx@seas.upenn.edu
                         </a>
-                        <div className="text-sm text-gray-600 mt-1 overflow-y-auto flex-grow"
-                            style={{maxHeight: '10rem'}}
-                        >
+                        <div className="text-sm text-gray-600 mt-1 fw p-6">
                             Hey! I'm a junior studying NETS and have been in love with JavaScript & TypeScript since I was 11. I love listening to rock music and playing the electric bass in my free time.
                         </div>
                     </div>

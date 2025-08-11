@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi"; // For hamburger / close icon
+import { FiMenu, FiX } from "react-icons/fi";
+import upenn from "../assets/upenn_shield.png";
+
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +15,12 @@ const Navbar = () => {
     
     return (
         <nav className="fixed top-0 left-0 w-full main-bg-dark shadow z-50 border-b-2 border-slate-300">
-            <div className="mx-auto flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 py-4 md:py-6 max-w-7xl">
+            <div className="mx-auto flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 py-2 md:py-4 max-w-7xl">
+                <img
+                    src={upenn}
+                    alt="Staff photo"
+                    className="w-16 h-16"
+                />
                 <a href="#" className="text-red-700 font-bold transition text-2xl md:text-4xl ah-font-bold">
                     CIS 1962
                 </a>
