@@ -1,9 +1,9 @@
 const assignments = [
-  { id: 'HW1', title: "???", assigned: "9/15", due: "9/22" },
-  { id: 'HW2', title: "???", assigned: "9/22", due: "10/6" },
-  { id: 'HW3', title: "???", assigned: "10/6", due: "10/20" },
-  { id: 'HW4', title: "???", assigned: "10/27", due: "11/10" },
-  { id: 'HW5', title: "???", assigned: "11/10", due: "11/24" },
+  { id: 'HW1', title: "Data Wrangling", assigned: "9/15", due: "9/29", detailsUrl: "1-data-analysis"},
+  { id: 'HW2', title: "???", assigned: "9/29", due: "10/20" },
+  { id: 'HW3', title: "???", assigned: "10/20", due: "11/3" },
+  { id: 'HW4', title: "???", assigned: "11/3", due: "11/17" },
+  { id: 'HW5', title: "???", assigned: "11/17", due: "12/1" },
   { id: 'Project', title: "Final Project", assigned: "11/3", due: "12/8" }
 ];
 

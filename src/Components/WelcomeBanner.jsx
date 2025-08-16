@@ -23,19 +23,19 @@ const HeroBanner = () => {
               </div> 
               <p className="text-base sm:text-xl text-indigo-800 group-hover:text-red-700 cursor-pointer text-center">Gradescope</p>
             </a>
-            {/* <a href="#" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
+            <a href="#" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
               <div  className="text-2xl sm:text-3xl font-bold bg-white text-indigo-800 group-hover:text-red-700 px-4 sm:px-8 py-2 sm:py-3 rounded shadow border transition-colors">
                 <SiCanvas />
               </div> 
               <p className="text-base sm:text-xl text-indigo-800 group-hover:text-red-700 cursor-pointer text-center">Canvas</p>
-            </a> */}
+            </a>
             <a href="#" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
               <div  className="text-2xl sm:text-3xl font-bold bg-white text-indigo-800 group-hover:text-red-700 px-4 sm:px-8 py-2 sm:py-3 rounded shadow border transition-colors">
                 <GiDiscussion />
               </div> 
               <p className="text-base sm:text-xl text-indigo-800 group-hover:text-red-700 cursor-pointer text-center">Discussion</p>
             </a>
-            <a href="#" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
+            <a href="syllabus" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
               <div  className="text-2xl sm:text-3xl font-bold bg-white text-indigo-800 group-hover:text-red-700 px-4 sm:px-8 py-2 sm:py-3 rounded shadow border transition-colors">
                 <FaFileContract />
               </div> 

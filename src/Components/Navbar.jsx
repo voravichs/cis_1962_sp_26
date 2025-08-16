@@ -7,10 +7,10 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const navLinks = [
-        { href: "#schedule", label: "Schedule" },
-        { href: "#assignments", label: "Assignments" },
-        { href: "#resources", label: "Resources" },
-        { href: "#staff", label: "Staff" },
+        { href: "/#schedule", label: "Schedule" },
+        { href: "/#assignments", label: "Assignments" },
+        { href: "/#resources", label: "Resources" },
+        { href: "/#staff", label: "Staff" },
     ];
     
     return (
@@ -21,7 +21,7 @@ const Navbar = () => {
                     alt="Staff photo"
                     className="w-16 h-16"
                 />
-                <a href="#" className="text-red-700 font-bold transition text-2xl md:text-4xl ah-font-bold">
+                <a href="/#" className="text-red-700 font-bold transition text-3xl md:text-4xl ah-font-bold px-2">
                     CIS 1962
                 </a>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
                         <li key={link.href}>
                             <a
                                 href={link.href}
-                                className="hover:text-red-600 transition text-lg md:text-2xl lg:text-3xl"
+                                className="hover:text-red-600 transition opacity-50 hover:opacity-100 text-lg md:text-2xl lg:text-3xl"
                             >
                                 {link.label}
                             </a>

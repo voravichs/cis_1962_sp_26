@@ -1,14 +1,14 @@
 const resources = [
     {
         label: "Syllabus",
-        href: "TODO", 
+        href: "syllabus", 
     },
     {
         label: "Style Guide",
         href: "TODO", 
     },
     {
-        label: "JavaScript + VSCode Setup",
+        label: "JS Development Guide",
         href: "TODO", 
     },
     {

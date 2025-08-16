@@ -14,7 +14,7 @@ const ScheduleTable = () => {
   return (
     <section id="schedule" className="scroll-mt-24 w-full flex-center text-center min-h-[60vh] mb-12 px-4 sm:px-8">
       <div className="max-w-7xl w-full flex flex-col gap-10 sm:gap-16 mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center ">
           <p>Schedule</p>
         </h1>
 
