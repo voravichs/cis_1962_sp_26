@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import Navbar from '../../Components/Navbar'
 import { FaPlug, FaClipboardList, FaRobot } from "react-icons/fa";
 import { MdGrade } from "react-icons/md";
+import { IoIosCodeDownload } from "react-icons/io";
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -40,6 +42,14 @@ function DataAnalysis() {
         {/* Introduction */}
         <section className="mb-16 text-gray-800">
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <FaPlug /> Introduction &amp; Installation</h2>
+          <a
+            href={"/starter/data-analysis-students.zip"}
+            download
+            aria-label="Download starter files as zip"
+            className="flex-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/3 my-4"
+          >
+            <IoIosCodeDownload className="text-3xl"/> Starter Files
+          </a>
           <p className="mb-4">
             Imagine you are a data analyst for a mobile app developer, and you are tasked with performing analysis on app reviews of various popular apps from users across multiple languages. You have been asked to perform this analysis in JavaScript, and fortunately you have just recently learned the basics of JavaScript, enough to parse, clean, and analyze this data!
           </p>
@@ -50,7 +60,7 @@ function DataAnalysis() {
             Before you start this homework, make sure you have already installed Node.js and a code editor like VSCode by following the instructions in the <a className='text-blue-700 underline' href='development' target="_blank" rel="noopener noreferrer">JS Development Guide</a>. 
           </p>
           <p className="mb-8">
-            Then, you should download the starter files from the top of this page (or from the card on this site's homepage), which contains an AI Synthesis template, a <span className='inline-code'>package.json</span> file, the prettier and eslint config files, and an src directory with some skeleton code with TODO items and the CSV file for the dataset. Once you have the starter files, navigate to the starter code directory (outside of the src directory) within a terminal (either using the one integrated into your code editor or the terminal included with your OS), and run the command:
+            Then, you should download the starter files from the top of this sectino (or from the card on this site's homepage), which contains an AI Synthesis template, a <span className='inline-code'>package.json</span> file, the prettier and eslint config files, and an src directory with some skeleton code with TODO items and the CSV file for the dataset. Once you have the starter files, navigate to the starter code directory (outside of the src directory) within a terminal (either using the one integrated into your code editor or the terminal included with your OS), and run the command:
           </p>
           <p className='blue-block font-mono'>
             npm install
@@ -255,6 +265,7 @@ fr- Positive: 0, Neutral: 0, Negative: 0`}
           </ul>
           <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Activity B: If you did NOT AI</h3>
           <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
+            <li>Explain some improvement you want to make within your code. Perhaps you have a code block that could be more concise, or a part of your code could be improved with a library or be performed with a more efficient algorithm.</li>
             <li>Ask AI how to improve your code, by picking a part of your program you are interested in improving and asking something along the lines of "how can I improve this code?" This does not have to be verbatim; you could ask more specific questions for improvement, like "what JavaScript libraries could improve the efficiency of my code?"</li>
             <li>Evaluate the response the AI generates. You may need to do some research to do this evaluation, to see if the syntax generates correctly or if any libraries the AI suggests are appropriate for the current task. Report on whether the AI's solution fits within your project, or if it would need modifications to work properly.</li>
             <li>You do NOT need to use the AI suggestion within your final submission, if your code already works properly. If the scope of your inquiry in this activity leads you to replace parts of your code, switch to Assignment A instead.</li>
