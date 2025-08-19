@@ -14,7 +14,7 @@ function StyleGuide() {
     return (
         <div className="main-bg-light min-h-screen pt-16 pb-24 flex flex-col items-center gap-16 ah-font">
             <Navbar/>
-            <div className="max-w-4xl mx-auto px-4 py-10 pt-10 sm:pt-14 md:pt-16">
+            <div className="max-w-4xl mx-auto px-4 py-10 pt-10 sm:pt-14 md:pt-16 text-lg">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8">JavaScript Style Guide</h1>
 
                 {/* Introduction */}

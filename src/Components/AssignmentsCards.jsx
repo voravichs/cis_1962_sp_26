@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { PiHandTap } from "react-icons/pi";
 import assignments from "../data/assignments"
+import { IoIosCodeDownload } from "react-icons/io";
+import { BiSolidDetail } from "react-icons/bi";
 
 const styles = `
 .card-flip {
@@ -95,9 +97,17 @@ const AssignmentCard = ({ hw, flip, onFlip }) => (
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="View full assignment details (opens in new tab)"
+                    className="flex items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 mb-4"
+                >
+                    <BiSolidDetail className="text-3xl"/>Details
+                </a>
+                <a
+                    href={hw.starter}
+                    download
+                    aria-label="Download starter files as zip"
                     className="flex items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300"
                 >
-                    Details
+                    <IoIosCodeDownload className="text-3xl"/> Starter Files
                 </a>
                 <div className="mt-auto absolute bottom-2 right-4 text-pink-100 text-3xl hand-tap-animate">
                     <PiHandTap />

@@ -9,7 +9,7 @@ const resources = [
     },
     {
         label: "JS Development Guide",
-        href: "TODO", 
+        href: "development", 
     },
     {
         label: "AI Policy",
