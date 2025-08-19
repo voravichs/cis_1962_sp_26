@@ -5,15 +5,15 @@ const resources = [
     },
     {
         label: "Style Guide",
-        href: "TODO", 
+        href: "style-guide", 
     },
     {
         label: "JS Development Guide",
         href: "TODO", 
     },
     {
-        label: "AI Policy / Documentation Template",
-        href: "TODO", 
+        label: "AI Policy",
+        href: "ai-policy", 
     },
     {
         label: "JavaScript Documentation",

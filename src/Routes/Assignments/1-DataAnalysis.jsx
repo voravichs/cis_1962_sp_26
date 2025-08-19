@@ -1,6 +1,10 @@
 import { useEffect } from 'react';
 import Navbar from '../../Components/Navbar'
-import { FaPlug, FaClipboardList  } from "react-icons/fa";
+import { FaPlug, FaClipboardList, FaRobot } from "react-icons/fa";
+import { MdGrade } from "react-icons/md";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 
 function DataAnalysis() {
   useEffect(() => {
@@ -14,7 +18,7 @@ function DataAnalysis() {
         <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Homework 1: Data Analysis</h1>
         <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-4'>Due September 29th at 11:59 PM</h3>
 
-        <p className='p-4 border-l-4 border-red-700 rounded-lg ring-2 ring-red-700 mb-4 shadow-lg font-mono'><span className='font-bold'>Topics:</span> CSV File Parsing, Data Cleaning, Destructuring, Array Methods, Control Flow, Template Literals, Data Analysis/Aggregation</p>
+        <p className='red-block font-mono'><span className='font-bold'>Topics:</span> CSV File Parsing, Data Cleaning, Destructuring, Array Methods, Control Flow, Template Literals, Data Analysis/Aggregation</p>
 
         {/* Intro */}
         <section className="mb-8 text-gray-800">
@@ -35,7 +39,7 @@ function DataAnalysis() {
 
         {/* Introduction */}
         <section className="mb-16 text-gray-800">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <FaPlug /> Introduction and Installation</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <FaPlug /> Introduction &amp; Installation</h2>
           <p className="mb-4">
             Imagine you are a data analyst for a mobile app developer, and you are tasked with performing analysis on app reviews of various popular apps from users across multiple languages. You have been asked to perform this analysis in JavaScript, and fortunately you have just recently learned the basics of JavaScript, enough to parse, clean, and analyze this data!
           </p>
@@ -46,22 +50,25 @@ function DataAnalysis() {
             Before you start this homework, make sure you have already installed Node.js and a code editor like VSCode by following the instructions in the <a className='text-blue-700 underline' href='dev-guide' target="_blank" rel="noopener noreferrer">JS Development Guide</a>. 
           </p>
           <p className="mb-8">
-            Then, you should download the starter files from the top of this page (or from the card on this site's homepage), which contains some skeleton code with TODO items, a README and AI Synthesis template, a <span className='inline-code'>package.json</span> file, and the CSV file for the dataset. Once you have the starter files, navigate to the starter code directory within a terminal (either using the one integrated into your code editor or the terminal included with your OS), and run the command:
+            Then, you should download the starter files from the top of this page (or from the card on this site's homepage), which contains an AI Synthesis template, a <span className='inline-code'>package.json</span> file, the prettier and eslint config files, and an src directory with some skeleton code with TODO items and the CSV file for the dataset. Once you have the starter files, navigate to the starter code directory (outside of the src directory) within a terminal (either using the one integrated into your code editor or the terminal included with your OS), and run the command:
           </p>
-          <p className='p-4 border-l-4 border-indigo-800 rounded-lg ring-2 ring-indigo-800 mb-8 shadow-lg font-mono'>
+          <p className='blue-block font-mono'>
             npm install
           </p>
           <p className="mb-4">
             This command will be something you will commonly run at the start of every JavaScript project, in order to install the dependencies you need for the project. These dependencies are defined in the <span className='inline-code'>package.json</span> file, and the command downloads all of the dependencies from npmjs.com. For this homework, we will be using the <span className='inline-code'>papaparse</span> library to parse CSV files. Upon running this command, you should see a new directory called <span className='inline-code'>node_modules</span> and a <span className='inline-code'>package-lock.json</span> file have been created. The directory houses all the dependencies, while the the json file records installed dependencies. We will discuss project structure and dependency management in a later lecture, so for now leave both of these files alone for now!
           </p>
-          <p className="mb-8">
+          <p className="mb-4">
             To run this homework, you can enter the command:
           </p>
-          <pre className='p-4 border-l-4 border-indigo-800 rounded-lg ring-2 ring-indigo-800 mb-8 shadow-lg font-mono'>
+          <pre className='blue-block font-mono'>
             <code>
               node src/main.js
             </code>
           </pre>
+          <p className='mb-8'>
+            <b>Please note</b>: If you used AI for any part of this assignment, save <b>all</b> the chat logs and context! Your instructors will want to see this usage during the AI synthesis activity at the end the homework. If you did not or will no use AI, you can disregard this instruction.
+          </p>
         </section>
 
         {/* Instructions */}
@@ -75,35 +82,50 @@ function DataAnalysis() {
               Your first task will be to utilize two dependencies, the built-in <span className='inline-code'>fs</span>, and <span className='inline-code'>papaparse</span>, which you installed earlier, in order to turn the CSV data into an object we can work with in JavaScript. Here are the specifications and tips for using each of these dependencies:
             </p>
             {/* fs */}
-            <div className='p-4 border-l-4 border-red-700 rounded-lg ring-2 ring-red-700 mb-4 shadow-lg'>
+            <div className='red-block'>
               <span className='inline-code'>fs</span>
               <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
                   <li><span className='inline-code'>fs</span>, which stands for File System, is a built-in module for Node.js</li>
                   <li>It allows your program to interact with the file system on your computer.</li>
                   <li>After importing the module, you can call various methods, defined in its <a className='text-blue-700 underline' href='https://nodejs.org/api/fs.html' target="_blank" rel="noopener noreferrer">documentation</a>.</li>
                   <li>For our purposes, use <span className='inline-code'>fs.readFileSync(path[, options])</span>, which is a simple synchronous option to read files. Here's an example of how you may import <span className='inline-code'>fs</span> and use this method:</li>
-                  <pre className='p-4 border-l-4 border-indigo-800 rounded-lg ring-2 ring-indigo-800 my-8 shadow-lg font-mono'>
-                    <code>
-                      {`const fs = require('fs');
-  const data = fs.readFileSync('./file.txt', 'utf8');`}
-                    </code>
-                  </pre>
+                  <div className="blue-block font-mono my-4">
+                    <SyntaxHighlighter
+                      language="javascript"
+                      style={vs}
+                      customStyle={{
+                          background: 'none',
+                          border: 'none',
+                          fontSize: 18,
+                          margin: 0,
+                          padding: 0,
+                      }}
+                    >{`const fs = require('fs');
+const data = fs.readFileSync('./file.txt', 'utf8');`}</SyntaxHighlighter>
+                </div>
               </ul>  
             </div>
             {/* papaparse */}
-            <div className='p-4 border-l-4 border-red-700 rounded-lg ring-2 ring-red-700 mb-4 shadow-lg'>
+            <div className='red-block'>
               <span className='inline-code'>papaparse</span>
               <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
                   <li><span className='inline-code'>papaparse</span> is a simple CSV parser that parses CSV files into JSON/JavaScript objects with minimal code. You should read the opening page of <a className='text-blue-700 underline' href='https://www.papaparse.com/' target="_blank" rel="noopener noreferrer">documentation</a>, as it contains all you need for this assignment.</li>
                   <li>It's important to note that <span className='inline-code'>papaparse</span> <b>parses everything into a string</b>, this means even numbers and booleans. While <span className='inline-code'>papaparse</span> has options to automatically convert types, we recommend against doing so, so that you can get practice with JavaScripts normal type conversion in the data cleaning part of the assignment.</li>
                   <li>Similar to fs above, you must import <span className='inline-code'>papaparse</span> in order to use it. Here's an example:</li>
-                  <pre className='p-4 border-l-4 border-indigo-800 rounded-lg ring-2 ring-indigo-800 my-8 shadow-lg font-mono'>
-                    <code>
-                      {`const Papa = require('papaparse');
-  const csv = Papa.parse(some_data);`}
-                    </code>  
-                  </pre>
-                  
+                  <div className="blue-block font-mono my-4">
+                    <SyntaxHighlighter
+                      language="javascript"
+                      style={vs}
+                      customStyle={{
+                          background: 'none',
+                          border: 'none',
+                          fontSize: 18,
+                          margin: 0,
+                          padding: 0,
+                      }}
+                    >{`const Papa = require('papaparse');
+const csv = Papa.parse(some_data);`}</SyntaxHighlighter>
+                  </div>
                   <li>Look at the documentation to see what other options you might need to specify given this dataset. Hint: there's may be a few important options you will need to specify!</li>
               </ul>  
             </div>
@@ -134,9 +156,18 @@ function DataAnalysis() {
             <p className="mb-8">
               Here is an example of one of the cleaned, filtered records from the dataset:
             </p>
-            <pre className='p-4 border-l-4 border-indigo-800 rounded-lg ring-2 ring-indigo-800 my-8 shadow-lg font-mono'>
-              <code>
-                {`{
+            <div className="blue-block font-mono my-4">
+              <SyntaxHighlighter
+                language="json"
+                style={vs}
+                customStyle={{
+                    background: 'none',
+                    border: 'none',
+                    fontSize: 18,
+                    margin: 0,
+                    padding: 0,
+                }}
+              >{`{
   review_id: 99,
   user_id: 9262579,
   app_name: 'Grammarly',
@@ -153,9 +184,8 @@ function DataAnalysis() {
   user_country: 'Vietnam',
   user_gender: '',
   app_version: '6.9.40-beta'
-}`}
-              </code>  
-            </pre>
+}`}</SyntaxHighlighter>
+            </div>
             <p className="mb-8">
               At the end of this section, you should have an object that contained your filtered and cleaned data. Make sure your properties <b>exactly</b> match the property names from the original dataset and have the correct data types stored in them.
             </p>
@@ -181,7 +211,7 @@ function DataAnalysis() {
             <p className="mb-4">
               Next, we will print out a breakdown of the sentiments by App, and then by language. You should format your <span className='inline-code'>console.log</span> statements similar to the examples below:
             </p>
-            <pre className='p-4 border-l-4 border-indigo-800 rounded-lg ring-2 ring-indigo-800 my-8 shadow-lg font-mono'>
+            <pre className='blue-block font-mono'>
               <code>
                 {`WhatsApp- Positive: 0, Neutral: 0, Negative: 0
 ...
@@ -189,41 +219,57 @@ fr- Positive: 0, Neutral: 0, Negative: 0`}
               </code>  
             </pre>
             <p className='mb-4'>
-              For this section, you may find destructuring your objects to be helpful in processing and sorting your data. Also, you may find template literals to be helpful to print out complex lines like the ones shown above. Refer to the lecture slides for how you can use both of these syntactical techniques!
+              For this section, you may find destructuring your data into other objects to be helpful in sorting your data for analysis and printing. Also, you may find template literals to be helpful to print out complex lines like the ones shown above. Refer to the lecture slides for how you can use both of these syntactical techniques!
             </p>
           </section>
 
           {/* Step 4 */}
           <section className='mb-8'>
-            <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Step 4: Basic NLP</h3>
+            <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Step 4: Summary Statistics</h3>
             <p className="mb-4">
-              With newly cleaned data, we are now ready to start analysing it! In this step, we will add a property to each record called <span className='inline-code'>sentiment</span> that represents a general label of the rating each user granted to apps. We will also destructure some parts of the reviews for analysis later on.
-            </p>
-            <p className="mb-4">
-              Write a function called <span className='inline-code'>labelSentiment()</span> that takes in a rating as an argument and returns strings based on that rating:
+              To wrap up our analysis, let us look at some basic summary statistics. Using the cleaned data and any objects you have created from the previous section, answer the following statistical analysis questions:
             </p>
             <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
-              <li><span className='inline-code'>positive</span> if the rating is greater than 4.0.</li>
-              <li><span className='inline-code'>neutral</span> if the rating is between 2.0 and 3.0.</li>
-              <li><span className='inline-code'>negative</span> if the rating is below 2.0</li>
+              <li>What is the most reviewed app in this dataset, and how many reviews does it have?</li>
+              <li>For the most reviewed app, what is the most commonly used device?</li>
+              <li>For the most reviewed app, what the average star rating (out of 5.0)?</li>
             </ul>
             <p className="mb-4">
-              Then, use this function to label every data record with a new property called <span className='inline-code'>sentiment</span>.
-            </p>
-            <p className="mb-4">
-              Next, we will print out a breakdown of the sentiments by App, and then by language. You should format your <span className='inline-code'>console.log</span> statements similar to the examples below:
-            </p>
-            <pre className='p-4 border-l-4 border-indigo-800 rounded-lg ring-2 ring-indigo-800 my-8 shadow-lg font-mono'>
-              <code>
-                {`WhatsApp- Positive: 0, Neutral: 0, Negative: 0
-...
-fr- Positive: 0, Neutral: 0, Negative: 0`}
-              </code>  
-            </pre>
-            <p className='mb-4'>
-              For this section, you may find destructuring your objects to be helpful in processing and sorting your data. Also, you may find template literals to be helpful to print out complex lines like the ones shown above. Refer to the lecture slides for how you can use both of these syntactical techniques!
+              Store these in the provided variables in the starter code and print out the summary statistics.
             </p>
           </section>
+        </section>
+
+        {/* AI Synthesis */}
+        <section className="mb-8 text-gray-800">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <FaRobot />AI Synthesis Activity</h2>
+          <p className='mb-4'>
+            As part of an initiative to promote honest and ethical use of AI and LLMs in programming classes, you will perform an AI synthesis activity as part of this homework. This assignment will be written within your <span className='inline-code'>README.md</span> file, and will differ based on a self-report of whether you have used AI for any part of this assignment or not.  Please be truthful about your usage, because either way, you will still need to perform this AI synthesis activity! This AI synthesis activity will represent <b>5% of the individual homework's grade</b>.
+          </p>
+          <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Assignment A: If you used AI</h3>
+          <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
+            <li>Cite the usage by including screenshots or a link to the conversation with your AI of choice. Make sure to include any context, instructions, and all the converstations you had with the AI.</li>
+            <li>Write about why you used AI. Was there a gap in knowledge you wanted to fill? Were the answers through traditional search engines not adquete? Did you want to let AI help you format something in a quick manner?</li>
+            <li>Evaluate the AI's response. If you asked multiple questions, you can pick one of the responses the AI generated. Does the AI answer your question properly? Does it hallucinate any details? Could there be room to improve this response through manual editing? Did you accept this response fully or adapt parts of it into your work?  </li>
+            <li>If you used unfamiliar syntax or concepts generated by AI within your assignment, be sure to research them and explain what those concepts are to demonstrate your understanding.</li>
+          </ul>
+          <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Assignment B: If you did NOT AI</h3>
+          <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
+            <li>Ask AI how to improve your code, by picking a part of your program you are interested in improving and asking something along the lines of "how can I improve this code?" This does not have to be verbatim; you could ask more specific questions for improvement, like "what JavaScript libraries could improve the efficiency of my code?"</li>
+            <li>Evaluate the response the AI generates. You may need to do some research to do this evaluation, to see if the syntax generates correctly or if any libraries the AI suggests are appropriate for the current task. Report on whether the AI's solution fits within your project, or if it would need modifications to work properly.</li>
+            <li>You do NOT need to use the AI suggestion within your final submission, if your code already works properly. If the scope of your inquiry in this activity leads you to replace parts of your code, switch to Assignment A instead.</li>
+          </ul>
+          <p className='mb-4'>
+            Templates for these responses are included in the provided <span className='inline-code'>README.md</span> starter files for this assignment. You can also refer to the dedicated <a href='ai-policy' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">AI Policy</a> page for more information and examples of good responses. This activity will be graded mostly for effortful completion. We are looking to foster an environment of honest AI usage, so please take this activity as a learning opportunity!
+          </p>
+        </section>
+
+        {/* Submission */}
+        <section className="mb-8 text-gray-800">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <MdGrade />Submission</h2>
+          <p className='mb-4'>
+            Submit <span className='inline-code'>main.js</span> and the <span className='inline-code'>README.md</span> file with your AI synthesis activity to Gradescope. Before you submit, make sure you lint your code for style errors using the command <span className='inline-code'>npm run lint</span>. More details on style can be found in the <a href='style-guide' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">style guide</a>. We will take -1 points for every style error remaining in the submission.
+          </p>
         </section>
       </div>
     </div>
