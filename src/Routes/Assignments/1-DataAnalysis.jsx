@@ -99,19 +99,19 @@ function DataAnalysis() {
                   <li>It allows your program to interact with the file system on your computer.</li>
                   <li>After importing the module, you can call various methods, defined in its <a className='text-blue-700 underline' href='https://nodejs.org/api/fs.html' target="_blank" rel="noopener noreferrer">documentation</a>.</li>
                   <li>For our purposes, use <span className='inline-code'>fs.readFileSync(path[, options])</span>, which is a simple synchronous option to read files. Here's an example of how you may import <span className='inline-code'>fs</span> and use this method:</li>
-                  <div className="blue-block font-mono my-4">
+                  <div className="blue-block font-mono my-4 text-sm sm:text-xl">
                     <SyntaxHighlighter
                       language="javascript"
                       style={vs}
                       customStyle={{
                           background: 'none',
                           border: 'none',
-                          fontSize: 18,
                           margin: 0,
                           padding: 0,
                       }}
                     >{`const fs = require('fs');
-const data = fs.readFileSync('./file.txt', 'utf8');`}</SyntaxHighlighter>
+const data = 
+  fs.readFileSync('./file.txt', 'utf8');`}</SyntaxHighlighter>
                 </div>
               </ul>  
             </div>
@@ -129,7 +129,7 @@ const data = fs.readFileSync('./file.txt', 'utf8');`}</SyntaxHighlighter>
                       customStyle={{
                           background: 'none',
                           border: 'none',
-                          fontSize: 18,
+                          fontSize: 16,
                           margin: 0,
                           padding: 0,
                       }}
@@ -173,7 +173,7 @@ const csv = Papa.parse(some_data);`}</SyntaxHighlighter>
                 customStyle={{
                     background: 'none',
                     border: 'none',
-                    fontSize: 18,
+                    fontSize: 16,
                     margin: 0,
                     padding: 0,
                 }}
@@ -182,8 +182,10 @@ const csv = Papa.parse(some_data);`}</SyntaxHighlighter>
   user_id: 9262579,
   app_name: 'Grammarly',
   app_category: 'Music & Audio',
-  review_text: 'Stupido malattia donna magari già posare sbagliare qualità. 
-    Tempo vino morale sviluppo ora popolazione avvicinare.',
+  review_text: 'Stupido malattia donna 
+    magari già posare sbagliare qualità. 
+    Tempo vino morale sviluppo 
+    ora popolazione avvicinare.',
   review_language: 'fi',
   rating: 2.3,
   review_date: 2024-06-28T22:59:58.000Z,
@@ -221,11 +223,13 @@ const csv = Papa.parse(some_data);`}</SyntaxHighlighter>
             <p className="mb-4">
               Next, we will print out a breakdown of the sentiments by App, and then by language. You should format your <span className='inline-code'>console.log</span> statements similar to the examples below:
             </p>
-            <pre className='blue-block font-mono'>
+            <pre className='blue-block font-mono text-base'>
               <code>
-                {`WhatsApp- Positive: 0, Neutral: 0, Negative: 0
+                {`WhatsApp
+Positive: 0, Neutral: 0, Negative: 0
 ...
-fr- Positive: 0, Neutral: 0, Negative: 0`}
+fr
+Positive: 0, Neutral: 0, Negative: 0`}
               </code>  
             </pre>
             <p className='mb-4'>

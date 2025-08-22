@@ -97,7 +97,7 @@ const AssignmentCard = ({ hw, flip, onFlip }) => (
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="View full assignment details (opens in new tab)"
-                    className="flex items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 mb-4"
+                    className="flex items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 mb-2"
                 >
                     <BiSolidDetail className="text-3xl"/>Details
                 </a>

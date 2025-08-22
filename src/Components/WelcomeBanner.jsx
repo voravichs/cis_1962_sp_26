@@ -10,7 +10,7 @@ const HeroBanner = () => {
       <div className="flex flex-col md:flex-row w-full max-w-7xl gap-8 md:gap-16 lg:gap-32">
         {/* Left/Top */}
         <div className="w-full md:w-1/2 bg-white p-4 md:p-8 rounded-lg md:rounded-xl shadow flex flex-col justify-center text-center">
-          <p className="text-3xl sm:text-4xl md:text-5xl font-bold ">CIS 1962: JavaScript Minicourse</p>
+          <p className="text-3xl sm:text-4xl md:text-5xl font-bold ">CIS 1962: JavaScript Programming</p>
           <div className="border-t-4 border-red-700 my-2 mb-4"></div>
           <p className="text-base sm:text-lg">Fall 2025</p>
           <p className="text-base sm:text-lg">Monday 5:15-6:45 PM</p>

@@ -56,7 +56,7 @@ function StyleGuide() {
                             customStyle={{
                                 background: '#fee2e2',
                                 border: 'none',
-                                fontSize: 18,
+                                fontSize: 16,
                                 margin: 0,
                                 padding: 0,
                             }}
@@ -73,14 +73,16 @@ total = total + 2;
                         customStyle={{
                             background: '#d1fae5',
                             border: 'none',
-                            fontSize: 18,
+                            fontSize: 16,
                             margin: 0,
                             padding: 0,
                         }}
                         >{`let total = 0;
-total += 2; // Only use let if variable may change
+// Only use let if variable may change
+total += 2; 
 
-const userName = 'Alice'; // Use const if never reassigned
+// Use const if never reassigned
+const userName = 'Alice'; 
 `}</SyntaxHighlighter>
                     </div>
                 </section>
@@ -113,16 +115,17 @@ const userName = 'Alice'; // Use const if never reassigned
                             customStyle={{
                                 background: '#fee2e2',
                                 border: 'none',
-                                fontSize: 18,
+                                fontSize: 16,
                                 margin: 0,
                                 padding: 0,
                             }}
                             >{`if (score == 5) {
-  message = "Perfect!";
+    message = "Perfect!";
 } else {
-  if (score == 0) { // "Lonely" if inside else
-    message = "Try again.";
-  }
+    // "Lonely" if inside else
+    if (score == 0) {
+        message = "Try again.";
+    }
 }
 
 if (flag) {
@@ -140,7 +143,7 @@ if (flag) {
                             customStyle={{
                                 background: '#d1fae5',
                                 border: 'none',
-                                fontSize: 18,
+                                fontSize: 16,
                                 margin: 0,
                                 padding: 0,
                             }}
@@ -181,12 +184,13 @@ result = flag ? "yes" : "no";
                             customStyle={{
                                 background: '#fee2e2',
                                 border: 'none',
-                                fontSize: 18,
+                                fontSize: 16,
                                 margin: 0,
                                 padding: 0,
                             }}
                             >{`arr.map(function(item) {
-  return "Value: " + item; // String concatenation
+    // String concatenation
+    return "Value: " + item; 
 });
 `}
 </SyntaxHighlighter>
@@ -199,11 +203,12 @@ result = flag ? "yes" : "no";
                             customStyle={{
                                 background: '#d1fae5',
                                 border: 'none',
-                                fontSize: 18,
+                                fontSize: 16,
                                 margin: 0,
                                 padding: 0,
                             }}
-                            >{`arr.map(item => \`Value: \${item}\`);  // Arrow function + template literal
+                            >{`// Arrow function + template literal
+arr.map(item => \`Value: \${item}\`);  
 `}</SyntaxHighlighter>
                         </div>
                     </div>
@@ -245,14 +250,15 @@ result = flag ? "yes" : "no";
                             customStyle={{
                                 background: '#fee2e2',
                                 border: 'none',
-                                fontSize: 18,
+                                fontSize: 16,
                                 margin: 0,
                                 padding: 0,
                             }}
                             >{`// Repeated property access
 for (const user of users) {
     if (user.isActive) {
-        console.log(user.name + " is active");
+        console.log(user.name + 
+            " is active");
     }
 }
 
@@ -260,7 +266,7 @@ for (const user of users) {
 throw new Error();
 
 // Unneeded ESLint disable
-// eslint-disable-next-line no-unused-vars, eqeqeq
+// eslint-disable-next-line eqeqeq
 let y = 1;
 
 // Using alert in production code
@@ -277,14 +283,16 @@ if (x > 10) {
                             customStyle={{
                                 background: '#d1fae5',
                                 border: 'none',
-                                fontSize: 18,
+                                fontSize: 16,
                                 margin: 0,
                                 padding: 0,
                             }}
-                            >{`// Use destructuring for repeated property access
+                            >{`// Use destructuring for 
+// repeated property access
 for (const { isActive, name } of users) {
     if (isActive) {
-        console.log(\`\${name} is active\`);
+        console.log(\`\${name} 
+            is active\`);
     }
 }
 
@@ -292,10 +300,13 @@ for (const { isActive, name } of users) {
 throw new Error("Input was empty");
 
 // Only disable ESLint with a clear comment
-// eslint-disable-next-line eqeqeq -- Must use loose equality for this legacy API
+// eslint-disable-next-line eqeqeq 
+// -- Must use loose equality 
+// for this legacy API
 let y = getLegacyValue();
 
-// Use a non-blocking notification instead of alert in user-facing code
+// Use a non-blocking notification 
+// instead of alert in user-facing code
 if (x > 10) {
     showNotification("Too big!");
 }
