@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Navbar from '../../Components/Navbar'
+import SideNav from '../../Components/SideNav';
 import { FaPlug, FaClipboardList, FaRobot } from "react-icons/fa";
 import { MdGrade } from "react-icons/md";
 import { IoIosCodeDownload } from "react-icons/io";
@@ -7,6 +8,24 @@ import { IoIosCodeDownload } from "react-icons/io";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
+const SECTIONS = [
+  {
+    id: "introduction",
+    icon: <FaPlug className="inline-block text-3xl" />
+  },
+  {
+    id: "instructions",
+    icon: <FaClipboardList className="inline-block text-3xl" />
+  },
+  {
+    id: "ai-synthesis",
+    icon: <FaRobot className="inline-block text-3xl" />
+  },
+  {
+    id: "submission",
+    icon: <MdGrade className="inline-block text-3xl" />
+  }
+];
 
 function DataAnalysis() {
   useEffect(() => {
@@ -15,6 +34,10 @@ function DataAnalysis() {
   return (
     <div className="main-bg-light min-h-screen pt-16 pb-24 flex flex-col items-center gap-16 ah-font">
       <Navbar/>
+      
+      {/* Side Nav */}
+      <SideNav sections={SECTIONS}/>
+      
       <div className="max-w-4xl mx-auto px-4 py-10 pt-10 sm:pt-14 md:pt-16 text-lg">
         {/* Title */}
         <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Homework 1: Data Analysis</h1>
@@ -22,7 +45,7 @@ function DataAnalysis() {
 
         <p className='red-block font-mono'><span className='font-bold'>Topics:</span> CSV File Parsing, Data Cleaning, Destructuring, Array Methods, Control Flow, Template Literals, Data Analysis/Aggregation</p>
 
-        {/* Intro */}
+        {/* Intro Text */}
         <section className="mb-8 text-gray-800">
           <p className="mb-4">
             This homework will help you get acquainted with using JavaScript syntax and developing moderately complex JavaScript projects. For this assignment, you will be analysing a <a className='text-blue-700 underline' href='https://www.kaggle.com/datasets/pratyushpuri/multilingual-mobile-app-reviews-dataset-2025' target="_blank" rel="noopener noreferrer">Kaggle dataset of multilingual mobile app reviews</a>, presented to you as a CSV file. You will be writing code to parse, clean, prepare, and analyze this data to extract meaningful insights. This is a classic exercise in data wrangling and preprocessing!
@@ -40,13 +63,13 @@ function DataAnalysis() {
         </section>
 
         {/* Introduction */}
-        <section className="mb-16 text-gray-800">
+        <section id="introduction" className="mb-16 scroll-mt-28 text-gray-800">
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <FaPlug /> Introduction &amp; Installation</h2>
           <a
             href={"/starter/data-analysis-students.zip"}
             download
             aria-label="Download starter files as zip"
-            className="flex-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/3 my-4"
+            className="flex-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/2 sm:w-1/3 my-4"
           >
             <IoIosCodeDownload className="text-3xl"/> Starter Files
           </a>
@@ -60,7 +83,7 @@ function DataAnalysis() {
             Before you start this homework, make sure you have already installed Node.js and a code editor like VSCode by following the instructions in the <a className='text-blue-700 underline' href='development' target="_blank" rel="noopener noreferrer">JS Development Guide</a>. 
           </p>
           <p className="mb-8">
-            Then, you should download the starter files from the top of this sectino (or from the card on this site's homepage), which contains an AI Synthesis template, a <span className='inline-code'>package.json</span> file, the prettier and eslint config files, and an src directory with some skeleton code with TODO items and the CSV file for the dataset. Once you have the starter files, navigate to the starter code directory (outside of the src directory) within a terminal (either using the one integrated into your code editor or the terminal included with your OS), and run the command:
+            Then, you should download the starter files from the top of this section (or from the card on this site's homepage), which contains an AI Synthesis template, a <span className='inline-code'>package.json</span> file, the prettier and eslint config files, and an src directory with some skeleton code with TODO items and the CSV file for the dataset. Once you have the starter files, navigate to the starter code directory (outside of the src directory) within a terminal (either using the one integrated into your code editor or the terminal included with your OS), and run the command:
           </p>
           <p className='blue-block font-mono'>
             npm install
@@ -82,12 +105,15 @@ function DataAnalysis() {
         </section>
 
         {/* Instructions */}
-        <section className="mb-8 text-gray-800">
+        <section id="instructions" className="mb-8 scroll-mt-28 text-gray-800">
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"><FaClipboardList />Instructions</h2>
 
           {/* Step 1 */}
           <section className='mb-8'>
             <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Step 1: Parse the Data</h3>
+            <pre className='red-block mt-4'>
+              <b>Files</b>: analysis.js
+            </pre>
             <p className="mb-4">
               Your first task will be to utilize two dependencies, the built-in <span className='inline-code'>fs</span>, and <span className='inline-code'>papaparse</span>, which you installed earlier, in order to turn the CSV data into an object we can work with in JavaScript. Here are the specifications and tips for using each of these dependencies:
             </p>
@@ -147,17 +173,21 @@ const csv = Papa.parse(some_data);`}</SyntaxHighlighter>
           {/* Step 2 */}
           <section className='mb-8'>
             <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Step 2: Data Cleaning</h3>
+            <pre className='red-block mt-4'>
+              <b>Files</b>: analysis.js
+            </pre>
             <p className="mb-4">
               Now that you have your csv data parsed, you will want to destructure and clean your data in preparation for analysis. Data you recieve from large datasets may not always be clean- in fact, this dataset has many null values, including null review texts, ratings, countries, genders, and app versions. 
             </p>  
             <p className="mb-4">
-              First, review the <a className='text-blue-700 underline' href='https://www.kaggle.com/datasets/pratyushpuri/multilingual-mobile-app-reviews-dataset-2025' target="_blank" rel="noopener noreferrer">dataset's column specifications</a>. The Kaggle page will contain a table of the columns of this data, their data types, descriptions and samples, and how many nulls values are contained in each column. As mentioned earlier, <span className='inline-code'>papaparse</span> converted all the data into strings. You will be converting all of the column values into their proper types.
+              First, review the <a className='text-blue-700 underline' href='https://www.kaggle.com/datasets/pratyushpuri/multilingual-mobile-app-reviews-dataset-2025' target="_blank" rel="noopener noreferrer">dataset's column specifications</a>. The Kaggle page will contain a table of the columns of this data, their data types, descriptions and samples, and how many nulls values are contained in each column. As mentioned earlier, <span className='inline-code'>papaparse</span> converted all the data into strings. You will be converting all of the column values into their proper types. Additionally, you will restructure all the user properties into its own object property for each review,
             </p>
             <p className="mb-4">
               Your data cleaning goals are as follows:
             </p>
             <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
               <li>Filter out every record with <span className='inline-code'>null</span> column values, <b>except</b> <span className='inline-code'>user_gender</span>, as a null value is allowed.</li>
+              <li>Merge all the user statistics, including <span className='inline-code'>user_id</span>, <span className='inline-code'>user_age</span>, <span className='inline-code'>user_country</span>, and <span className='inline-code'>user_gender</span>, into an object that holds them called <span className='inline-code'>user</span>, while removing the original properties.</li>
               <li>Convert the <span className='inline-code'>review_id</span>, <span className='inline-code'>user_id</span>, <span className='inline-code'>num_helpful_votes</span>, and <span className='inline-code'>user_age</span> to Integer</li>
               <li>Convert the <span className='inline-code'>rating</span> into a Float</li>
               <li>Convert <span className='inline-code'>review_date</span> into a <a className='text-blue-700 underline' href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date' target="_blank" rel="noopener noreferrer">Date</a></li>
@@ -179,7 +209,6 @@ const csv = Papa.parse(some_data);`}</SyntaxHighlighter>
                 }}
               >{`{
   review_id: 99,
-  user_id: 9262579,
   app_name: 'Grammarly',
   app_category: 'Music & Audio',
   review_text: 'Stupido malattia donna 
@@ -192,10 +221,13 @@ const csv = Papa.parse(some_data);`}</SyntaxHighlighter>
   verified_purchase: false,
   device_type: 'Windows Phone',
   num_helpful_votes: 1090,
-  user_age: 44,
-  user_country: 'Vietnam',
-  user_gender: '',
   app_version: '6.9.40-beta'
+  user: {
+    user_age: 44,
+    user_country: 'Vietnam',
+    user_gender: '',
+    user_id: 9262579,
+  }
 }`}</SyntaxHighlighter>
             </div>
             <p className="mb-8">
@@ -206,6 +238,9 @@ const csv = Papa.parse(some_data);`}</SyntaxHighlighter>
           {/* Step 3 */}
           <section className='mb-8'>
             <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Step 3: Sentiment Analysis</h3>
+            <pre className='red-block mt-4'>
+              <b>Files</b>: analysis.js
+            </pre>
             <p className="mb-4">
               With newly cleaned data, we are now ready to start analysing it! In this step, we will add a property to each record called <span className='inline-code'>sentiment</span> that represents a general label of the rating each user granted to apps. We will also destructure some parts of the reviews for analysis later on.
             </p>
@@ -218,28 +253,19 @@ const csv = Papa.parse(some_data);`}</SyntaxHighlighter>
               <li><span className='inline-code'>negative</span> if the rating is below 2.0</li>
             </ul>
             <p className="mb-4">
-              Then, use this function to label every data record with a new property called <span className='inline-code'>sentiment</span>.
+              Next, we will sort the sentiments by app, and then by language, into arrays of objects. Do these analyses in the functions <span className='inline-code'>sentimentAnalysisApp()</span> and <span className='inline-code'>sentimentAnalysisLang()</span> respectively. Be sure to follow the proper object format for returning arrays of these statistics provided in the function documentation.
             </p>
-            <p className="mb-4">
-              Next, we will print out a breakdown of the sentiments by App, and then by language. You should format your <span className='inline-code'>console.log</span> statements similar to the examples below:
-            </p>
-            <pre className='blue-block font-mono text-base'>
-              <code>
-                {`WhatsApp
-Positive: 0, Neutral: 0, Negative: 0
-...
-fr
-Positive: 0, Neutral: 0, Negative: 0`}
-              </code>  
-            </pre>
             <p className='mb-4'>
-              For this section, you may find destructuring your data into other objects to be helpful in sorting your data for analysis and printing. Also, you may find template literals to be helpful to print out complex lines like the ones shown above. Refer to the lecture slides for how you can use both of these syntactical techniques!
+              For this section, you may find destructuring your data into other objects to be helpful in sorting your data for analysis and printing. Refer to the lecture slides for how you can destructuring and other syntactical techniques for this section!
             </p>
           </section>
 
           {/* Step 4 */}
           <section className='mb-8'>
             <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Step 4: Summary Statistics</h3>
+            <pre className='red-block mt-4'>
+              <b>Files</b>: analysis.js
+            </pre>
             <p className="mb-4">
               To wrap up our analysis, let us look at some basic summary statistics. Using the cleaned data and any objects you have created from the previous section, answer the following statistical analysis questions:
             </p>
@@ -249,13 +275,13 @@ Positive: 0, Neutral: 0, Negative: 0`}
               <li>For the most reviewed app, what the average star rating (out of 5.0)?</li>
             </ul>
             <p className="mb-4">
-              Store these in the provided variables in the starter code and print out the summary statistics.
+              Create an object to store the answers to these questions and return them from the function <span className='inline-code'>summaryStatistics()</span>. Use the object format provided in the homework documentation.
             </p>
           </section>
         </section>
 
         {/* AI Synthesis */}
-        <section className="mb-8 text-gray-800">
+        <section id="ai-synthesis" className="mb-8 scroll-mt-28 text-gray-800">
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <FaRobot />AI Synthesis Activity</h2>
           <p className='mb-4'>
             As part of an initiative to promote honest and ethical use of AI and LLMs in programming classes, you will perform an AI synthesis activity as part of this homework. This assignment will be written within your <span className='inline-code'>README.md</span> file, and will differ based on a self-report of whether you have used AI for any part of this assignment or not.  Please be truthful about your usage, because either way, you will still need to perform this AI synthesis activity! This AI synthesis activity will represent <b>5% of the individual homework's grade</b>.
@@ -280,10 +306,10 @@ Positive: 0, Neutral: 0, Negative: 0`}
         </section>
 
         {/* Submission */}
-        <section className="mb-8 text-gray-800">
+        <section id="submission" className="mb-8 scroll-mt-28 text-gray-800">
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <MdGrade />Submission</h2>
           <p className='mb-4'>
-            Submit <span className='inline-code'>main.js</span> and the <span className='inline-code'>README.md</span> file with your AI synthesis activity to Gradescope. Before you submit, make sure you lint your code for style errors using the command <span className='inline-code'>npm run lint</span>. More details on style can be found in the <a href='style-guide' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">style guide</a>. We will take -1 points for every style error remaining in the submission.
+            Submit <span className='inline-code'>analysis.js</span> and the <span className='inline-code'>README.md</span> file with your AI synthesis activity to Gradescope. Before you submit, make sure you lint your code for style errors using the command <span className='inline-code'>npm run lint</span>. More details on style can be found in the <a href='style-guide' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">style guide</a>. We will take -1 points for every style error remaining in the submission for the submitted files. You may also test your code against our provided Mocha test suite, which should be the same as our autograder for this assignment, using <span className='inline-code'>npm test</span>.
           </p>
         </section>
       </div>
