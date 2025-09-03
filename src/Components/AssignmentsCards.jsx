@@ -4,6 +4,9 @@ import assignments from "../data/assignments"
 import { IoIosCodeDownload } from "react-icons/io";
 import { BiSolidDetail } from "react-icons/bi";
 
+const today = new Date(); // Real Today
+// const today = new Date(2025, 8, 15) // Test Today
+
 const styles = `
 .card-flip {
   perspective: 1000px;
@@ -75,14 +78,16 @@ const AssignmentCard = ({ hw, flip, onFlip }) => (
             {/* Front */}
             <div className="card-front absolute w-full h-full rounded-2xl flex flex-col items-start justify-center px-7 py-10 transition-all">
                 <div className="text-lg font-extrabold mb-1 text-red-700 tracking-wide uppercase">{hw.id}</div>
-                <div className="text-2xl font-bold mb-2 text-slate-900">{hw.title}</div>
+                <div className="text-2xl font-bold mb-2 text-slate-900">
+                  {today >= hw.assigned ? hw.title : '???'}
+                </div>
                 <div className="mb-1 text-slate-700 text-base">
                     <span className="font-semibold text-red-700">Assigned:</span>
-                    {" "}{hw.assigned}
+                    {" "}{(hw.assigned.getMonth() + 1) + '/' + hw.assigned.getDate()}
                 </div>
                 <div className="mb-2 text-slate-700 text-base">
                     <span className="font-semibold text-red-700">Due:</span>
-                    {" "}{hw.due}
+                    {" "}{(hw.due.getMonth() + 1) + '/' + hw.due.getDate()}
                 </div>
                 <div className="mt-auto absolute bottom-2 right-4 text-red-400 text-3xl opacity-70 hand-tap-animate">
                     <PiHandTap />
@@ -91,24 +96,39 @@ const AssignmentCard = ({ hw, flip, onFlip }) => (
             {/* Back */}
             <div className="card-back bg-indigo-900 absolute w-full h-full rounded-2xl flex flex-col items-start justify-center px-7 py-10 transition-all">
                 {/* <div className="text-lg font-black tracking-wider text-white uppercase mb-1">Details</div> */}
-                <div className="text-2xl font-bold mb-2 text-white">{hw.title}</div>
-                <a
-                    href={hw.detailsUrl || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="View full assignment details (opens in new tab)"
-                    className="flex items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 mb-2"
-                >
-                    <BiSolidDetail className="text-3xl"/>Details
-                </a>
-                <a
+                <div className="text-2xl font-bold mb-2 text-white">
+                  {today >= hw.assigned ? hw.title : '???'}
+                </div>
+                {today >= hw.assigned 
+                  ? 
+                  <a
+                      href={hw.detailsUrl || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View full assignment details (opens in new tab)"
+                      className="flex items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 mb-2"
+                  >
+                      <BiSolidDetail className="text-3xl"/>Details
+                  </a>
+                  :
+                  <p
+                      className="flex items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 mb-2"
+                  >
+                      <BiSolidDetail className="text-3xl"/>Coming Soon!
+                  </p>
+                }
+                {today >= hw.assigned 
+                  ? 
+                  <a
                     href={hw.starter}
                     download
                     aria-label="Download starter files as zip"
                     className="flex items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300"
-                >
-                    <IoIosCodeDownload className="text-3xl"/> Starter Files
-                </a>
+                  >
+                      <IoIosCodeDownload className="text-3xl"/> Starter Files
+                  </a>
+                  : ""
+                }
                 <div className="mt-auto absolute bottom-2 right-4 text-pink-100 text-3xl hand-tap-animate">
                     <PiHandTap />
                 </div>

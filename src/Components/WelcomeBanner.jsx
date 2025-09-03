@@ -17,23 +17,23 @@ const HeroBanner = () => {
           <p className="text-base sm:text-lg">Amy Gutmann Hall 214</p>
           {/* Links */}
           <div className="flex-center flex-wrap gap-4 sm:gap-8 mt-4 w-full">
-            <a href="#" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
+            {/* <a href="#" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
               <div className="text-2xl sm:text-3xl font-bold bg-white text-indigo-800 group-hover:text-red-700 px-4 sm:px-8 py-2 sm:py-3 rounded shadow border transition-colors">
                 <IoStatsChart />
               </div> 
               <p className="text-base sm:text-xl text-indigo-800 group-hover:text-red-700 cursor-pointer text-center">Gradescope</p>
-            </a>
-            <a href="#" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
+            </a> */}
+            <a href="https://canvas.upenn.edu/courses/1878754" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
               <div  className="text-2xl sm:text-3xl font-bold bg-white text-indigo-800 group-hover:text-red-700 px-4 sm:px-8 py-2 sm:py-3 rounded shadow border transition-colors">
                 <SiCanvas />
               </div> 
               <p className="text-base sm:text-xl text-indigo-800 group-hover:text-red-700 cursor-pointer text-center">Canvas</p>
             </a>
-            <a href="#" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
+            <a href="https://edstem.org/us/courses/81595/discussion" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
               <div  className="text-2xl sm:text-3xl font-bold bg-white text-indigo-800 group-hover:text-red-700 px-4 sm:px-8 py-2 sm:py-3 rounded shadow border transition-colors">
                 <GiDiscussion />
               </div> 
-              <p className="text-base sm:text-xl text-indigo-800 group-hover:text-red-700 cursor-pointer text-center">Discussion</p>
+              <p className="text-base sm:text-xl text-indigo-800 group-hover:text-red-700 cursor-pointer text-center">Ed Discussion</p>
             </a>
             <a href="syllabus" className="flex-center flex-col gap-1 group w-1/3 sm:w-auto">
               <div  className="text-2xl sm:text-3xl font-bold bg-white text-indigo-800 group-hover:text-red-700 px-4 sm:px-8 py-2 sm:py-3 rounded shadow border transition-colors">
