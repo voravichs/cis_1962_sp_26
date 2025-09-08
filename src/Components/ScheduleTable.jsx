@@ -1,4 +1,5 @@
 import schedule from "../data/schedule"
+import { RiSlideshow2Fill } from "react-icons/ri";
 
 const columns = [
   { key: "id", label: "Lecture" },
@@ -34,7 +35,19 @@ const ScheduleTable = () => {
                   <td className="px-3 py-3">{item.id}</td>
                   <td className="px-3 py-3">{item.date}</td>
                   <td className="px-3 py-3">{item.topic}</td>
-                  <td className="px-3 py-3">{item.slides}</td>
+                  <td className="px-3 py-3">
+                    {item.slides 
+                    ?
+                    <a
+                      href={item.slides}
+                      download
+                      aria-label="Download slides as pdf"
+                      className="flex-center"
+                    >
+                      <RiSlideshow2Fill className="text-3xl"/>
+                    </a>
+                    : ""}
+                  </td>
                   <td className="px-3 py-3">{item.code}</td>
                   <td className="px-3 py-3">{item.assignmentsAssigned}</td>
                   <td className="px-3 py-3">{item.assignmentsDue}</td>
