@@ -1,5 +1,6 @@
 import schedule from "../data/schedule"
 import { RiSlideshow2Fill } from "react-icons/ri";
+import { IoIosCodeDownload } from "react-icons/io";
 
 const columns = [
   { key: "id", label: "Lecture" },
@@ -48,7 +49,19 @@ const ScheduleTable = () => {
                     </a>
                     : ""}
                   </td>
-                  <td className="px-3 py-3">{item.code}</td>
+                  <td className="px-3 py-3">
+                    {item.code 
+                    ?
+                    <a
+                      href={item.code}
+                      download
+                      aria-label="Download slides as pdf"
+                      className="flex-center"
+                    >
+                      <IoIosCodeDownload className="text-3xl"/>
+                    </a>
+                    : ""}
+                  </td>
                   <td className="px-3 py-3">{item.assignmentsAssigned}</td>
                   <td className="px-3 py-3">{item.assignmentsDue}</td>
                 </tr>

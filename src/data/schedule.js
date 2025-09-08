@@ -1,5 +1,5 @@
 const schedule = [
-  { id: 1, date: "9/8", topic: "Introduction to JavaScript", slides: "/slides/Lec1_1962.pdf", code: "", assignmentsAssigned: "", assignmentsDue: "" },
+  { id: 1, date: "9/8", topic: "Introduction to JavaScript", slides: "/slides/Lec1_1962.pdf", code: "/code/lec1/main.js", assignmentsAssigned: "", assignmentsDue: "" },
   { id: 2, date: "9/15", topic: "Collections and Control Flow", slides: "", code: "", assignmentsAssigned: "HW1", assignmentsDue: "" },
   { id: 3, date: "9/22", topic: "Callbacks and Asynchronous JavaScript", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "" },
   { id: 4, date: "9/29", topic: "HTML, CSS, and the DOM", slides: "", code: "", assignmentsAssigned: "HW2", assignmentsDue: "HW1" },
