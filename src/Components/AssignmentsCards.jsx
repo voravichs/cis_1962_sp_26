@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { PiHandTap } from "react-icons/pi";
 import assignments from "../data/assignments"
-import { IoIosCodeDownload } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
 import { BiSolidDetail } from "react-icons/bi";
 
 const today = new Date(); // Real Today
-// const today = new Date(2025, 8, 15) // Test Today
+// const today = new Date(2025, 10, 15) // Test Today
 
 const styles = `
 .card-flip {
@@ -125,7 +125,7 @@ const AssignmentCard = ({ hw, flip, onFlip }) => (
                     aria-label="Download starter files as zip"
                     className="flex items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300"
                   >
-                      <IoIosCodeDownload className="text-3xl"/> Starter Files
+                      <FaGithub className="text-3xl"/> GitHub Classroom
                   </a>
                   : ""
                 }

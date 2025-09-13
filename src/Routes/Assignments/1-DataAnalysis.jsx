@@ -3,7 +3,7 @@ import Navbar from '../../Components/Navbar'
 import SideNav from '../../Components/SideNav';
 import { FaPlug, FaClipboardList, FaRobot } from "react-icons/fa";
 import { MdGrade } from "react-icons/md";
-import { IoIosCodeDownload } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -66,12 +66,12 @@ function DataAnalysis() {
         <section id="introduction" className="mb-16 scroll-mt-28 text-gray-800">
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <FaPlug /> Introduction &amp; Installation</h2>
           <a
-            href={"/starter/data-analysis-students.zip"}
+            href={"https://classroom.github.com/a/PA8fMuFu"}
             download
             aria-label="Download starter files as zip"
-            className="flex-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/2 sm:w-1/3 my-4"
+            className="flex-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/2 my-4"
           >
-            <IoIosCodeDownload className="text-3xl"/> Starter Files
+            <FaGithub className="text-3xl"/> Accept assignment on Github Classroom
           </a>
           <p className="mb-4">
             Imagine you are a data analyst for a mobile app developer, and you are tasked with performing analysis on app reviews of various popular apps from users across multiple languages. You have been asked to perform this analysis in JavaScript, and fortunately you have just recently learned the basics of JavaScript, enough to parse, clean, and analyze this data!

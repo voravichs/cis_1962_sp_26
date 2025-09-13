@@ -5,7 +5,7 @@ const assignments = [
     assigned: new Date(2025, 8, 15),
     due: new Date(2025, 8, 29),
     detailsUrl: "1-data-analysis",
-    starter: "/starter/data-analysis-students.zip"
+    starter: "https://classroom.github.com/a/PA8fMuFu"
   },
   {
     id: 'HW2',

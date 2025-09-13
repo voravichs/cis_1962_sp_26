@@ -39,13 +39,13 @@ function Syllabus() {
                     </ul>
                     <p className="text-gray-900 mb-4">
                         <h3 className='text-xl font-bold'>Attendance</h3>
-                        <p className='mb-4'>Attendance will be taken through online polling, which will also be used for in-class questions and quizzes. Attendance will not be mandatory, but lectures will not be recorded, so it is in your best interest to attend as many classes as possible. If we notice you are missing a majority of lectures, these points will be deducted from your final grade.</p>
+                        <p className='mb-4'>Attendance will be taken through online polling, which will also be used for in-class questions and quizzes. Attendance will not be mandatory, but lectures will not be recorded, so it is in your best interest to attend as many classes as possible. If we notice you are missing a majority of lectures in the semester (6+), these points will be deducted from your final grade.</p>
                         <p>If you do need to miss a lecture or have extenuating circumstances, please feel free to contact the course staff. Lecture slides and code will be provided after each lecture on both the course website and Ed Lessons.</p>
 
                     </p>
                     <p className="text-gray-900 mb-4">
                         <h3 className='text-xl font-bold'>Homework</h3>
-                        <p className='mb-4'>There will be 5 homework assignments, which are primarily structured coding assignments within JavaScript. These homeworks are meant to be substantial projects assigned over 2 weeks, except homework 2, which will be assigned over 3 weeks. Grading will be based on correctness based on certain test criteria and best coding practices, including style. Submitted code will be run through an autograder through Gradescope and ESLint for style errors based on a pre-defined style guide, provided on the course website.</p>
+                        <p className='mb-4'>There will be 5 homework assignments, which are primarily structured coding assignments within JavaScript. These homeworks are meant to be substantial projects assigned over 2 weeks, except homework 2, which will be assigned over 3 weeks. Grading will be based on correctness based on certain test criteria and best coding practices, including style. Submitted code will often be manually graded, but subject to run tests for correctness and ESLint for style errors based on a pre-defined style guide, provided on the course website.</p>
 
                         <p className='mb-4'>The first 3 homeworks will be based on the first half of the course, while the content of the last two homeworks will depend on the topics that will be chosen for the second half of the course.</p>
 
@@ -64,10 +64,10 @@ function Syllabus() {
                 <section className="mb-16">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"><HiAcademicCap/>Academic Integrity</h2>
                     <p className="text-gray-900 mb-4">
-                        We actively encourage students to use Google and modern AI/LLM tools for conceptual questions (see section below for AI guidelines). We will not allow students to copy/paste code from online sources. Implementation details for homeworks should be individual work, authored by the student without help from others.
+                        We actively encourage students to use Google and modern AI/LLM tools for conceptual questions (see section below for AI guidelines). We will not allow students to copy/paste code from online sources. While short generation is allowed, action will be taken against excessive AI code generation for assignments. Implementation details for homeworks should be <b>individual work</b>, authored by the student without help from others, and reflect work associated specifically made for this class, and no other past or present classes.
                     </p>
                     <p className="text-gray-900 mb-4">
-                        Homework will be submitted to Gradescope and subject to checks for plagiarism through that software. Submitted homework should reflect one's own individual work, any attempts to copy or plagiarize code will be penalized. Please review <a href='https://catalog.upenn.edu/pennbook/code-of-academic-integrity/' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">Penn's Code of Academic Integrity</a> for more details. 
+                        Homework will be submitted to GitHub classroom and subject to checks for plagiarism. Submitted homework should reflect one's own individual work, any attempts to copy or plagiarize code will be penalized. Please review <a href='https://catalog.upenn.edu/pennbook/code-of-academic-integrity/' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">Penn's Code of Academic Integrity</a> for more details. 
                     </p>
                 </section>
 
