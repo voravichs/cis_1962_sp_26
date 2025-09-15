@@ -28,6 +28,8 @@ const Staff = () => {
                             <MdMail className="text-lg" aria-hidden="true" />
                             voravich@seas.upenn.edu
                         </a>
+                        <div>Office Hours: </div>
+                        <div>Monday, 3 - 5 PM at Levine 601 (Bump Space)</div>
                         <div className="text-sm text-gray-600 mt-1 fw p-6">
                             Hello! I am an alumni of the MCIT program here at UPenn. I love classic JRPGs, MMORPGs, and simulation games. I also dabble in UI/UX development, game development, and pixel art from time to time. Looking forward to a wonderful semester!
                         </div>
@@ -50,6 +52,8 @@ const Staff = () => {
                             <MdMail className="text-lg" aria-hidden="true" />
                             esinx@seas.upenn.edu
                         </a>
+                        <div>Office Hours: </div>
+                        <div>Monday, 7 - 9PM Levine 5th floor bump space (next to 501)</div>
                         <div className="text-sm text-gray-600 mt-1 fw p-6">
                             Hey! I'm a junior studying NETS and have been in love with JavaScript & TypeScript since I was 11. I love listening to rock music and playing the electric bass in my free time.
                         </div>
