@@ -1,6 +1,7 @@
 import schedule from "../data/schedule"
 import { RiSlideshow2Fill } from "react-icons/ri";
 import { IoIosCodeDownload } from "react-icons/io";
+import { BiSolidVideoRecording } from "react-icons/bi";
 
 const columns = [
   { key: "id", label: "Lecture" },
@@ -46,6 +47,17 @@ const ScheduleTable = () => {
                       className="flex-center"
                     >
                       <RiSlideshow2Fill className="text-3xl"/>
+                    </a>
+                    : ""}
+                    {item.recording 
+                    ?
+                    <a
+                      href={item.recording}
+                      download
+                      aria-label="Download slides as pdf"
+                      className="flex-center"
+                    >
+                      <BiSolidVideoRecording className="text-3xl"/>
                     </a>
                     : ""}
                   </td>

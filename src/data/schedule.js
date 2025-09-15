@@ -1,6 +1,6 @@
 const schedule = [
   { id: 1, date: "9/8", topic: "Introduction to JavaScript", slides: "/slides/Lec1_1962.pdf", code: "/code/lec1/main.js", assignmentsAssigned: "", assignmentsDue: "" },
-  { id: 2, date: "9/15", topic: "Collections and Control Flow", slides: "/slides/Lec2_1962.pdf", code: "/code/lec2/strings.js", assignmentsAssigned: "HW1", assignmentsDue: "" },
+  { id: 2, date: "9/15", topic: "Collections and Control Flow", slides: "/slides/Lec2_1962.pdf", code: "/code/lec2/strings.js", recording: "https://drive.google.com/file/d/1RpEidhss2UrxYvugSsMoxbQOOMBrsWE6/view?usp=sharing", assignmentsAssigned: "HW1", assignmentsDue: "" },
   { id: 3, date: "9/22", topic: "Callbacks and Asynchronous JavaScript", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "" },
   { id: 4, date: "9/29", topic: "HTML, CSS, and the DOM", slides: "", code: "", assignmentsAssigned: "HW2", assignmentsDue: "HW1" },
   { id: 5, date: "10/6", topic: "Project Management, NPM, and Error Handling", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "" },
