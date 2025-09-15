@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Navbar from '../Components/Navbar'
-import { FaNodeJs } from "react-icons/fa";
+import { FaNodeJs, FaGithub } from "react-icons/fa";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { VscRunAll } from "react-icons/vsc";
 
@@ -89,6 +89,21 @@ function Development() {
                     </p>
                     <p className=''>
                         For instance, both the <span className='inline-code'>prettier</span> and <span className='inline-code'>ESLint</span> scripts are already defined for you, and will fix formatting errors and run style checks respectively. You would run these commands using <span className='inline-code'>npm run format</span> and <span className='inline-code'>npm run lint</span>. For more information on style, see the <a href='style-guide' className='text-blue-700 underline' target="_blank" rel="noopener noreferrer">style guide</a>.
+                    </p>
+                </section>
+
+                {/* Git & GitHub Classroom */}
+                <section className='mb-16'>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"><FaGithub />Git & GitHub Classroom</h2>
+                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Git</h3>
+                    <p className='mb-4'>
+                        We will be using Git to practice proper version control within this class. While we will not teach the basics of Git, there are many online resources for you to learn Git and Git commands. For this class, you will simply need to know how to clone a repository and push commits to a remote repository. If you plan on working in groups in the final project, knowing how to collaborate on Git properly using pull requests and code reviews will also help.
+                    </p>
+                    <p className='mb-4'>You can refer to <a href='https://drive.google.com/file/d/1xFnnBgz8PzHgMqoh5U1nd9jcAfnOHIwP/view?usp=sharing' className='text-blue-700 underline' target="_blank" rel="noopener noreferrer">this video</a> from the 19xx website from Penn in order to learn the basics of Git if you aren't already familiar. Feel free to ask through Ed Discussion if you have any issues setting up Git for this course!</p>
+                    
+                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>GitHub Classroom</h3>
+                    <p className='mb-4'>
+                        We will be using GitHub classroom for you to accept and submit assignments this semester. Make sure you have a GitHub account and git installed on your device. Each homework will have a link to the assignment on GitHub classroom, which you can accept and create a fork of the GitHub repository with the starter code for each assignment. You will need to then clone the repository to a local directory to start working on the assignment. You should make commits often, when you've finished important parts of the assignment, so that you have a version history for any unforseen hardware issues. Once you are done with the homework, you just need to make your final changes and commit to your repo before the due date. While the GitHub classroom might not enforce the due date, we will know when you last commited, so we will only grade the most recent commit before the due date!
                     </p>
                 </section>
             </div>
