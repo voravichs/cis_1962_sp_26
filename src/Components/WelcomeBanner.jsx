@@ -3,8 +3,31 @@ import { SiCanvas } from "react-icons/si";
 import { GiDiscussion } from "react-icons/gi";
 import { FaFileContract } from "react-icons/fa";
 import update from "../data/updating";
+import schedule from "../data/schedule"
 
 const HeroBanner = () => {
+  function getTodayMD() {
+    const today = new Date();
+    const month = today.getMonth() + 1; // getMonth() is zero-based
+    const day = today.getDate();
+    return `${month}/${day}`;
+  }
+
+  // Find today's entry in schedule
+  function getTodayTopicAndHomework(schedule) {
+    const todayMD = getTodayMD();
+    const session = schedule.find(item => item.date === todayMD);
+    
+    if (!session) {
+      return "No current topic.";
+    }
+    
+    return {
+      topic: session.topic,
+      assignmentsAssigned: session.assignmentsAssigned || "None",
+      assignmentsDue: session.assignmentsDue || "None"
+    };
+  }
   return (
     <section className="pt-10 sm:pt-14 md:pt-16 w-full px-4 sm:px-8 flex-center min-h-[60vh]">
       <div className="flex flex-col md:flex-row w-full max-w-7xl gap-8 md:gap-16 lg:gap-32">
@@ -49,7 +72,7 @@ const HeroBanner = () => {
               Welcome to CIS 1962, a mini-course on JavaScript at the University of Pennsylvania! This course will introduce students to the fundamentals of modern JavaScript. You will build interactive projects through learning Node.js and the basics of web development, and dive into exploring modern frameworks and concepts of JavaScript. 
             </p>
             <div className="rounded-lg md:rounded-xl shadow p-4 sm:p-8 md:px-16 bg-white flex flex-col mb-2 w-full sm:w-3/4 text-left">
-              <h2> <span className="font-bold">Current Topic:</span> {update.topic}</h2>
+              <h2> <span className="font-bold">Current Topic:</span> {getTodayTopicAndHomework(schedule).topic}</h2>
               <div className="border-t-2 border-red-700 w-full my-2"></div>
               <h2> <span className="font-bold">Homework:</span> {update.current_assignment}</h2>
             </div>
