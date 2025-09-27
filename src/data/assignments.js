@@ -9,9 +9,11 @@ const assignments = [
   },
   {
     id: 'HW2',
-    title: "Gemini Chatbot",
+    title: "ChatJS",
     assigned: new Date(2025, 8, 29),
-    due: new Date(2025, 9, 20)
+    due: new Date(2025, 9, 20),
+    detailsUrl: "2-chatjs",
+    starter: ""
   },
   {
     id: 'HW3',

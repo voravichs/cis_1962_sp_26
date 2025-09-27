@@ -29,7 +29,7 @@
 }
 
 .green-block {
-  @apply p-4 border-l-4 border-emerald-600 rounded-lg ring-2 ring-emerald-600 bg-emerald-100 mb-8 shadow-lg font-mono
+  @apply p-4 border-l-4 border-emerald-600 rounded-lg ring-2 ring-emerald-600 bg-emerald-100 mb-8 shadow-lg
 }
 
 .ah-font {

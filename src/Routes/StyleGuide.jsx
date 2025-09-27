@@ -66,7 +66,7 @@ total = total + 2;
 `}</SyntaxHighlighter>
                     </div>
                     <p className="font-semibold text-xl">✅ Good</p>
-                    <div className="green-block">
+                    <div className="green-block font-mono">
                         <SyntaxHighlighter
                         language="javascript"
                         style={vs}
@@ -136,7 +136,7 @@ if (flag) {
 `}</SyntaxHighlighter>
                         </div>
                         <p className="font-semibold text-xl">✅ Good</p>
-                        <div className="green-block">
+                        <div className="green-block font-mono">
                             <SyntaxHighlighter
                             language="javascript"
                             style={vs}
@@ -196,7 +196,7 @@ result = flag ? "yes" : "no";
 </SyntaxHighlighter>
                         </div>
                         <p className="font-semibold text-xl">✅ Good</p>
-                        <div className="green-block">
+                        <div className="green-block font-mono">
                             <SyntaxHighlighter
                             language="javascript"
                             style={vs}
@@ -276,7 +276,7 @@ if (x > 10) {
 `}</SyntaxHighlighter>
                         </div>
                         <p className="font-semibold text-xl">✅ Good</p>
-                        <div className="green-block">
+                        <div className="green-block font-mono">
                             <SyntaxHighlighter
                             language="javascript"
                             style={vs}
