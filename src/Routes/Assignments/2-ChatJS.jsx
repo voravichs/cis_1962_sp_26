@@ -127,7 +127,13 @@ function ChatJS() {
             </p>
             <pre className='blue-block font-mono'>
               <code>
-                npx serve . -p 3000
+                npx serve ./src -p 3000
+              </code>
+            </pre>
+            <p className='mb-8'> Or you can run: </p>
+            <pre className='blue-block font-mono'>
+              <code>
+                npm run dev
               </code>
             </pre>
             <p className='mb-8'>
