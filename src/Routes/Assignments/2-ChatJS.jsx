@@ -146,9 +146,6 @@ function ChatJS() {
             <p className='mb-4'>
               Once you see this output, you can open your browser and navigate to <span className='inline-code'>http://localhost:3000</span> and you should see the contents of the <span className='inline-code'>index.html</span> file.
             </p>
-            <p className='mb-8'>
-              <b>Please note</b>: If you used AI for any part of this assignment, save <b>all</b> the chat logs and context! Your instructors will want to see this usage during the AI synthesis activity at the end the homework. If you did not or will no use AI, you can disregard this instruction.
-            </p>
           </section>
 
           {/* Gemini */}
@@ -180,9 +177,33 @@ function ChatJS() {
 const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY";
 const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/...";`}</SyntaxHighlighter>
             </p>
+          </section>
+
+          {/* ChatAPI */}
+          <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Chat API</h3> 
+          <section className='mb-12 pl-3'>
+            <p className='mb-8'>In order to use the Chat API for chat persistence in part 2, you will need another API key that we will provide for you. You should receive an email from the instructors soon after the homework is released with your API key. Make sure to <b>never</b> share this API key, just as you wouldn't share your Gemini API key! Once you have the API key, paste it into the <span className='inline-code'>chat-api.js</span> file towards the bottom:</p>
+            <p className='blue-block font-mono my-4 text-sm sm:text-xl mb-8'>
+              <SyntaxHighlighter
+                language="javascript"
+                style={vs}
+                customStyle={{
+                    background: 'none',
+                    border: 'none',
+                    margin: 0,
+                    padding: 0,
+                }}
+              >{`// Insert your Chat API key here
+const BASE_URL = "https://hw2.cis1962.esinx.net/api";
+const API_KEY = "YOUR_API_KEY";`}</SyntaxHighlighter>
+            </p>
             <p className='red-block mb-8'>
               <h4 className='flex-center gap-2 text-2xl'> <IoMdAlert className='text-red-700'/> IMPORTANT <IoMdAlert className='text-red-700'/></h4>
-              <p>For the simplicity of this homework, we hard-coded the Gemini API key in the <span className='inline-code'>chat.js</span> file. In a real-world application, you should never do this. Web applications are publicly accessible, so is your API key in your code. You should store your API key in a secure way, such as in an environment variable behind a backend server.</p>
+              <p>For the simplicity of this homework, we hard-coded the Gemini API and Chat API keys. In a real-world application, you should never do this. Web applications are publicly accessible, so is your API key in your code. You should store your API key in a secure way, such as in an environment variable behind a backend server.</p>
+            </p>
+            
+            <p className='red-block mb-8'>
+              <b>Please note</b>: If you used AI for any part of this assignment, save <b>all</b> the chat logs and context! Your instructors will want to see this usage during the AI synthesis activity at the end the homework. If you did not or will no use AI, you can disregard this instruction.
             </p>
           </section>
           
@@ -220,6 +241,24 @@ const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/
             <p className="red-block">
               <h4 className='font-bold'>Classes and the keyword <span className='inline-code'>this</span></h4>
               <p>By the start of this homework, we will not have covered classes or object-oriented programming yet, which will be covered in the week after this homework is released. During this homework, you will be using the Chat and ChatAPI classes. These classes are objects which contain properties, called fields, which can be accessed from within the same class using the keyword <span className='inline-code'>this</span>. If you need to refer to the current class from within a method in the class at any time, use <span className='inline-code'>this</span>, which will provide you a reference to the current class, which will allow you to get properties and methods from elsewhere in the class.</p>
+            </p>
+            <p className="red-block">
+              <h4 className='font-bold'>What is a <span className='inline-code'>message</span>?</h4>
+              <p>When working with chatbots, messages need to store both the role, or who's speaking, and the message itself. In JavaScript, we can represent this through an object that stores both the role and content of the message, like so: </p>
+              <div className="blue-block font-mono my-4">
+                <SyntaxHighlighter
+                  language="javascript"
+                  style={vs}
+                  customStyle={{
+                      background: 'none',
+                      border: 'none',
+                      fontSize: 16,
+                      margin: 0,
+                      padding: 0,
+                  }}
+                >{`const message = { role: "assistant", content: "Hello world!" }`}</SyntaxHighlighter>
+              </div>
+              <p>There are two roles in a chat: the assistant, and the user. In general, you will be using this structure to store and display your chats, such as the messages array stored in each instance of the Chat class.</p>
             </p>
           </section>
           
@@ -267,7 +306,7 @@ const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/
               <li>See the chat input and form in the chat form container</li>
             </ul>
             <p className="mb-4">
-              We've provided some functions in the starter code of <span className='inline-code'>script.js</span> for you to use, but you will have to write some of your own functions to handle some of the requirements above. The implementation of these functions will depend on how you structure your HTML and what you name various id's and CSS classes for DOM manipulation, so use your own discretion on how you design your web page and this script to work with it. Some of the provided functions will be used in other sections of this homework, so do not implement those yet!
+              We've provided some functions in the starter code of <span className='inline-code'>script.js</span> for you to use, but you will have to write some of your own functions and code to handle some of the requirements above (TODOs not always provided!). The implementation of these functions will depend on how you structure your HTML and what you name various id's and CSS classes for DOM manipulation, so use your own discretion on how you design your web page and this script to work with it. Some of the provided functions will be used in other sections of this homework, so do not implement those yet!
             </p>
           </section>
         </section>
