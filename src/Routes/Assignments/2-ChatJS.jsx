@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import Navbar from '../../Components/Navbar'
 import SideNav from '../../Components/SideNav';
-import { FaGithub, FaPlug, FaClipboardList, FaRobot } from "react-icons/fa";
+import { FaGithub, FaPlug, FaRobot } from "react-icons/fa";
 import { MdGrade } from "react-icons/md";
 import { IoMdAlert } from "react-icons/io";
 import { TbHexagonNumber1Filled, TbHexagonNumber2Filled, TbHexagonNumber3Filled } from "react-icons/tb";
+import assignments from '../../data/assignments';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -80,7 +81,7 @@ function ChatJS() {
           <section className='mb-8'>
             <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <FaPlug /> Introduction &amp; Installation</h2>
             <a
-              href={""}
+              href={assignments[1].starter}
               download
               aria-label="Download starter files as zip"
               className="flex-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/2 my-4"

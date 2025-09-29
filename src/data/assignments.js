@@ -13,7 +13,7 @@ const assignments = [
     assigned: new Date(2025, 8, 29),
     due: new Date(2025, 9, 20),
     detailsUrl: "2-chatjs",
-    starter: ""
+    starter: "https://classroom.github.com/a/zjBI8Wgc"
   },
   {
     id: 'HW3',
