@@ -3,7 +3,7 @@ const schedule = [
   { id: 2, date: "9/15", topic: "Collections and Control Flow", slides: "/slides/Lec2_1962.pdf", code: "/code/lec2/strings.js", recording: "https://drive.google.com/file/d/1RpEidhss2UrxYvugSsMoxbQOOMBrsWE6/view?usp=sharing", assignmentsAssigned: "HW1", assignmentsDue: "" },
   { id: 3, date: "9/22", topic: "Callbacks and Asynchronous JavaScript", slides: "/slides/Lec3_1962.pdf", code: "/code/lec3/fetch.js", assignmentsAssigned: "", assignmentsDue: "" },
   { id: 4, date: "9/29", topic: "HTML, CSS, and the DOM", slides: "/slides/Lec4_1962.pdf", code: "/code/lec4/lec4.zip", assignmentsAssigned: "HW2", assignmentsDue: "HW1" },
-  { id: 5, date: "10/6", topic: "Object-Oriented Programming and Design Patterns", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "" },
+  { id: 5, date: "10/6", topic: "Object-Oriented Programming and Design Patterns", slides: "/slides/Lec5_1962.pdf", code: "/code/lec4/lec5.zip", assignmentsAssigned: "", assignmentsDue: "" },
   { id: "-", date: "10/13", topic: "NO CLASS (Indigenous People's Day)", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "" },
   { id: 6, date: "10/20", topic: "Project Management: Modules, Packages, Testing, and Linting", slides: "", code: "", assignmentsAssigned: "HW3", assignmentsDue: "HW2" },
   { id: 7, date: "10/27", topic: "Exploration of Contemporary JavaScript Topics", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "" },
