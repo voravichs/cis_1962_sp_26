@@ -325,7 +325,7 @@ const API_KEY = "YOUR_API_KEY";`}</SyntaxHighlighter>
           {/* Part 2.1 */}
           <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Part 2.1: Chat API</h3>
           <pre className='red-block mt-4'>
-            <b>Files</b>: <span className='inline-code'>chat-api.js</span>
+            <b>Files</b>: <span className='inline-code'>chat.js</span>, <span className='inline-code'>script.js</span>, <span className='inline-code'>index.html</span>, <span className='inline-code'>style.css</span>
           </pre>
           <section className='mb-12 pl-3'>
             <p className="mb-4">
@@ -351,14 +351,6 @@ const API_KEY = "YOUR_API_KEY";`}</SyntaxHighlighter>
             <p className="mb-4">
               Remember that you must include the API key that we provided you in ALL request headers!
             </p>
-          </section>
-          
-          {/* Part 2.2 */}
-          <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Step 2.2: Saving Chat History and Implementing Persistence</h3>
-          <pre className='red-block mt-4'>
-            <b>Files</b>: <span className='inline-code'>chat.js</span>, <span className='inline-code'>script.js</span>
-          </pre>
-          <section className='mb-8'>
             <p className="mb-4">
               Now we will use the chat API to save chats and allow them to persist. Implement the following methods:
             </p> 
