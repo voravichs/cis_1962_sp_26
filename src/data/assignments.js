@@ -17,9 +17,11 @@ const assignments = [
   },
   {
     id: 'HW3',
-    title: "???",
+    title: "Project Scaffolding",
     assigned: new Date(2025, 9, 20),
-    due: new Date(2025, 10, 3)
+    due: new Date(2025, 10, 3), 
+    detailsUrl: "3-project-scaffolding",
+    starter: "https://classroom.github.com/a/x6X7wJcH"
   },
   {
     id: 'HW4',
