@@ -30,6 +30,7 @@ const Staff = () => {
                         </a>
                         <div>Office Hours: </div>
                         <div>Monday, 3 - 5 PM at Levine 601 (Bump Space)</div>
+                        <div>Friday,  3:30- 5:30 PM on <a className="inline-flex items-center gap-1 text-indigo-700 underline hover:text-red-700 transition mb-2" href="https://upenn.zoom.us/j/8793214523">Zoom</a></div>
                         <div className="text-sm text-gray-600 mt-1 fw p-6">
                             Hello! I am an alumni of the MCIT program here at UPenn. I love classic JRPGs, MMORPGs, and simulation games. I also dabble in UI/UX development, game development, and pixel art from time to time. Looking forward to a wonderful semester!
                         </div>
