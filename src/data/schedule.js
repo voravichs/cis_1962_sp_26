@@ -5,7 +5,7 @@ const schedule = [
   { id: 4, date: "9/29", topic: "HTML, CSS, and the DOM", slides: "/slides/Lec4_1962.pdf", code: "/code/lec4/lec4.zip", assignmentsAssigned: "HW2", assignmentsDue: "HW1" },
   { id: 5, date: "10/6", topic: "Object-Oriented Programming and Design Patterns", slides: "/slides/Lec5_1962.pdf", code: "/code/lec5/lec5.zip", assignmentsAssigned: "", assignmentsDue: "" },
   { id: "-", date: "10/13", topic: "NO CLASS (Indigenous People's Day)", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "" },
-  { id: 6, date: "10/20", topic: "Project Management & Introduction to TypeScript", slides: "", code: "", assignmentsAssigned: "HW3", assignmentsDue: "HW2" },
+  { id: 6, date: "10/20", topic: "Project Management & Introduction to TypeScript", slides: "/slides/Lec6_1962.pdf", code: "", assignmentsAssigned: "HW3", assignmentsDue: "HW2" },
   { id: 7, date: "10/27", topic: "TypeScript", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "" },
   { id: 8, date: "11/3", topic: "React", slides: "", code: "", assignmentsAssigned: "Final Project and HW4", assignmentsDue: "HW3" },
   { id: 9, date: "11/10", topic: "React", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "Final Project Proposals" },

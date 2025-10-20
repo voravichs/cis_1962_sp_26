@@ -55,9 +55,6 @@ function ProjectScaffolding() {
             In this homework, you will be putting together your own publishable npm package using a combination of TypeScript and the Zod package for validating types. You will be building this project <b>from scratch</b>: we will provide you no starter code, not even a <span className='inline-code'>package.json</span> or configuration files like before! With the knowledge from the lecture on project mananagement, you'll get to step into the shoes of a developer to choose all the tools you need for a project yourself- with some guidance, of course. 
           </p>
           <p className="mb-4">
-            In addition, we'll be presenting your project specifications as user stories that may be presented to Agile teams to guide the values and technical needs that we are looking for out of this application. These should give you a direction to follow as you start from scratch.
-          </p>
-          <p className="mb-4">
             This homework is an exercise in reading documentation on your own. About 80% of this homework is just looking it up, because you're exploring new packages and setting things up yourself! In particular, acquiant yourself with the Zod and TypeScript documentations to get familiar with how to use them in projects.
           </p>
           <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Assignment Goals</h3>
@@ -217,7 +214,7 @@ function ProjectScaffolding() {
         <section id="submission" className="mb-8 scroll-mt-28 text-gray-800">
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"> <MdGrade />Submission & Rubric</h2>
           <p className='mb-4'>
-            To submit, simply push your commits to the repository generated from GitHub classroom. Make sure your latest commit before the deadline includes all files you worked on during this homework and your <span className='inline-code'>AIAssignment.md</span> file containing your AI syntesis activity. You should only push the files related to the package, you don't need to push any test files you made to test the package. Before you submit, make sure you lint your code for style errors using the command <span className='inline-code'>npm run lint</span>. More details on style can be found in the <a href='style-guide' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">style guide</a>. We will take -1 points for every style error remaining in the submission for the submitted files. Since this file requires you to make your own ESLint, we will use your linting rules instead of the standard rules we would apply.
+            To submit, simply push your commits to the repository generated from GitHub classroom. Make sure your latest commit before the deadline includes all files you worked on during this homework and your <span className='inline-code'>AIAssignment.md</span> file containing your AI syntesis activity. You should only push the files related to the package, you don't need to push any test files you made to test the package. Before you submit, make sure you lint your code for style errors using the command <span className='inline-code'>npm run lint</span>. More details on style can be found in the <a href='style-guide' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">style guide</a>. We will take -1 points for every style error remaining in the submission for the submitted files. Since this project requires you to make your own ESLint, we will use your linting rules instead of the standard rules we would apply.
           </p>
 
           {/* Rubric */}
