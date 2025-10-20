@@ -230,7 +230,7 @@ function ProjectScaffolding() {
 
             <p className='blue-block'>
               <p className='mb-2'>To test this section, try making a new, empty package in a directory next to your pizza validator. You should be able to install it as a dependency just by providing its path:</p>
-              <p className='red-block font-mono'>npm install ../folder-name</p>
+              <p className='red-block font-mono'>npm install ../folder-name </p> 
               <p>Alternatively, you can actually publish the package to npm and install it from there. Make sure you indicate that you did so within the README so that we can see it as well!</p>
             </p>
 
