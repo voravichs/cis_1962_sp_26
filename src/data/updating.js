@@ -1,5 +1,5 @@
 const update = {
-    "topic": "Collections and Control Flow",
+    "topic": "TypeScript",
     "current_assignment": "HW3: Project Scaffolding"
 }
 
