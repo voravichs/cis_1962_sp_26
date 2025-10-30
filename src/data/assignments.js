@@ -39,7 +39,8 @@ const assignments = [
     id: 'Project',
     title: "Final Project",
     assigned: new Date(2025, 10, 3),
-    due: new Date(2025, 11, 8)
+    due: new Date(2025, 11, 8),
+    detailsUrl: "final-project",
   }
 ];
 
