@@ -26,7 +26,7 @@ const assignments = [
   {
     id: 'HW4',
     title: "???",
-    assigned: new Date(2025, 10, 3),
+    assigned: new Date(2025, 10, 10),
     due: new Date(2025, 10, 17)
   },
   {
