@@ -30,8 +30,9 @@ const SECTIONS = [
 
 function FinalProject() {
   useEffect(() => {
-        document.title = 'HW3 | CIS 1962';
+        document.title = 'Final Project | CIS 1962';
     }, []);
+
   return (
     <div className="main-bg-light min-h-screen pt-16 pb-24 flex flex-col items-center gap-16 ah-font">
       <Navbar/>
