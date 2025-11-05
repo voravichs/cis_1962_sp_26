@@ -7,7 +7,7 @@ const schedule = [
   { id: "-", date: "10/13", topic: "NO CLASS (Indigenous People's Day)", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "" },
   { id: 6, date: "10/20", topic: "Project Management & Introduction to TypeScript", slides: "/slides/Lec6_1962.pdf", code: "/code/lec6/lec6.zip", assignmentsAssigned: "HW3", assignmentsDue: "HW2" },
   { id: 7, date: "10/27", topic: "TypeScript, React, and Web Bundlers", slides: "/slides/Lec7_1962.pdf", code: "/code/lec7.zip", assignmentsAssigned: "", assignmentsDue: "" },
-  { id: 8, date: "11/3", topic: "React: Components, Props, Hooks, Events, & Style", slides: "/slides/Lec8_1962.pdf", code: "", assignmentsAssigned: "Final Project", assignmentsDue: "HW3" },
+  { id: 8, date: "11/3", topic: "React: Components, Props, Hooks, Events, & Style", slides: "/slides/Lec8_1962.pdf", code: "/code/lec8.zip", assignmentsAssigned: "Final Project", assignmentsDue: "HW3" },
   { id: 9, date: "11/10", topic: "React Routing, Redux & Next.js", slides: "", code: "", assignmentsAssigned: "HW4", assignmentsDue: "" },
   { id: 10, date: "11/17", topic: "Building a Backend & Authorization with Express.js", slides: "", code: "", assignmentsAssigned: "HW5", assignmentsDue: "HW4 & Final Project Proposals" },
   { id: 11, date: "11/24", topic: "Backend, MongoDB, and Cloud Integration", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "Project Milestone 1" },
