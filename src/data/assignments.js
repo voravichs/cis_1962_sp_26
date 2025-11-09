@@ -25,9 +25,11 @@ const assignments = [
   },
   {
     id: 'HW4',
-    title: "???",
+    title: "React Pokedex",
     assigned: new Date(2025, 10, 10),
-    due: new Date(2025, 10, 17)
+    due: new Date(2025, 10, 17),
+        detailsUrl: "4-react-pokedex",
+    starter: "https://classroom.github.com/a/x6X7wJcH"
   },
   {
     id: 'HW5',
