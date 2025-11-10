@@ -71,7 +71,7 @@ function ReactPokedex() {
         {/* GitHub Classroom */}
         <section className='mb-8'>
           <a
-            href={assignments[2].starter}
+            href={assignments[3].starter}
             download
             aria-label="Download starter files as zip"
             className="flex-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/2 my-4"
