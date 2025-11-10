@@ -28,8 +28,8 @@ const assignments = [
     title: "React Pokedex",
     assigned: new Date(2025, 10, 10),
     due: new Date(2025, 10, 17),
-        detailsUrl: "4-react-pokedex",
-    starter: "https://classroom.github.com/a/x6X7wJcH"
+    detailsUrl: "4-react-pokedex",
+    starter: "https://classroom.github.com/a/EETRpb8U"
   },
   {
     id: 'HW5',

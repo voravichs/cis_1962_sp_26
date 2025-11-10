@@ -94,7 +94,7 @@ function ReactPokedex() {
           <p className='blue-block'>
             <h4 className='font-bold'>API Documentation</h4>
             <p className='mb-2'>See <InlineCode text={"API.md"}/> within the starter files for complete endpoint details and response types.</p>
-            <p className='mb-2'><b>Important</b>: Box management endpoints require authentication via Bearer token. You'll need to obtain a JWT token from your instructor to access these features.</p>
+            <p className='mb-2'><b>Important</b>: Box management endpoints require authentication via Bearer token. You'll need to obtain a JWT token from your instructor to access these features. This will be the <b>same JWT token</b> you used in HW2, so please copy and reuse your token from that homework's API! </p>
           </p>
           <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Assignment Goals</h3>
           <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
@@ -135,7 +135,7 @@ function ReactPokedex() {
               <div className='blue-block font-mono my-4'>
                 npm create vite@latest pokedex --template react-ts
               </div>
-              <p>Install any necessary dependencies and organize your project structure appropriately.</p>
+              <p>Install any necessary dependencies (we've included a package.json with linting and prettier configs) and organize your project structure appropriately.</p>
               <div className='blue-block my-4'>
                 <h4 className='font-bold'>Recommended Project Structure:</h4>
                 {pokedexTree}
