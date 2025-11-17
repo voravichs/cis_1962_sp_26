@@ -33,9 +33,11 @@ const assignments = [
   },
   {
     id: 'HW5',
-    title: "???",
+    title: "Pokedex Backend",
     assigned: new Date(2025, 10, 17),
-    due: new Date(2025, 11, 1)
+    due: new Date(2025, 11, 1),
+    detailsUrl: "5-pokedex-backend",
+    starter: ""
   },
   {
     id: 'Project',

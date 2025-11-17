@@ -1,6 +1,6 @@
 const update = {
-    "topic": "TypeScript, React, and Web Bundlers",
-    "current_assignment": "HW3: Project Scaffolding"
+    "topic": "Backend & Authorization with Next.js & Express",
+    "current_assignment": "HW5: Pokedex Backend"
 }
 
 export default update;

@@ -6,9 +6,6 @@ import { FaGithub, FaPlug, FaRobot, FaPizzaSlice, FaClipboardList } from "react-
 import { MdGrade, MdCatchingPokemon, MdCheckBoxOutlineBlank } from "react-icons/md";
 import assignments from '../../data/assignments';
 
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
 const SECTIONS = [
   {
     id: "terminology",

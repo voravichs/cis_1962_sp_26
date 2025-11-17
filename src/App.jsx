@@ -6,6 +6,7 @@ import DataAnalysis from "./Routes/Assignments/1-DataAnalysis"
 import ChatJS from './Routes/Assignments/2-ChatJS';
 import ProjectScaffolding from './Routes/Assignments/3-ProjectScaffolding';
 import ReactPokedex from './Routes/Assignments/4-ReactPokedex';
+import PokedexBackend from './Routes/Assignments/5-PokedexBackend';
 import FinalProject from './Routes/Assignments/Final-Project';
 import StyleGuide from './Routes/StyleGuide';
 import AIPolicy from './Routes/AIPolicy';
@@ -22,6 +23,7 @@ function App() {
         <Route path='/2-chatjs' element={<ChatJS/>}/>
         <Route path='/3-project-scaffolding' element={<ProjectScaffolding/>}/>
         <Route path='/4-react-pokedex' element={<ReactPokedex/>}/>
+        <Route path='/5-pokedex-backend' element={<PokedexBackend/>}/>
         <Route path='final-project' element={<FinalProject/>}/>
         <Route path='/style-guide' element={<StyleGuide/>}/>
         <Route path='/ai-policy' element={<AIPolicy/>}/>
