@@ -37,7 +37,7 @@ const assignments = [
     assigned: new Date(2025, 10, 17),
     due: new Date(2025, 11, 1),
     detailsUrl: "5-pokedex-backend",
-    starter: ""
+    starter: "https://classroom.github.com/a/xQMXz_i6"
   },
   {
     id: 'Project',
