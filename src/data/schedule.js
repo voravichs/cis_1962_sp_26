@@ -10,7 +10,7 @@ const schedule = [
   { id: 8, date: "11/3", topic: "React: Components, Props, Hooks, Events, & Style", slides: "/slides/Lec8_1962.pdf", code: "/code/lec8.zip", assignmentsAssigned: "Final Project", assignmentsDue: "HW3" },
   { id: 9, date: "11/10", topic: "React & Next.js", slides: "/slides/Lec9_1962.pdf", code: "/code/lec9.zip", assignmentsAssigned: "HW4", assignmentsDue: "" },
   { id: 10, date: "11/17", topic: "Backend & Authorization with Next.js & Express", slides: "/slides/Lec10_1962.pdf", code: "/code/lec10.zip", assignmentsAssigned: "HW5", assignmentsDue: "Final Project Proposals" },
-  { id: 11, date: "11/24", topic: "Security, Webpage Monitoring, & Auditing", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "HW4 & Project Milestone 1" },
+  { id: 11, date: "11/24", topic: "Making Secure, Accessible, and Robust Web Applications", slides: "/slides/Lec11_1962.pdf", code: "", assignmentsAssigned: "", assignmentsDue: "HW4 & Project Milestone 1" },
   { id: 12, date: "12/1", topic: "Background Tasks, Caching, and Cloud Integration", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "HW5 & Project Milestone 2" },
   { id: 13, date: "12/8", topic: "Final Project Presentations", slides: "", code: "", assignmentsAssigned: "", assignmentsDue: "Final Project Due" }
 ];
