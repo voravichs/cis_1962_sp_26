@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Navbar from '../../Components/Navbar'
 import SideNav from '../../Components/SideNav';
 import { VscDebugStart } from "react-icons/vsc";
-import { FaGrinStars, FaPlug, FaRobot, FaClipboardList } from "react-icons/fa";
+import { FaGrinStars, FaPlug, FaClipboardList } from "react-icons/fa";
 import { MdGrade } from "react-icons/md";
 
 const SECTIONS = [
@@ -45,7 +45,7 @@ function FinalProject() {
         <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Final Project</h1>
         <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Proposal: Due November 17th</h3>
         <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Milestone 1: Due November 24th</h3>
-        <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Milestone 2: Due December 1st</h3>
+        <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Milestone 2 (OPTIONAL): Due December 1st</h3>
         <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Presentations: Due December 8th</h3>
         <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-8'>Final Deadline: Due December 11th</h3>
 
@@ -100,6 +100,9 @@ function FinalProject() {
             <li>Describe any setbacks and challenges you are facing at this moment in the project, either related to this milestone or otherwise.</li>
             <li>At this point in time, are you on track to completing this final project in the alloted time?</li>
           </ul>
+          <p className="mb-4">
+            Milestone 2 is OPTIONAL. While we encourage you to submit it to show that you are meeting your goals that you have set out in your proposal, we will not count it against you if you do not submit Milestone 2.
+          </p>
         </section>
 
         {/* Extra Credit */}
