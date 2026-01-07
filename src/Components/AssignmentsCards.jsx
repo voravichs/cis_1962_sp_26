@@ -4,8 +4,8 @@ import assignments from "../data/assignments"
 import { FaGithub } from "react-icons/fa";
 import { BiSolidDetail } from "react-icons/bi";
 
-const today = new Date(); // Real Today
-// const today = new Date(2025, 10, 15) // Test Today
+// const today = new Date(); // Real Today
+const today = new Date(2024, 10, 15) // Test Today
 
 const styles = `
 .card-flip {
