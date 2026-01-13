@@ -1,0 +1,50 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.inline-code {
+  @apply font-mono px-2 rounded border border-gray-400 bg-white text-slate-900
+}
+
+.red-block {
+  @apply p-4 border-l-4 border-red-700 rounded-lg ring-2 ring-red-700 bg-red-100 mb-4 shadow-lg text-slate-900
+}
+
+.blue-block {
+  @apply p-4 border-l-4 border-indigo-800 rounded-lg ring-2 ring-indigo-800 bg-indigo-100 mb-8 shadow-lg text-slate-900
+}
+
+.green-block {
+  @apply p-4 border-l-4 border-emerald-600 rounded-lg ring-2 ring-emerald-600 bg-emerald-100 mb-8 shadow-lg text-slate-900
+}
+
+.red-bold {
+  @apply font-bold text-red-700
+}
