@@ -18,30 +18,33 @@ const gradeBreakdown = [
 
 export default function Syllabus() {
     return (
-        <div className="scroll-mt-48 max-w-5xl mx-auto text-lg text-white">
+        <div className="scroll-mt-48 max-w-5xl mx-auto text-lg text-black dark:text-white">
             <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold mb-8'>Syllabus</h1>
             <div className="flex flex-col gap-12">
                 {/* Course Description */}
                 <section className="space-y-8">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-700 font-bold mb-2 flex gap-2"><MdDescription />Course Description</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><MdDescription />Course Description</h2>
                     <p className="ml-4">
                         This course will provide a comprehensive introduction to JavaScript, one of the most widely used programming languages for web development. We will focus on the fundamentals of JavaScript and what makes it unique from other programming languages. Students will be given the opportunity to explore contemporary topics of interest in JavaScript and web development, such as modern frameworks and libraries. Through projects, participants will develop the skills necessary to build dynamic, interactive web applications.
                     </p>
                     <p className="ml-4">
                         This section (201) of CIS 1962 will be focused on working towards building full-stack web applicaitons using JavaScript and modern frameworks. This section will not go in depth into topics like exploring specific backend libraries and solutions for the web, rather it aim to equip students with the fundamentals of making robust web applications and encouraging students to explore specific libraries and technologies on their own.
                     </p>
+                    <p className="ml-4">
+                        Both sections of CIS 1962 will share office hours, meaning that you can attend Eunsoo's office hours from section 202 if you have any questions or need help!
+                    </p>
                 </section>
 
                 {/* Prereqs */}
                 <section className="space-y-8">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-700 font-bold mb-2 flex gap-2"> <MdFactCheck />Prerequisites</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"> <MdFactCheck />Prerequisites</h2>
                     <span className="font-semibold text-2xl text-red-700 ml-4">CIS 1200</span>
                     <p className="ml-4">This course will assume that you have basic knowledge of some other programming language, whether it's Java, Python, or some other programming language. Additionally, knowledge of version control in Git will be helpful throughout the course for homework submissions and final project collaboration if you choose to work in a group. Please speak to the instructor if you do not meet this requirement but you have similar experience, or if you have any questions about the content of the course. Prior knowledge of HTML and CSS are not required, and will be taught during lectures.</p>
                 </section>
 
                 {/* Grading */}
                 <section className="space-y-8">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-700 font-bold mb-2 flex gap-2"><MdGrade />Grading</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><MdGrade />Grading</h2>
                     <div>
                         <div className="w-full h-8 flex rounded overflow-hidden my-4 border">
                             {gradeBreakdown.map((item) => (
@@ -68,16 +71,16 @@ export default function Syllabus() {
                     </div>
                     
                     <div className="ml-4 space-y-4">
-                        <h3 className='text-xl font-bold text-indigo-700'>Attendance</h3>
+                        <h3 className='text-xl font-bold text-indigo-600'>Attendance</h3>
                         <p className='ml-4'>Attendance will be taken through online polling, which will also be used for in-class questions and quizzes. Attendance will not be mandatory, but lectures will not be recorded, so it is in your best interest to attend as many classes as possible. If we notice you are missing a majority of lectures in the semester (7+), <span className="red-bold">these points will be deducted from your final grade</span>.</p>
                         <p className="ml-4">If you do need to miss a lecture or have extenuating circumstances, please feel free to contact the course staff. Lecture slides and code will be provided after each lecture on both the course website and Ed Lessons.</p>
                     </div>
                     <div className="ml-4 space-y-4">
-                        <h3 className='text-xl font-bold text-indigo-700'>Homework</h3>
+                        <h3 className='text-xl font-bold text-indigo-600'>Homework</h3>
                         <p className='ml-4'>There will be 8 homework assignments, which are primarily structured coding assignments within JavaScript. Grading will be based on correctness based on certain test criteria and best coding practices, including style. Submitted code will often be manually graded, but subject to run tests for correctness and ESLint for style errors based on a pre-defined <Link href="/styleguide" className="text-blue-700 underline">style guide</Link>.</p>
                     </div>
                     <div className="ml-4 space-y-4">
-                        <h3 className='text-xl font-bold text-indigo-700'>Final Project</h3>
+                        <h3 className='text-xl font-bold text-indigo-600'>Final Project</h3>
                         <p className='ml-4'>The final project for this course will be an open-ended synthesis of all the JavaScript topics students will learn in this course. The project will be assigned almost month in advance to allow project proposals and planning to occur. This project should be considered a chance for students to make something they can be proud of, and display in their portfolios as a mark of their experience with JavaScript. More details about the content of this final project will be posted closer to release date.</p>
 
                         <p className='ml-4'>This project can be done solo in a group. It will be mandated that the project be hosted on GitHub and make full use of version control.</p>
@@ -86,13 +89,13 @@ export default function Syllabus() {
 
                 {/* Late Policy and Others */}
                 <section className="space-y-8">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-700 font-bold mb-2 flex gap-2"><MdGrade />Late Policy, Extensions, and Exceptions</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><MdGrade />Late Policy, Extensions, and Exceptions</h2>
                     <div className="ml-4 space-y-4">
-                        <h3 className='text-xl font-bold text-indigo-700'>Late Submission Policy</h3>
+                        <h3 className='text-xl font-bold text-indigo-600'>Late Submission Policy</h3>
                         <p className='ml-4'>We know that stuff happens during the semester that's out of your control. Midterms, interviews, and other unforeseen circumstances may prevent you from submitting assignments on time. Thus, we have a 72 hour late submission policy, where each assignment can be submitted up to 72 hours late for 10% off of the grade. We will not accept submission after this deadline unless an extension is granted by the instructor.</p>
                     </div>
                     <div className="ml-4 space-y-4">
-                        <h3 className='text-xl font-bold text-indigo-700'>Resubmission and Regrades</h3>
+                        <h3 className='text-xl font-bold text-indigo-600'>Resubmission and Regrades</h3>
                         <p className='ml-4'>If you would like to resubmit an assignment after it is graded, or if you miss the original deadline and the late submission period, you will have an opportunity to resubmit for a regrade at the end of the semester. We will open a Google Form at the end of the semester to facilitate these submissions, so look out for an Ed post about it if you are interested. All resubmission are subject to a 20% penalty, meaning that the max grade you can get is 80% for resubmissions.</p>
                     </div>
 
@@ -100,7 +103,7 @@ export default function Syllabus() {
 
                 {/* Academic Integrity */}
                 <section className="space-y-8">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-700 font-bold mb-2 flex gap-2"><HiAcademicCap/>Academic Integrity</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><HiAcademicCap/>Academic Integrity</h2>
                     <div className="ml-4 space-y-4">
                         <p>
                             Implementation details for homeworks should be <span className="red-bold">individual work</span>, authored by the student without help from others, and reflect work associated specifically made for this class, and no other past or present classes.
@@ -116,7 +119,7 @@ export default function Syllabus() {
                 </section>
 
                 <section className="space-y-8">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"><FaRobot />AI Guidelines</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><FaRobot />AI Guidelines</h2>
                     <div className="ml-4 space-y-4">
                         <p>
                             The use of AI tools, such as ChatGPT, GitHub Copilot, and others, is not permitted for graded assignments in this course unless explicitly stated otherwise (such as when you are building an AI Chatbot!). While these tools can be helpful for learning and exploring concepts, relying on them for completing assignments undermines the learning process and violates academic integrity policies.

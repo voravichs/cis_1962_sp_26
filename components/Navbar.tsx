@@ -11,12 +11,12 @@ import Link from "next/link";
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const navLinkClass = "text-white text-2xl px-1 opacity-50 hover:opacity-100 hover:text-red-500 focus:text-red-500 font-bold transition-all";
-    const iconBtnClass = "text-3xl sm:text-3xl font-bold text-white bg-slate-800 group-hover:text-red-500 group-focus:text-red-500 px-8 py-4 rounded shadow border border-slate-700 transition-colors";
+    const navLinkClass = "text-2xl px-1 opacity-50 hover:opacity-100 hover:text-red-500 focus:text-red-500 font-bold transition-all";
+    const iconBtnClass = "text-3xl sm:text-3xl font-bold text-white bg-slate-800 group-hover:text-red-500 group-focus:text-red-500 px-8 py-4 rounded shadow border border-slate-700 transition-colors shadow-lg hover:shadow-xl focus:shadow-xl";
     
     return (
         <nav
-            className="fixed top-0 left-0 w-full bg-black shadow z-50 border-b border-slate-200"
+            className="fixed top-0 left-0 w-full bg-white dark:bg-black shadow z-50 border-b border-slate-200"
             style={{ fontFamily: "var(--font-source-sans)" }}
         >
             <div className="mx-auto flex items-center gap-6 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 py-4 max-w-7xl">
@@ -29,11 +29,11 @@ export default function Navbar() {
                         className="w-11 md:w-20 h-12.5 md:h-20 min-w-20 min-h-20"
                     />
                 </Link>
-                <div className="flex flex-col flex-1">
-                    <h1 className="text-center md:text-left text-white font-extrabold text-5xl leading-tight overflow">
+                <div className="flex flex-col flex-1 text-black dark:text-white">
+                    <h1 className="text-center md:text-left font-extrabold text-5xl leading-tight overflow">
                         CIS 1962<span className="hidden md:inline">: JavaScript</span>
                     </h1>
-                    <span className="hidden md:flex text-white/75 text-lg md:text-xl mb-4">Spring 2026 &#8226; Thursday 5:15-6:45 PM &#8226; Amy Gutmann Hall 214</span>
+                    <span className="hidden md:flex opacity-75 text-lg md:text-xl mb-4">Spring 2026 &#8226; Thursday 5:15-6:45 PM &#8226; Amy Gutmann Hall 214</span>
                     <ul className="hidden md:flex items-center gap-6 mt-1">
                         {[
                             { href: '/syllabus', label: 'Syllabus' },
@@ -51,34 +51,34 @@ export default function Navbar() {
                             <span className={iconBtnClass}>
                                 <SiCanvas />
                             </span>
-                            <span className="text-sm mt-1 text-white group-hover:text-red-500 tracking-wide font-semibold">Canvas</span>
+                            <span className="text-sm mt-1 group-hover:text-red-500 tracking-wide font-semibold">Canvas</span>
                         </a>
                         <a href="https://edstem.org/us/courses/91614/discussion" className="flex flex-col items-center group" target="_blank" rel="noopener noreferrer" aria-label="Ed Discussion">
                             <span className={iconBtnClass}>
                                 <GiDiscussion />
                             </span>
-                            <span className="text-sm mt-1 text-white group-hover:text-red-500 tracking-wide font-semibold">Ed Discussion</span>
+                            <span className="text-sm mt-1 group-hover:text-red-500 tracking-wide font-semibold">Ed Discussion</span>
                         </a>
                     </div>
                 </div>
-                <div className="hidden lg:flex gap-3 ml-6">
+                <div className="hidden lg:flex gap-3 ml-6 text-black dark:text-white">
                     <a href="https://canvas.upenn.edu/courses/1911777" className="flex flex-col items-center group" target="_blank" rel="noopener noreferrer" aria-label="Canvas">
                         <span className={iconBtnClass}>
                             <SiCanvas />
                         </span>
-                        <span className="text-sm text-center mt-1 text-white group-hover:text-red-500 tracking-wide font-semibold">Canvas</span>
+                        <span className="text-sm text-center mt-1 group-hover:text-red-500 tracking-wide font-semibold">Canvas</span>
                     </a>
                     <a href="https://edstem.org/us/courses/91614/discussion" className="flex flex-col items-center group" target="_blank" rel="noopener noreferrer" aria-label="Ed Discussion">
                         <span className={iconBtnClass}>
                             <GiDiscussion />
                         </span>
-                        <span className="text-sm text-center mt-1 text-white group-hover:text-red-500 tracking-wide font-semibold">Ed Discussion</span>
+                        <span className="text-sm text-center mt-1 group-hover:text-red-500 tracking-wide font-semibold">Ed Discussion</span>
                     </a>
                 </div>
                     {/* Canvas & Ed on right for xl+ only */}
                 {/* MOBILE HAMBURGER */}
                 <button
-                    className="md:hidden text-3xl text-white p-2 ml-auto rounded focus:outline-none focus:ring-2 focus:ring-white"
+                    className="md:hidden text-3xl text-black dark:text-white p-2 ml-auto rounded focus:outline-none focus:ring-2 focus:ring-white"
                     onClick={() => setMenuOpen((open) => !open)}
                     aria-label={menuOpen ? "Close menu" : "Open menu"}
                     aria-expanded={menuOpen}

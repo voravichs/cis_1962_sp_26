@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 
 export default function Development() {
     return (
-        <div className="scroll-mt-48 max-w-5xl mx-auto text-lg text-white">
+        <div className="scroll-mt-48 max-w-5xl mx-auto text-lg text-black dark:text-white">
             <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold mb-8'>Development</h1>
 
             <div className="space-y-16">
                 {/* Node and NPM */}
                 <section className="space-y-8">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"><FaNodeJs />Installing Node.js &amp; npm</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><FaNodeJs />Installing Node.js &amp; npm</h2>
                     <p className='ml-4'>
                         <b>Node (Node.js)</b> is a JavaScript runtime that operates anywhere, even beyond the browser. It lets JavaScript become a general use programming language, and also allows JavaScript to handle backend processes as well. <b>Node Package Manager (npm)</b> is a tool used by most developers working in JavaScript to manage dependencies on behalf of applications in Node.js. It allows a lightweight way to manage dependencies, download and update packages, and publish and share code with others. 
                     </p>
@@ -47,7 +47,7 @@ export default function Development() {
 
                 {/* VSCode */}
                 <section className='space-y-8'>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"><VscVscodeInsiders />Code Editor</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><VscVscodeInsiders />Code Editor</h2>
                     <p className='ml-4'>
                         While many professionals do use full-fledged integrated development environments (IDEs) for JavaScript like <XLink link="https://www.jetbrains.com/webstorm/" text="WebStorm"/>, they are often unnecessary for the overhead they introduce unless developing complex, enterprise-level applications.
                     </p>
@@ -58,7 +58,7 @@ export default function Development() {
 
                 {/* Running */}
                 <section className='space-y-8'>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"><VscRunAll />Installing &amp; Running Projects</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><VscRunAll />Installing &amp; Running Projects</h2>
                     <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Running JavaScript Code</h3>
                     <p className='ml-4'>
                         JavaScript code can be run in many ways. Within a browser, you can open development tools / inspect elements in order to view various aspects about a webpage, including HTML/CSS, network calls, persistent storage, and a console where JavaScript code can immediately be executed.
@@ -96,7 +96,7 @@ export default function Development() {
 
                 {/* Git & GitHub Classroom */}
                 <section className='space-y-8'>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2"><FaGithub />Git & GitHub Classroom</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><FaGithub />Git & GitHub Classroom</h2>
                     <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Git</h3>
                     <p className='ml-4'>
                         We will be using Git to practice proper version control within this class. While we will not teach the basics of Git, there are many online resources for you to learn Git and Git commands. For this class, you will simply need to know how to clone a repository and push commits to a remote repository. If you plan on working in groups in the final project, knowing how to collaborate on Git properly using pull requests and code reviews will also help.

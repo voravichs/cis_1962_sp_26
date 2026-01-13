@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 
 export default function StyleGuide() {
     return (
-        <div className="scroll-mt-48 max-w-5xl mx-auto text-lg text-white">
+        <div className="scroll-mt-48 max-w-5xl mx-auto text-lg text-black dark:text-white">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8">JavaScript Style Guide</h1>
 
             {/* Introduction */}
             <section className="mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2">
                     <MdInfoOutline/>Overview</h2>
                 <p className="ml-4">
                     This style guide summarizes the JavaScript coding standards for all coursework. It is enforced by our ESLint configuration. Following these practices will help you pass the autograder and produce readable, professional code. <span className="font-bold">Key ESLint rules are referenced throughout.</span>
@@ -27,7 +27,7 @@ export default function StyleGuide() {
 
             {/* Variable Declaration & Assignment */}
             <section className="mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2">
                     <HiOutlineCode/>Variable Declaration &amp; Assignment
                 </h2>
                 <ul className="list-disc ml-6  mb-4 text-lg">
@@ -88,7 +88,7 @@ const userName = 'Alice';
 
             {/* Equality & Conditionals */}
             <section className="mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2">
                     <FaHandSparkles/>Equality &amp; Conditionals
                 </h2>
                 <ul className="list-disc ml-6  mb-4 text-lg">
@@ -161,7 +161,7 @@ result = flag ? "yes" : "no";
 
             {/* Function & String Syntax */}
             <section className="mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2">
                     <MdFactCheck/>Function &amp; String Syntax
                 </h2>
                 <ul className="list-disc ml-6  mb-4 text-lg">
@@ -215,7 +215,7 @@ arr.map(item => \`Value: \${item}\`);
 
             {/* Advanced & Code Quality */}
             <section className="mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2">
                     <HiOutlineLightBulb/>Advanced & Code Quality
                 </h2>
                 <ul className="list-disc ml-6  mb-4 text-lg">
@@ -316,7 +316,7 @@ showNotification("Too big!");
 
             {/* Final Remarks */}
             <section className="space-y-4">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-800 font-bold mb-2 flex gap-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2">
                     <SiEslint/>Linting and Prettier Formatting
                 </h2>
                 <p className='ml-4'>

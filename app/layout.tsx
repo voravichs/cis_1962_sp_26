@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={sourceSans.variable}>
         <div style={{ fontFamily: "var(--font-source-sans)" }}>
           <Navbar />
-            <main className='pt-36 md:pt-80 lg:pt-52 pb-16 px-8 w-full '>
+            <main className='pt-36 md:pt-80 lg:pt-52 pb-16 px-8 w-full bg-zinc-100 dark:bg-zinc-900'>
               {children}  
             </main>
           <Footer />

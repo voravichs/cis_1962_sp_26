@@ -2,7 +2,7 @@ import { SiNextdotjs } from 'react-icons/si';
 
 export default function Footer() {
     return (
-        <footer className="w-full py-4 text-gray-700 text-sm flex flex-col items-center gap-1 border-t">
+        <footer className="w-full py-4 text-gray-500 text-sm flex flex-col items-center gap-1 border-t">
             <div>
                 <strong>CIS 1962 Spring 2026</strong>
             </div>

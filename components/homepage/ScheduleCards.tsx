@@ -9,7 +9,7 @@ export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
             {/* Lecture content */}
             <div
                 className={`
-                    w-full lg:w-1/2 flex flex-col relative overflow-hidden border border-black rounded-lg px-4 py-3 text-red-700
+                    w-full lg:w-1/2 flex flex-col relative overflow-hidden border-2 border-white dark:border-black rounded-lg px-4 py-3 text-red-700
                     ${idx % 2 === 0 ? "bg-red-50" : "bg-red-100"}
                     before:content-[''] before:absolute before:inset-y-0 before:left-0 before:w-2 before:bg-red-700
                 `}
@@ -96,8 +96,8 @@ export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
             {/* HW content DESKTOP */}
             {item.homework && (
                 <div className={`
-                    hidden lg:flex w-1/2 flex-col relative overflow-hidden border border-black rounded-lg p-4 text-white bg-indigo-900
-                    before:content-[''] before:absolute before:inset-y-0 before:left-0 before:w-4 before:bg-white
+                    hidden lg:flex w-1/2 flex-col relative overflow-hidden border border-white dark:border-black rounded-lg p-4 text-white bg-indigo-900
+                    before:content-[''] before:absolute before:inset-y-0 before:left-0 before:w-4 before:bg-slate-800 dark:before:bg-white
                     `}
                 >
                     

@@ -61,7 +61,7 @@ const Staff = () => {
                             esinx@seas.upenn.edu
                         </a>
                         <div>Office Hours: </div>
-                        <div>Monday, 7 - 9PM Levine 5th floor bump space (next to 501)</div>
+                        <div>TBD</div>
                         <div className="text-sm text-gray-600 mt-1 fw p-6">
                             Hey! I'm a junior studying NETS and have been in love with JavaScript & TypeScript since I was 11. I love listening to rock music and playing the electric bass in my free time.
                         </div>
