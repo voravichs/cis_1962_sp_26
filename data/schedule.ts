@@ -3,8 +3,8 @@ const schedule = [
     id: 1,
     date: "1/15",
     topic: "Introduction to JavaScript",
-    slides: "",
-    code: "",
+    slides: "/lectures/Lec1_1962_sp26.pdf",
+    code: "https://edstem.org/us/courses/91614/lessons/156829/slides/920643",
     homework:   { 
       id: 'HW1',
       title: "Data Analysis",
