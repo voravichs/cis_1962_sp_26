@@ -69,24 +69,29 @@ export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
                     <div className="col-span-2 flex items-center justify-center">
                         <span className="font-medium text-lg">Due: {item.homework.due.toLocaleDateString()}</span>
                     </div>
-                    <a
-                        href={item.homework.starter}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-2 text-slate-700 hover:text-red-700"
-                    >
-                        <FaInfoCircle className="text-4xl" />
-                        <span className="font-medium">Instructions</span>
-                    </a>
-                    <a
-                        href={item.homework.starter}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-2 text-slate-700 hover:text-red-700"
-                    >
-                        <FaGithub className="text-4xl" />
-                        <span className="font-medium">Github Classroom</span>
-                    </a>
+                    {item.homework.detailsUrl && (
+                        <a
+                            href={item.homework.detailsUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex flex-col items-center gap-2 text-slate-700 hover:text-red-700"
+                        >
+                            <FaInfoCircle className="text-4xl" />
+                            <span className="font-medium">Instructions</span>
+                        </a>
+                    )}
+                    {item.homework.starter && (
+                        <a
+                            href={item.homework.starter}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex flex-col items-center gap-2 text-slate-700 hover:text-red-700"
+                        >
+                            <FaGithub className="text-4xl" />
+                            <span className="font-medium">Github Classroom</span>
+                        </a>
+                    )}
+                    
                     </div>
                 </div>
                 </div>
@@ -109,27 +114,32 @@ export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
                         <div className="font-bold text-xl">{item.homework.id} - {item.homework.title}</div>
                         <div className="grid grid-cols-3 gap-3 mt-6">
                             <div className="flex flex-col items-center gap-2">
-                            <span className="font-medium">Due:</span>
-                            <span className="font-bold">{item.homework.due.toLocaleDateString()}</span>
+                                <span className="font-medium">Due:</span>
+                                <span className="font-bold">{item.homework.due.toLocaleDateString()}</span>
                             </div>
-                            <a
-                            href={item.homework.starter}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex flex-col items-center gap-2 text-white hover:text-indigo-300"
-                            >
-                            <FaInfoCircle className="text-4xl" />
-                            <span className="font-medium">Instructions</span>
-                            </a>
-                            <a
-                            href={item.homework.starter}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex flex-col items-center gap-2 text-white hover:text-indigo-300"
-                            >
-                            <FaGithub className="text-4xl" />
-                            <span className="font-medium">Github Classroom</span>
-                            </a>
+                            {item.homework.detailsUrl && (
+                                <a
+                                    href={item.homework.detailsUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex flex-col items-center gap-2 text-white hover:text-indigo-300"
+                                >
+                                    <FaInfoCircle className="text-4xl" />
+                                    <span className="font-medium">Instructions</span>
+                                </a>    
+                            )}
+                            {item.homework.starter && (
+                                <a
+                                    href={item.homework.starter}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex flex-col items-center gap-2 text-white hover:text-indigo-300"
+                                >
+                                    <FaGithub className="text-4xl" />
+                                    <span className="font-medium">Github Classroom</span>
+                                </a>    
+                            )}
+                            
                         </div>
                         </div>
                     </div>

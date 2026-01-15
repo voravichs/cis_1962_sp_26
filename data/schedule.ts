@@ -11,8 +11,8 @@ const schedule = [
       assigned: new Date(2026, 0, 15),
       due: new Date(2026, 0, 29),
       durationWeeks: 2,
-      detailsUrl: "1-data-analysis",
-      starter: "TBD",
+      detailsUrl: "/hw/hw1",
+      starter: "https://classroom.github.com/a/joPrvaB2",
       icon: "📊"
     },
   },
@@ -32,13 +32,13 @@ const schedule = [
     due: "HW1 Due!",
     homework:   { 
       id: 'HW2',
-      title: "Pizza Validator with TypeScript",
+      title: "TBD",
       assigned: new Date(2026, 0, 29),
       due: new Date(2026, 1, 5),
       durationWeeks: 1,
-      detailsUrl: "2-pizza-validator",
-      starter: "TBD",
-      icon: "🍕"
+      detailsUrl: "",
+      starter: "",
+      icon: "❓"
     },
   },
   {
@@ -50,13 +50,13 @@ const schedule = [
     due: "HW2 Due!",
     homework:   { 
       id: 'HW3',
-      title: "Chatbot Frontend",
+      title: "TBD",
       assigned: new Date(2026, 1, 5),
       due: new Date(2026, 1, 12),
       durationWeeks: 1,
-      detailsUrl: "3-chatjs-part1",
-      starter: "TBD",
-      icon: "💬"
+      detailsUrl: "",
+      starter: "",
+      icon: "❓"
     },
   },
   {
@@ -68,13 +68,13 @@ const schedule = [
     due: "HW3 Due!",
     homework:   { 
       id: 'HW4',
-      title: "ChatJS: AI Chatbot Backend",
+      title: "TBD",
       assigned: new Date(2026, 1, 12),
       due: new Date(2026, 1, 19),
       durationWeeks: 1,
-      detailsUrl: "4-chatjs-part2",
+      detailsUrl: "",
       starter: "",
-      icon: "🤖"
+      icon: "❓"
     },
   },
   {

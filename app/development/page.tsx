@@ -90,7 +90,7 @@ export default function Development() {
                         {`npm run <script_name>`}
                     </p>
                     <p className='ml-4'>
-                        For instance, both the <span className='inline-code'>prettier</span> and <span className='inline-code'>ESLint</span> scripts are already defined for you, and will fix formatting errors and run style checks respectively. You would run these commands using <span className='inline-code'>npm run format</span> and <span className='inline-code'>npm run lint</span>. For more information on style, see the <Link href="/styleguide" className="text-blue-700 underline">style guide</Link>.
+                        For instance, both the <span className='inline-code'>prettier</span> and <span className='inline-code'>ESLint</span> scripts are already defined for you, and will fix formatting errors and run style checks respectively. You would run these commands using <span className='inline-code'>npm run format</span> and <span className='inline-code'>npm run lint</span>. For more information on style, see the <Link href="/styleguide" className="link">style guide</Link>.
                     </p>
                 </section>
 
