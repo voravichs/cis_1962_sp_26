@@ -33,7 +33,7 @@ export default function Navbar() {
                     <h1 className="text-center md:text-left font-extrabold text-5xl leading-tight overflow">
                         CIS 1962<span className="hidden md:inline">: JavaScript</span>
                     </h1>
-                    <span className="hidden md:flex opacity-75 text-lg md:text-xl mb-4">Spring 2026 &#8226; Thursday 5:15-6:45 PM &#8226; Amy Gutmann Hall 214</span>
+                    <span className="hidden md:flex opacity-75 text-lg md:text-xl mb-4">Spring 2026 &#8226; Thursday 5:15-6:45 PM &#8226; Towne 337</span>
                     <ul className="hidden md:flex items-center gap-6 mt-1">
                         {[
                             { href: '/syllabus', label: 'Syllabus' },
