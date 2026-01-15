@@ -2,7 +2,7 @@ import { FaNodeJs, FaGithub } from "react-icons/fa";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { VscRunAll } from "react-icons/vsc";
 import XLink from "@/components/XLink";
-import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {

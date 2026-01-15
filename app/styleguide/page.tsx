@@ -4,7 +4,7 @@ import { FaHandSparkles } from "react-icons/fa";
 import { SiEslint } from "react-icons/si";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Style Guide | CIS 1962",

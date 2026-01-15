@@ -4,6 +4,7 @@ import { MdGrade } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import schedule from '@/data/schedule';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -23,6 +24,11 @@ const SECTIONS = [
     icon: <MdGrade className="inline-block text-3xl" />
   }
 ];
+
+export const metadata: Metadata = {
+  title: "HW1 | CIS 1962",
+  description: "Homework 1 Page of CIS 1962 for Spring 2026 at the University of Pennsylvania",
+};
 
 function DataAnalysis() {
   return (
