@@ -19,7 +19,7 @@ const schedule = [
   {
     id: 2,
     date: "1/22",
-    topic: "Collections, Control Flow, and Types",
+    topic: "Collections, Control Flow, and Strings",
     slides: "",
     code: "",
   },
