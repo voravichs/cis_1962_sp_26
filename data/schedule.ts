@@ -20,8 +20,8 @@ const schedule = [
     id: 2,
     date: "1/22",
     topic: "Collections, Control Flow, and Strings",
-    slides: "",
-    code: "",
+    slides: "/lectures/Lec2_1962_sp26.pdf",
+    code: "https://edstem.org/us/courses/91614/lessons/157464/slides/926372",
   },
   {
     id: 3,
