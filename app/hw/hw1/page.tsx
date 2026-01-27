@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   description: "Homework 1 Page of CIS 1962 for Spring 2026 at the University of Pennsylvania",
 };
 
-function DataAnalysis() {
+export default function DataAnalysis() {
   return (
     <div className="scroll-mt-48 max-w-5xl mx-auto text-lg text-black dark:text-white">      
       {/* Side Nav */}
@@ -39,9 +39,9 @@ function DataAnalysis() {
       <div className="mx-auto text-lg">
         {/* Title */}
         <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Homework 1: Data Analysis</h1>
-        <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-4'>Due September 29th at 11:59 PM</h3>
+        <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-4'>Due January 29th at 11:59 PM</h3>
 
-        <p className='red-block font-mono'><span className='font-bold'>Topics:</span> CSV File Parsing, Data Cleaning, Destructuring, Array Methods, Control Flow, Template Literals, Data Analysis/Aggregation</p>
+        <div className='red-block font-mono'><span className='font-bold'>Topics:</span> CSV File Parsing, Data Cleaning, Destructuring, Array Methods, Control Flow, Template Literals, Data Analysis/Aggregation</div>
 
         {/* Intro Text */}
         <section className="space-y-8 mb-8">
@@ -67,7 +67,7 @@ function DataAnalysis() {
             href={schedule[0].homework?.starter}
             download
             aria-label="Download starter files as zip"
-            className="flex justify-center items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/2 my-4"
+            className="flex justify-center items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/2 my-4 cursor-pointer"
           >
             <FaGithub className="text-3xl"/> Accept assignment on Github Classroom
           </a>
@@ -287,12 +287,10 @@ const csv = Papa.parse(some_data);`}</SyntaxHighlighter>
             </p>  
             <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Submission</h3>
             <p className='ml-4'>
-                To submit, simply push your commits to the repository generated from GitHub classroom. Make sure your latest commit before the deadline includes your completed <span className='inline-code'>analysis.js</span> file and your <span className='inline-code'>README.md</span> file containing your AI syntesis activity. Before you submit, make sure you lint your code for style errors using the command <span className='inline-code'>npm run lint</span>. More details on style can be found in the <Link href='/styleguide' className="link">style guide</Link>. We will take -1 points for every style error remaining in the submission for the submitted files. You may also test your code against our provided Mocha test suite, which should be the same as our autograder for this assignment, using <span className='inline-code'>npm test</span>.
+                To submit, simply push your commits to the repository generated from GitHub classroom. Make sure your latest commit before the deadline includes your completed <span className='inline-code'>analysis.js</span> file and your <span className='inline-code'>README.md</span> file. Before you submit, make sure you lint your code for style errors using the command <span className='inline-code'>npm run lint</span>. More details on style can be found in the <Link href='/styleguide' className="link">style guide</Link>. We will take -1 points for every style error remaining in the submission for the submitted files. You may also test your code against our provided Mocha test suite, which should be the same as our autograder for this assignment, using <span className='inline-code'>npm test</span>.
             </p>
         </section>
       </div>
     </div>
   )
 }
-
-export default DataAnalysis

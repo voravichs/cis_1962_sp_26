@@ -32,13 +32,13 @@ const schedule = [
     due: "HW1 Due!",
     homework:   { 
       id: 'HW2',
-      title: "TBD",
+      title: "Project Scaffolding",
       assigned: new Date(2026, 0, 29),
       due: new Date(2026, 1, 5),
       durationWeeks: 1,
-      detailsUrl: "",
+      detailsUrl: "/hw/hw2",
       starter: "",
-      icon: "❓"
+      icon: "🍕"
     },
   },
   {
@@ -138,7 +138,7 @@ const schedule = [
       id: 'HW7',
       title: "TBD",
       assigned: new Date(2026, 2, 19),
-      due: new Date(2026, 3, 2),
+      due: new Date(2026, 3, 6),
       durationWeeks: 2,
       detailsUrl: "",
       starter: "",
