@@ -36,9 +36,13 @@ const Staff = () => {
                         </a>
                         <div>Office Hours: </div>
                         <div>Monday, 5 - 7 PM at Levine 501 (Bump Space)</div>
+                        <a className="inline-flex items-center gap-1 text-indigo-700 underline hover:text-red-700 transition mb-2" href="https://upenn.zoom.us/j/8793214523">
+                            Zoom
+                        </a>
                         <div className="text-sm text-gray-600 mt-1 fw p-6">
                             Hello! I am an alumni of the MCIT program here at UPenn. I love TTRPGs, MMORPGs, and simulation games. I also work with UI/UX development, game development, and pixel art from time to time. Looking forward to a wonderful semester!
                         </div>
+                        
                     </div>
                     <div className="bg-white text-blue-900 rounded-xl shadow-lg w-80 flex items-center flex-col">
                         <div className="w-full aspect-square overflow-hidden mb-6 rounded-t-xl">
