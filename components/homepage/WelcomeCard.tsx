@@ -8,9 +8,12 @@ export default function WelcomeCard() {
           <p className="text-lg mb-6">
               This is a mini-course on JavaScript at the University of Pennsylvania! This course will introduce students to the fundamentals of modern JavaScript. You will build interactive projects through learning Node.js and the basics of web development, and dive into exploring modern frameworks and concepts of JavaScript.
           </p>
-          <div className="flex justify-center">
+          <div className="flex gap-4 justify-center">
             <a href="/syllabus" className="text-indigo-700 hover:text-white bg-white hover:bg-indigo-600 focus:text-white focus:bg-indigo-600 px-6 py-3 rounded-lg font-bold text-lg shadow-md transition-colors shadow-lg hover:shadow-xl focus:shadow-xl">
                 Check out our syllabus!
+            </a>
+            <a href="https://www.seas.upenn.edu/~esinx/cis1962/" target="_blank" rel="noopener noreferrer" className="text-indigo-700 hover:text-white bg-white hover:bg-indigo-600 focus:text-white focus:bg-indigo-600 px-6 py-3 rounded-lg font-bold text-lg shadow-md transition-colors shadow-lg hover:shadow-xl focus:shadow-xl">
+                Wrong Section? Here's Section 202's site!
             </a>
           </div>
           
