@@ -27,8 +27,8 @@ const schedule = [
     id: 3,
     date: "1/29",
     topic: "Project Management and Introduction to TypeScript",
-    slides: "",
-    code: "",
+    slides: "/lectures/Lec3_1962_sp26.pdf",
+    code: "https://edstem.org/us/courses/91614/lessons/158392/slides/930663",
     due: "HW1 Due!",
     homework:   { 
       id: 'HW2',
