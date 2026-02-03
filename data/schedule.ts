@@ -50,14 +50,24 @@ const schedule = [
     due: "HW2 Due!",
     homework:   { 
       id: 'HW3',
-      title: "Echo ChatBot",
+      title: "???",
       assigned: new Date(2026, 1, 5),
       due: new Date(2026, 1, 12),
       durationWeeks: 1,
-      detailsUrl: "/hw/hw3",
-      starter: "https://classroom.github.com/a/be_2yLDO",
-      icon: "💬"
+      detailsUrl: "",
+      starter: "",
+      icon: ""
     },
+    // homework:   { 
+    //   id: 'HW3',
+    //   title: "Echo ChatBot",
+    //   assigned: new Date(2026, 1, 5),
+    //   due: new Date(2026, 1, 12),
+    //   durationWeeks: 1,
+    //   detailsUrl: "/hw/hw3",
+    //   starter: "https://classroom.github.com/a/be_2yLDO",
+    //   icon: "💬"
+    // },
   },
   {
     id: 5,
