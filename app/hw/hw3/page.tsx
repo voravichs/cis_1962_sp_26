@@ -151,7 +151,7 @@ export default function HW3() {
                         <li>The chatbot should then respond by echoing back the user's message, prefixed with "Echo:", and this response should also be added to the chat area. (This function has been provided in the starter code with a 500ms delay)</li>
                         <li>When the new chat button is clicked, the chat area should be cleared of all messages, allowing the user to start a new conversation.</li>
                         <li>Chats should be persisted in local storage so that they are not lost when the page is refreshed.</li>
-                        <li>Your script will be in TypeScript, and will be compiled to JavaScript within the <span className="inline-code">dist</span> directory. There are some specific DOM types for TS that you may need to use, which you can review <XLink link="https://www.typescriptlang.org/docs/handbook/dom-manipulation.html" text='here'/>.</li>
+                        <li>Your script will be in TypeScript, and will be compiled to JavaScript within the <span className="inline-code">dist</span> directory. There are some specific DOM types for TS that you may need to use, which you can review <XLink link="https://www.typescriptlang.org/docs/handbook/dom-manipulation.html" text='here'/>.</li> Note: You will need to use type assertions (e.g., <span className='inline-code'>(document.getElementById("myInput") as HTMLInputElement)</span>) to let TypeScript know the specific types of certain DOM elements.
                         <li>Make sure to handle edge cases, such as empty input fields or excessively long messages.</li>
                     </ul>
                 </section>

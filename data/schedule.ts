@@ -46,7 +46,9 @@ const schedule = [
     date: "2/5",
     topic: "HTML, CSS, and the DOM",
     slides: "",
+    // slides: "/lectures/Lec4_1962_sp26.pdf",
     code: "",
+    // code: "https://edstem.org/us/courses/91614/lessons/159019/slides/934175",
     due: "HW2 Due!",
     homework:   { 
       id: 'HW3',
