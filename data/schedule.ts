@@ -45,31 +45,19 @@ const schedule = [
     id: 4,
     date: "2/5",
     topic: "HTML, CSS, and the DOM",
-    slides: "",
-    // slides: "/lectures/Lec4_1962_sp26.pdf",
-    code: "",
-    // code: "https://edstem.org/us/courses/91614/lessons/159019/slides/934175",
+    slides: "/lectures/Lec4_1962_sp26.pdf",
+    code: "https://edstem.org/us/courses/91614/lessons/159019/slides/934175",
     due: "HW2 Due!",
     homework:   { 
       id: 'HW3',
-      title: "???",
+      title: "Echo ChatBot",
       assigned: new Date(2026, 1, 5),
       due: new Date(2026, 1, 12),
       durationWeeks: 1,
-      detailsUrl: "",
-      starter: "",
-      icon: ""
+      detailsUrl: "/hw/hw3",
+      starter: "https://classroom.github.com/a/be_2yLDO",
+      icon: "💬"
     },
-    // homework:   { 
-    //   id: 'HW3',
-    //   title: "Echo ChatBot",
-    //   assigned: new Date(2026, 1, 5),
-    //   due: new Date(2026, 1, 12),
-    //   durationWeeks: 1,
-    //   detailsUrl: "/hw/hw3",
-    //   starter: "https://classroom.github.com/a/be_2yLDO",
-    //   icon: "💬"
-    // },
   },
   {
     id: 5,
