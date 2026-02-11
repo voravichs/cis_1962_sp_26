@@ -62,15 +62,15 @@ const schedule = [
   {
     id: 5,
     date: "2/12",
-    topic: "Async JavaScript: Callbacks, Promises, & Async/Await",
+    topic: "Asynchronous JavaScript, OOP, and Error Handling",
     slides: "",
     code: "",
     due: "HW3 Due!",
     homework:   { 
       id: 'HW4',
       title: "TBD",
-      assigned: new Date(2026, 1, 12),
-      due: new Date(2026, 1, 19),
+      assigned: new Date(2026, 1, 16),
+      due: new Date(2026, 1, 23),
       durationWeeks: 1,
       detailsUrl: "",
       starter: "",

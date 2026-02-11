@@ -35,7 +35,7 @@ const Staff = () => {
                             voravich@seas.upenn.edu
                         </a>
                         <div>Office Hours: </div>
-                        <div>Monday, 5 - 7 PM at Levine 501 (Bump Space)</div>
+                        <div>Tuesday, 5 - 7 PM at Levine 501 (Bump Space)</div>
                         <a className="inline-flex items-center gap-1 text-indigo-700 underline hover:text-red-700 transition mb-2" href="https://upenn.zoom.us/j/8793214523">
                             Zoom
                         </a>
