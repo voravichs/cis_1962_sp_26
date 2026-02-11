@@ -70,7 +70,7 @@ const schedule = [
       id: 'HW4',
       title: "TBD",
       assigned: new Date(2026, 1, 16),
-      due: new Date(2026, 1, 23),
+      due: new Date(2026, 1, 26),
       durationWeeks: 1,
       detailsUrl: "",
       starter: "",
@@ -83,17 +83,6 @@ const schedule = [
     topic: "Introduction to React and Web Bundlers",
     slides: "",
     code: "",
-    due: "HW4 Due!",
-    homework:   { 
-      id: 'HW5',
-      title: "TBD",
-      assigned: new Date(2026, 1, 19),
-      due: new Date(2026, 2, 5),
-      durationWeeks: 2,
-      detailsUrl: "",
-      starter: "",
-      icon: "❓"
-    },
   },
   {
     id: 7,
@@ -101,6 +90,17 @@ const schedule = [
     topic: "React: Components, Props, Hooks, Events, & Style",
     slides: "",
     code: "",
+    due: "HW4 Due!",
+    homework:   { 
+      id: 'HW5',
+      title: "TBD",
+      assigned: new Date(2026, 1, 26),
+      due: new Date(2026, 2, 5),
+      durationWeeks: 2,
+      detailsUrl: "",
+      starter: "",
+      icon: "❓"
+    },
   },
   {
     id: 8,
