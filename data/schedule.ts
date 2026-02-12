@@ -63,8 +63,8 @@ const schedule = [
     id: 5,
     date: "2/12",
     topic: "Asynchronous JavaScript, OOP, and Error Handling",
-    slides: "",
-    code: "",
+    slides: "/lectures/Lec5_1962_sp26.pdf",
+    code: "https://edstem.org/us/courses/91614/lessons/159449/slides/936745",
     due: "HW3 Due!",
     homework:   { 
       id: 'HW4',
