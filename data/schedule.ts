@@ -68,13 +68,13 @@ const schedule = [
     due: "HW3 Due!",
     homework:   { 
       id: 'HW4',
-      title: "TBD",
+      title: "ChatJS",
       assigned: new Date(2026, 1, 16),
       due: new Date(2026, 1, 26),
       durationWeeks: 1,
-      detailsUrl: "",
-      starter: "",
-      icon: "❓"
+      detailsUrl: "/hw/hw4",
+      starter: "/hw-starter/cis-1962-hw4-sp26-chatjs.zip",
+      icon: "🤖"
     },
   },
   {
