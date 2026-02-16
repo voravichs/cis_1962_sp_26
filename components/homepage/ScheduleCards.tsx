@@ -1,7 +1,7 @@
 import { RiSlideshow2Fill } from "react-icons/ri";
 import { IoIosCodeDownload } from "react-icons/io";
 import { MdDateRange } from "react-icons/md";
-import { FaGithub, FaInfoCircle } from "react-icons/fa";
+import { FaGithub, FaInfoCircle, FaCode } from "react-icons/fa";
 
 export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
     return (
@@ -87,7 +87,7 @@ export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
                                 rel="noopener noreferrer"
                                 className="flex flex-col items-center gap-2 text-slate-700 hover:text-red-700"
                             >
-                                <FaGithub className="text-4xl" />
+                                <FaCode className="text-4xl" />
                                 <span className="font-medium">Starter Code</span>
                             </a>
                         )}
