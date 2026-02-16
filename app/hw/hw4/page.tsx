@@ -73,7 +73,7 @@ export default function HW4() {
                 <section className='space-y-4'>
                     <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Files</h3>
                     <p className="ml-4">
-                        Upon accepting the assignment on GitHub Classroom and retrieving the starter files, make sure you have the following files:
+                        Upon retrieving the starter files, make sure you have the following files:
                     </p>
                     <ul className="text-lg ml-12 list-disc">
                         <li><span className='inline-code'>script.ts</span></li>
@@ -375,7 +375,7 @@ const API_KEY = "YOUR_API_KEY";`}</SyntaxHighlighter>
                 <section className='space-y-4'>
                     <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Submission</h3>
                     <p className='ml-4'>
-                        Submit your code through Gradescope as a <span className='inline-code'>.zip</span> file that contains your project. Make sure your project includes all files you worked on during this homework and your <span className='inline-code'>README.md</span> file. Make sure to include everything, including the contents of both <span className='inline-code'>src</span> and <span className='inline-code'>dist</span> directories, and all ts and compiled js files. Make sure the submitted file structure within your GitHub repository is <span className='red-bold'>exactly or similar</span> to the file structure you used to run and develop the project. Points will be taken off for malformed project structures in the final submission!
+                        Submit your code through Gradescope as a <span className='inline-code'>.zip</span> file that contains your project. Make sure your project includes all files you worked on during this homework and your <span className='inline-code'>README.md</span> file. Make sure to include everything, including the contents of both <span className='inline-code'>src</span> and <span className='inline-code'>dist</span> directories, and all ts and compiled js files. Make sure the submitted file structure within your submission is <span className='red-bold'>exactly or similar</span> to the file structure you used to run and develop the project. Points will be taken off for malformed project structures in the final submission!
                     </p>
                     <p className='ml-4'>
                         Before you submit, make sure you lint your code for style errors using the command <span className='inline-code'>npm run lint</span>. More details on style can be found in the <Link className='link' href={"/styleguide"}>style guide</Link>. We will take -1 points for every style error remaining in the submission for the submitted files. Since this project requires you to make your own ESLint, we will use your linting rules instead of the standard rules we would apply, so make sure you pass your own set of style rules!
