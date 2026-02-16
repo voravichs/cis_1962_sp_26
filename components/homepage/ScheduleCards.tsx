@@ -135,8 +135,8 @@ export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
                                     rel="noopener noreferrer"
                                     className="flex flex-col items-center gap-2 text-white hover:text-indigo-300"
                                 >
-                                    <FaGithub className="text-4xl" />
-                                    <span className="font-medium">Github Classroom</span>
+                                    <FaCode className="text-4xl" />
+                                    <span className="font-medium">Starter Code</span>
                                 </a>    
                             )}
                             
