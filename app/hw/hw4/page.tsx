@@ -66,7 +66,7 @@ export default function HW4() {
                     href={schedule[4].homework?.starter}
                     className="flex justify-center items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/2 my-4 cursor-pointer"
                 >
-                    <FaGithub className="text-3xl"/> Accept assignment on Github Classroom
+                    Starter Code
                 </a>
 
                 {/* Files */}

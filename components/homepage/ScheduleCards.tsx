@@ -88,7 +88,7 @@ export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
                                 className="flex flex-col items-center gap-2 text-slate-700 hover:text-red-700"
                             >
                                 <FaGithub className="text-4xl" />
-                                <span className="font-medium">Github Classroom</span>
+                                <span className="font-medium">Starter Code</span>
                             </a>
                         )}
                         
