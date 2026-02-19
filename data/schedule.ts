@@ -81,8 +81,8 @@ const schedule = [
     id: 6,
     date: "2/19",
     topic: "Introduction to React and Web Bundlers",
-    slides: "",
-    code: "",
+    slides: "/lectures/Lec6_1962_sp26.pdf",
+    code: "https://edstem.org/us/courses/91614/lessons/159893/slides/939137",
   },
   {
     id: 7,
