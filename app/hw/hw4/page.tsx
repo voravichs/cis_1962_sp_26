@@ -144,7 +144,7 @@ const GEMINI_API_URL = "https://generativelanguage.googleapis.com/...";`}</Synta
                 <section className='space-y-4'>
                     <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Chat API</h3>
                     <p className='ml-8'>
-                        In order to use the Chat API for chat persistence, you will need another API key that we will provide for you. You should receive an email from the instructors soon after the homework is released with your API key. Make sure to <b>never</b> share this API key, just as you wouldn't share your Gemini API key! Once you have the API key, paste it into the <span className='inline-code'>chat-api.ts</span> file towards the top where the placeholder string is. This API key is specific to the Chat API and is different from your Gemini API key, so make sure not to mix them up!:
+                        In order to use the Chat API for chat persistence, you will need another API key that we will provide for you. You should receive a Canvas message from the instructors soon after the homework is released with your API key. Make sure to <b>never</b> share this API key, just as you wouldn't share your Gemini API key! Once you have the API key, paste it into the <span className='inline-code'>chat-api.ts</span> file towards the top where the placeholder string is. This API key is specific to the Chat API and is different from your Gemini API key, so make sure not to mix them up!:
                     </p>
                     <div className='blue-block font-mono my-4 text-sm sm:text-xl ml-8'>
                     <SyntaxHighlighter
@@ -256,7 +256,7 @@ const API_KEY = "YOUR_API_KEY";`}</SyntaxHighlighter>
                         </p>
                         <pre className='blue-block font-mono mt-4'>
                             <code>
-                                curl "https://cis-1962-201-sp26-hw4.onrender.com/api/chat/version"
+                                curl "https://cis-1962-201-sp26-hw4.onrender.com/api/version"
                             </code>
                         </pre>
                     </div>
