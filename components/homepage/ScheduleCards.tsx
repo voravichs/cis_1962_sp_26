@@ -1,6 +1,6 @@
 import { RiSlideshow2Fill } from "react-icons/ri";
 import { IoIosCodeDownload } from "react-icons/io";
-import { MdDateRange } from "react-icons/md";
+import { MdDateRange, MdCatchingPokemon } from "react-icons/md";
 import { FaGithub, FaInfoCircle, FaCode } from "react-icons/fa";
 
 export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
@@ -60,40 +60,42 @@ export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
 
                 {item.homework && (
                     <div className="lg:hidden flex items-center px-8 py-4 gap-8 text-indigo-700 bg-indigo-50 mt-4 rounded-lg border border-indigo-700">
-                    {item.homework.icon && (
-                        <span className="text-5xl mr-2">{item.homework.icon}</span>
-                    )}
-                    <div className="w-full">
-                        <div className="font-bold text-xl">{item.homework.id} - {item.homework.title}</div>
-                        <div className="grid grid-rows-2 grid-cols-2 gap-3 mt-2">
-                        <div className="col-span-2 flex items-center justify-center">
-                            <span className="font-medium text-lg">Due: {item.homework.due.toLocaleDateString()}</span>
-                        </div>
-                        {item.homework.detailsUrl && (
-                            <a
-                                href={item.homework.detailsUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex flex-col items-center gap-2 text-slate-700 hover:text-red-700"
-                            >
-                                <FaInfoCircle className="text-4xl" />
-                                <span className="font-medium">Instructions</span>
-                            </a>
+                        {item.homework.icon && (
+                            item.homework.icon === "pokemon" ?
+                                <span className="text-6xl mr-2 text-red-500 bg-white rounded-full border"><MdCatchingPokemon/></span>
+                                : <span className="text-5xl mr-2">{item.homework.icon}</span>
                         )}
-                        {item.homework.starter && (
-                            <a
-                                href={item.homework.starter}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex flex-col items-center gap-2 text-slate-700 hover:text-red-700"
-                            >
-                                <FaCode className="text-4xl" />
-                                <span className="font-medium">Starter Code</span>
-                            </a>
-                        )}
-                        
+                        <div className="w-full">
+                            <div className="font-bold text-xl">{item.homework.id} - {item.homework.title}</div>
+                            <div className="grid grid-rows-2 grid-cols-2 gap-3 mt-2">
+                            <div className="col-span-2 flex items-center justify-center">
+                                <span className="font-medium text-lg">Due: {item.homework.due.toLocaleDateString()}</span>
+                            </div>
+                            {item.homework.detailsUrl && (
+                                <a
+                                    href={item.homework.detailsUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex flex-col items-center gap-2 text-slate-700 hover:text-red-700"
+                                >
+                                    <FaInfoCircle className="text-4xl" />
+                                    <span className="font-medium">Instructions</span>
+                                </a>
+                            )}
+                            {item.homework.starter && (
+                                <a
+                                    href={item.homework.starter}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex flex-col items-center gap-2 text-slate-700 hover:text-red-700"
+                                >
+                                    <FaCode className="text-4xl" />
+                                    <span className="font-medium">Starter Code</span>
+                                </a>
+                            )}
+                            
+                            </div>
                         </div>
-                    </div>
                     </div>
                 )}
             </div>
@@ -101,14 +103,16 @@ export default function ScheduleCards({item, idx}: {item: any, idx: number}) {
             {/* HW content DESKTOP */}
             {item.homework && (
                 <div className={`
-                    hidden lg:flex w-1/2 flex-col relative overflow-hidden border border-white dark:border-black rounded-lg p-4 text-white bg-indigo-900
+                    hidden lg:flex justify-center w-1/2 flex-col relative overflow-hidden border border-white dark:border-black rounded-lg p-4 text-white bg-indigo-900
                     before:content-[''] before:absolute before:inset-y-0 before:left-0 before:w-4 before:bg-slate-800 dark:before:bg-white
                     `}
                 >
                     
                     <div className="flex items-center justify-center px-8 gap-8">
                         {item.homework.icon && (
-                        <span className="text-5xl mr-2">{item.homework.icon}</span>
+                            item.homework.icon === "pokemon" ?
+                                <span className="text-6xl mr-2 text-red-500 bg-white rounded-full"><MdCatchingPokemon/></span>
+                                : <span className="text-5xl mr-2">{item.homework.icon}</span>
                         )}
                         <div className="w-full">
                         <div className="font-bold text-xl">{item.homework.id} - {item.homework.title}</div>

@@ -87,19 +87,21 @@ const schedule = [
   {
     id: 7,
     date: "2/26",
-    topic: "React: Components, Props, Hooks, Events, & Style",
+    topic: "React: Hooks, Style, Routing, and Libraries",
     slides: "",
     code: "",
     due: "HW4 Due!",
     homework:   { 
       id: 'HW5',
-      title: "TBD",
+      title: "Pokedex",
       assigned: new Date(2026, 1, 26),
       due: new Date(2026, 2, 5),
       durationWeeks: 2,
       detailsUrl: "",
       starter: "",
-      icon: "❓"
+      // detailsUrl: "/hw/hw5",
+      // starter: "/hw-starter/cis-1962-hw5-sp26-pokedex.zip",
+      icon: "pokemon"
     },
   },
   {
