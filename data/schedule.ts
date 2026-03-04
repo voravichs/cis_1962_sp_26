@@ -111,13 +111,15 @@ const schedule = [
     due: "HW5 Due!",
     homework:   { 
       id: 'HW6',
-      title: "TBD",
+      title: "Blog Part 1",
       assigned: new Date(2026, 2, 5),
       due: new Date(2026, 2, 19),
       durationWeeks: 2,
       detailsUrl: "",
       starter: "",
-      icon: "❓"
+      // detailsUrl: "/hw/hw6",
+      // starter: "/hw-starter/cis-1962-hw6-sp26-blogp1.zip",
+      icon: "📝"
     },
   },
   {
@@ -130,7 +132,7 @@ const schedule = [
   {
     id: 9,
     date: "3/19",
-    topic: "Next.js",
+    topic: "Deployment, Performance Optimization, and Web Security",
     slides: "",
     code: "",
     due: "HW6 Due!",

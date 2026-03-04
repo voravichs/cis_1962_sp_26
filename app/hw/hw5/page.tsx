@@ -1,5 +1,5 @@
 import SideNav from '@/components/Sidenav';
-import { FaGithub, FaPlug, FaClipboardList, FaPython} from "react-icons/fa";
+import { FaPlug, FaClipboardList} from "react-icons/fa";
 // import DogCarousel from '@/components/DogCarousel';
 import ModalDemo from '@/components/demos/ModalDemo';
 import Image from 'next/image';
@@ -8,13 +8,8 @@ import hw5_2 from '@/assets/hw5-2.png';
 import { MdGrade } from "react-icons/md";
 import schedule from '@/data/schedule';
 
-import Link from 'next/link';
 import type { Metadata } from "next";
 import XLink from '@/components/XLink';
-
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { IoMdAlert } from 'react-icons/io';
 
 const SECTIONS = [
   {
