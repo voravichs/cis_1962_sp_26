@@ -106,8 +106,8 @@ const schedule = [
     id: 8,
     date: "3/5",
     topic: "Backend with Express.js and Authorization",
-    slides: "",
-    code: "",
+    slides: "/lectures/Lec8_1962_sp26.pdf",
+    code: "https://edstem.org/us/courses/91614/lessons/161213/slides/946446",
     due: "HW5 Due!",
     homework:   { 
       id: 'HW6',
