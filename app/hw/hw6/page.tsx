@@ -7,6 +7,9 @@ import schedule from '@/data/schedule';
 import type { Metadata } from "next";
 import XLink from '@/components/XLink';
 
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 const SECTIONS = [
   {
     id: "introduction",
@@ -153,6 +156,35 @@ export default function HW6() {
                         Postman will allow you to make API calls, like <span className='inline-code'>GET http://localhost:3000/register</span> without the need to format a curl command. It also lets you easily add parameters, headers, and body data to your requests, and also provides multiple environments to manage different requests. Take advantage of Postman to thoroughly test your API endpoints with good and bad data, as we will also do the same when grading your homework!
                     </p>
                 </section>
+
+                {/* Types */}
+                <section className='space-y-4'>
+                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>TypeScript</h3>
+                    <p className="ml-4">
+                        For TypeScript use within this homework, you will need to make use of the Request and Response types from the Express library. However, these types don't include specific fields you have in the parameters or bodies of the API routes. You will need to add generics to the Request type to specify the types of the request parameters, query, and body for each route. For example, you may specify the ID of a URL parameter like so:
+                    </p>
+                    <div className="red-block font-mono my-4 text-sm sm:text-xl">
+                        <SyntaxHighlighter
+                        language="typescript"
+                        style={vs}
+                        customStyle={{
+                            background: 'none',
+                            border: 'none',
+                            margin: 0,
+                            padding: 0,
+                        }}
+                        >{`import type { Request, Response } from "express";
+
+type Params = { id: string };
+
+export function getUser(req: Request<Params>, res: Response) {
+  const { id } = req.params; // this is now typed as a string
+}`}</SyntaxHighlighter>
+                    </div>
+                    <p className='ml-4'>
+                        We've additionally provided you an type extension on the Request type to allow it to have an optional "user" field attached to it, so that you can work with the decoded JWT token payload a lot easier.
+                    </p>
+                </section>
             </section>
 
             {/* Instructions */}
@@ -183,8 +215,14 @@ export default function HW6() {
                         Once you are all set up with Redis (and have made sure to run <span className='inline-code'>npm i</span> to install dependencies), start setting up your Express application in <span className='inline-code'>index.ts</span>. Make sure your Express server can boot up with <span className='inline-code'>npm start</span> without any errors, and test a basic route just to make sure. 
                     </p>
                     <p className='ml-4'>
-                        We have provided a pre-written Redis client that connects to your provided Redis URL. This client is primarily used in your services to interact with the Redis database. For now, you should test that you can connect to your Redis database from your Express server by importing the cilent, starting the server, then testing if you see 'Redis connected successfully' in your terminal. If you don't see this message, make sure to check your environment variables and Redis Cloud setup to ensure everything is correct.
+                        We have provided a pre-written Redis client that connects to your provided Redis URL. This client is primarily used in your services to interact with the Redis database. For now, you should test that you can connect to your Redis database from your Express server by importing the cilent, starting the server, then testing if you see 'Redis connected successfully' in your terminal. If you don't see this message, make sure to check your environment variables and Redis Cloud setup to ensure everything is correct. 
                     </p>
+                    <div className='blue-block mt-8'>
+                        <h4 className='flex-center gap-2 text-2xl font-bold'>Using environment variables</h4>
+                        <p className='ml-4'>
+                            You'll notice in the Redis client provided that the <span className='inline-code'>dotenv</span> package is used to load environment variables from your <span className='inline-code'>.env</span> file, with the line <span className='inline-code'>dotenv.config()</span>. This allows you to access your environment variables using <span className='inline-code'>process.env.VARIABLE_NAME</span> anywhere in your code. For example, in the Redis client, the Redis URL is accessed with <span className='inline-code'>process.env.REDIS_URL</span>.
+                        </p>
+                    </div>
                 </section>
 
                 <hr></hr>
@@ -497,6 +535,8 @@ export default function HW6() {
                         Additionally, be mindful that each created post must have a unique ID. You can use the <span className='inline-code'>@paralleldrive/cuid2</span> library to generate unique IDs for each post. Make sure to include this ID in the post object that you store in the database, and use it to identify posts for fetching, updating, and deleting.
                     </p>
                 </section>
+
+                <hr></hr>
 
                 {/* Part 4 */}
                 <section id="four" className='scroll-mt-48 space-y-4'>

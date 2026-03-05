@@ -115,10 +115,8 @@ const schedule = [
       assigned: new Date(2026, 2, 5),
       due: new Date(2026, 2, 19),
       durationWeeks: 2,
-      detailsUrl: "",
-      starter: "",
-      // detailsUrl: "/hw/hw6",
-      // starter: "/hw-starter/cis-1962-hw6-sp26-blogp1.zip",
+      detailsUrl: "/hw/hw6",
+      starter: "/hw-starter/cis-1962-hw6-sp26-blogp1.zip",
       icon: "📝"
     },
   },
