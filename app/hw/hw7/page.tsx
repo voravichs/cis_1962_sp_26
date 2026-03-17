@@ -7,6 +7,9 @@ import schedule from '@/data/schedule';
 import type { Metadata } from "next";
 import Link from 'next/dist/client/link';
 
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 import Image from 'next/image';
 import hw7_1 from '@/assets/hw7-1.png'
 
@@ -144,6 +147,21 @@ export default function HW7() {
                         First, you should check that your fullstack application runs properly with the provided frontend and your existing backend code. Start by importing your backend code into the <span className='inline-code'>server</span> folder of the starter code. You can use the same Redis Cloud database and environment variables that you set up for homework 6 for this assignment as well.
                     </p>
                     <p className="ml-4">
+                        Next, you'll need to add CORS configuration to your backend to allow your frontend to make requests to it. Since your frontend and backend will be hosted on different localhosts, you will need to set up CORS in your backend to allow requests from the frontend's localhost. We've provided the <span className='inline-code'>cors</span> package in the backend dependencies, so you should use this package to set up CORS in your backend. Import CORS into your main server file and add the following line:
+                    </p>
+                    <div className="red-block font-mono my-4 text-sm sm:text-xl">
+                        <SyntaxHighlighter
+                        language="typescript"
+                        style={vs}
+                        customStyle={{
+                            background: 'none',
+                            border: 'none',
+                            margin: 0,
+                            padding: 0,
+                        }}
+                        >{`app.use(cors({ origin: 'http://localhost:5173', credentials: true }));`}</SyntaxHighlighter>
+                    </div>
+                    <p className="ml-4">
                         Once you've installed your backend and installed the dependencies for the frontend, run the command <span className='inline-code'>npm run dev</span> from the root directory to start both the frontend and backend concurrently. This should start two local servers, one for the frontend and one for the backend. The frontend should be hosted on <span className='inline-code'>localhost:5173</span> and the backend should be hosted on <span className='inline-code'>localhost:3000</span>. Check that you can access both the frontend and backend in your browser/postman, and that there are no errors in your terminal. If you run into any issues with this, make sure to check that your environment variables are set up correctly, and that your backend code is properly imported into the <span className='inline-code'>server</span> folder. 
                     </p>
                     <p className="ml-4">
@@ -181,7 +199,7 @@ export default function HW7() {
                 <section id="two" className='scroll-mt-48 space-y-4'>
                     <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Part 2: Registration, Login, and Home</h3>
                     <pre className='red-block ml-4 my-4'>
-                        <b>Files</b>: <span className='inline-code'>Login.tsx</span>, <span className='inline-code'>Register.tsx</span>
+                        <b>Files</b>: <span className='inline-code'>Login.tsx</span>, <span className='inline-code'>Register.tsx</span>, <span className='inline-code'>Home.tsx</span>
                     </pre>
                     <p className='ml-4'>
                         Implement the login and registration features in their respective pages. The starter files have provided you the user interface and components for these pages already, so you just need to fill in the TODOs on each of the pages with connections to the backend. 
