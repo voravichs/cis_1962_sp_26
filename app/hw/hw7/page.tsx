@@ -251,6 +251,8 @@ export default function HW7() {
                         ></iframe>
                     </div>
                 </section>
+
+                <hr></hr>
                 
                 {/* Part 4 */}
                 <section id="four" className='scroll-mt-48 space-y-4'>

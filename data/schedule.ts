@@ -148,7 +148,7 @@ const schedule = [
   {
     id: 10,
     date: "3/26",
-    topic: "NextJS",
+    topic: "Accessbility and More",
     slides: "",
     code: "",
     homework:   { 
@@ -165,7 +165,7 @@ const schedule = [
   {
     id: 11,
     date: "4/2",
-    topic: "Monitoring, Performance, and Accessibility",
+    topic: "NextJS",
     slides: "",
     code: "",
     due: "HW7 Due!",
@@ -173,21 +173,21 @@ const schedule = [
   {
     id: 12,
     date: "4/9",
-    topic: "TBD",
+    topic: "PWAs, Mobile Dev, and the State of JavaScript",
     slides: "",
     code: "",
   },
   {
     id: 13,
     date: "4/16",
-    topic: "PWAs, Mobile Dev, and the State of JavaScript",
+    topic: "TBD",
     slides: "",
     code: "",
   },
   {
     id: 14,
     date: "4/23",
-    topic: "",
+    topic: "Project Presentations",
     slides: "",
     code: "",
   }
