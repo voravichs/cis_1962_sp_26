@@ -263,7 +263,7 @@ export default function HW7() {
                     </p>
                     <ul className="text-lg ml-12 list-disc">
                         <li>What security vulnerabilities may be present in this application? How would you go about fixing these vulnerabilities? Please be specific as to what feature may be causing the vulnerability, how an attacker may exploit it, and what steps you would take to mitigate the risk.</li>
-                        <li> What are some possible optimization issues, either in the current backend and frontend code? Given time, would you design the frontend or backend any differently to improve performance?</li>
+                        <li> What are some possible optimization and UI/UX issues, either in the current backend and frontend code? Given time, would you design the frontend or backend any differently to improve them? If applicable, describe any changes you've already made to them in your final submission.</li>
                         <li>Imagine you want to deploy this application. Research and describe a possible plan to deploy this application efficiently. This can involve considerations such as refactoring the code to different frameworks or considering the architecture of different deployment environments as well. </li>
                     </ul>
                     <p className='ml-4'>
