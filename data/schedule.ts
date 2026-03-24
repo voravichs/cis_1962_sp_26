@@ -181,7 +181,7 @@ const schedule = [
       id: 'Final Project',
       title: "Milestone 1 DUE",
       due: new Date(2026, 3, 9),
-      durationWeeks: 2,
+      durationWeeks: 1,
       detailsUrl: "",
       starter: "",
       icon: "1️⃣"
@@ -197,7 +197,7 @@ const schedule = [
       id: 'Final Project',
       title: "Milestone 2 DUE",
       due: new Date(2026, 3, 16),
-      durationWeeks: 2,
+      durationWeeks: 1,
       detailsUrl: "",
       starter: "",
       icon: "2️⃣"
@@ -211,8 +211,8 @@ const schedule = [
     code: "",
     homework:   { 
       id: 'Final Project',
-      title: "Final Project DUE",
-      due: new Date(2026, 3, 23),
+      title: "Final Project Submissions",
+      due: new Date(2026, 3, 29),
       durationWeeks: 2,
       detailsUrl: "",
       starter: "",

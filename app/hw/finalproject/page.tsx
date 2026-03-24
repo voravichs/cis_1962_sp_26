@@ -1,16 +1,8 @@
 import SideNav from '@/components/Sidenav';
 import { FaPlug, FaClipboardList, FaGrinStars} from "react-icons/fa";
-import { MdGrade } from "react-icons/md";
-import schedule from '@/data/schedule';
+import { MdGrade, MdCoPresent } from "react-icons/md";
 
 import type { Metadata } from "next";
-import Link from 'next/dist/client/link';
-
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
-import Image from 'next/image';
-import hw7_1 from '@/assets/hw7-1.png'
 import { VscDebugStart } from 'react-icons/vsc';
 
 const SECTIONS = [
@@ -23,11 +15,15 @@ const SECTIONS = [
     icon: <FaClipboardList className="inline-block text-3xl" />
   },
   {
+    id: "presentation",
+    icon: <MdCoPresent className="inline-block text-3xl" />
+  },
+  {
     id: "extra",
     icon: <FaGrinStars className="inline-block text-3xl" />
   },
   {
-    id: "submission",
+    id: "rubric",
     icon: <MdGrade className="inline-block text-3xl" />
   },
   {
@@ -41,7 +37,7 @@ export const metadata: Metadata = {
   description: "Final Project Page of CIS 1962 for Spring 2026 at the University of Pennsylvania",
 };
 
-export default function HW7() {
+export default function FinalProject() {
     return (
         <div className="scroll-mt-48 max-w-5xl mx-auto text-lg text-black dark:text-white">      
         {/* Side Nav */}
@@ -49,245 +45,223 @@ export default function HW7() {
       
         <div className="mx-auto text-lg">
             {/* Title */}
-            <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Final Project: Blog Part 2</h1>
-            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-4'>Due April  at 11:59 PM</h3>
-
-            <div className='red-block font-mono'><span className='font-bold'>Topics:</span> Full Stack Development, Blogging, Cookies, Security, Routing</div>
+            <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Final Project</h1>
+            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Proposal: Due April 2nd</h3>
+            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Milestone 1: Due April 16th</h3>
+            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Milestone 2: Due April 23rd</h3>
+            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Presentations: Due April 23rd</h3>
+            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-8'>Final Deadline: Due May 4th</h3>
 
             {/* Intro Text */}
-            <section className="space-y-8 mb-8">
+            <section className="space-y-4 mb-8">
                 <p className="ml-4">
-                    This homework is a continuation of <Link className="link" href="/hw/hw6">Homework 6</Link>. In this assignment, you'll be taking your backend and connecting it to a provided frontend to create a full stack blogging application. Your backend is mostly complete for this task, but you may need to update some routes and add some routes to work with the provided frontend application. By the end of this assignment, you'll have a fully functional bloggin platform that users may create a accounts on, log in, create blog posts, and comment on posts. This homework will give you experience working with full stack development, connecting a frontend to a backend, and working with cookies for authentication. 
+                    Your final project for CIS 1962 will be a culmination of all that you learned within this course. This will be an full-stack open-ended project that must include a front-end and back-end component with deployment at the end, but otherwise is an opportunity to apply what you learned in a creative way to make something cool! You can use what you've learned in this class, or do a deep dive into new technologies, frameworks, or libraries to create something truly unique. 
                 </p>
-                <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2'>Assignment Goals</h3>
-                <ul className="text-lg ml-6 list-disc">
-                    <li>Connect a backend to a frontend</li>
-                    <li>Learn to work with Express.js alongside React</li>
-                    <li>Utilize cookies for authentication and data transfer</li>
+                <p className="ml-4">
+                    There are a few deadlines to keep track track of: a proposal will be due a week after this final project is announced, on April 2nd. Short milestone check-ins will be due April 16th and April 23rd to check in on your progress towards completing the final project. Then, we will present your projects in class during our final scheduled class on April 23rd. Your final submission will be due on May 4th (a day after reading days). <span className='red-bold'>All submissions will be done through Canvas assignments, either as text documents or a link to your final GitHub repo. </span>
+                </p>
+                <p className="ml-4">
+                    This project is intended to be done <span className='red-bold'>solo</span> or as a <span className='red-bold'>pair</span>. You will indicate this to us during your project proposals. Feel free to use Ed Discussion to find a group member if you desire for your project ideas. You will be submitting your final project as a GitHub repo, so make sure you familiarize yourself with GitHub collaboration techniques like pull requests, code reviews, and branches if you intend to work in a group. <span className='red-bold'>Only 1 student of a pair has to submit for the group for all assignments.</span>
+                </p>
+            </section>
+
+            {/* Proposal */}
+            <section id="proposal" className="scroll-mt-48 space-y-4 mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"> <VscDebugStart /> Proposal </h2>
+                <p className="ml-4">
+                    Before you begin your project, we would like to gauge what kinds of project you would like to do. We would like a clear and concise description of what your project will provide for users, and a rough idea of the technologies and tech stack you will use for the final project (Express, React, Vite, MongoDB, etc.), and how you plan to deploy your app at the end. You are welcome to include topics we haven't yet or will not discuss in this course, as this project is a chance to explore new ideas and technologies in JavaScript.
+                </p>
+                <p className="ml-4">
+                    You will submit your proposal as a text document responding to the below questions to Canvas:
+                </p>
+                <ul className="text-lg ml-12 list-disc">
+                    <li>Are you working solo or as a pair? If you are working as a pair, who are the group members?</li>
+                    <li>Write a pitch for your final project. This should include a clear description of the project's goals and what it will provide for users.</li>
+                    <li>Describe the tech stack for this project, including the main frontend and backend technologies you will use, and what your plan for deploying the app will be.</li>
+                    <li>Include your goals for what you would like to be done with before the scheduled milestone check-ins. For these milestones, you should consider prioritizing the back-end functionality first before the front-end, but it is up to you to pace yourself and hold yourself to your own scheduled goals.</li>
+                    <li>If you intend to use unique, new technologies we will not discuss in this course (see Extra Credit section), include them within your proposal so that we can verify whether or not it will count for extra credit!</li>
+                </ul>  
+                <p className="ml-4">
+                    After submitting your proposals, we will return to you with feedback on them promptly. You are free to start working on them or setting up your projects beforehand, so long as your project scope will fall within our rubric specifications and you do not get an outright rejection of your proposal from the instructors. Please look at the provided rubric for the final project to get a better sense of what kinds of projects will be appropriate for this assignment. If you have any questions about your proposal or want to run an idea by us, please feel free to reach out to us on Ed Discussion or during office hours!
+                </p>
+            </section>
+
+            {/* Milestone */}
+            <section id="milestones" className="scroll-mt-48 space-y-4 mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><FaClipboardList />Milestone</h2>
+                <p className="ml-4">
+                    It is important to pace yourself and give yourself enough time to develop and research new technologies for this final project. This is why we've explicitly required two milestone check-ins and for you to schedule your goals for them in advance in the proposal.
+                </p>
+                <p className="ml-4">
+                    You will submit your milestones as a text documents responding to the below questions to Canvas:
+                </p>
+                <ul className="text-lg ml-12 list-disc">
+                    <li>Have you met your goals for this milestone that you defined in your proposal?</li>
+                    <li>Describe any setbacks and challenges you are facing at this moment in the project, either related to this milestone or otherwise.</li>
+                    <li>At this point in time, are you on track to completing this final project in the alloted time?</li>
                 </ul>
             </section>
 
-            {/* Introduction */}
-            <section id="introduction" className="scroll-mt-48 space-y-8 mb-8">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"> <FaPlug /> Introduction &amp; Installation</h2>
-
-                {/* Starter Code */}
-                <a
-                    href={schedule[9].homework?.starter}
-                    className="flex justify-center items-center gap-1 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg font-semibold shadow transition focus:outline-none focus:ring-2 focus:ring-red-300 w-1/2 my-4 cursor-pointer mx-auto"
-                >
-                    Starter Code
-                </a>
-
-                {/* Blog */}
-                <section className='space-y-4'>
-                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Premise</h3>
-                    <p className="ml-4">
-                        Imagine you are a web developer for a tiny startup called "PennBlog". You have already written some backend code for the functionality of a blogging platform, and the frontend team has just handed you the frontend code for this application (your starter code). Your manager has tasked you with connecting the frontend to your backend, and making any necessary updates to your backend to make sure the frontend works properly.
-                    </p>
-                    <p className="ml-4">
-                        At the end of the day, your blogging platform must meet the following requirements:
-                    </p>
-                    <ul className="text-lg ml-12 list-disc">
-                        <li>Users can create accounts and login to the system</li>
-                        <li>Each user is tied to a singular blog and profile</li>
-                        <li>Users can view the blogs of all other users on the platform</li>
-                        <li>Users can create, edit, and delete their own blog posts</li>
-                        <li>Users can view comments on their blog posts and add comments to other users' posts</li>
-                        <li>Users can delete comments on their own posts</li>
-                    </ul>
-                </section>
-
-                {/* Files */}
-                <section className='space-y-4'>
-                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Files</h3>
-                    <p className="ml-4">
-                        Your starter code for this homework includes the most of the frontend code and configurations you need.
-                        Upon installing the starter code for this project, you should have the following files:
-                    </p>
-                    <ul className="text-lg ml-12 list-disc">
-                        <li>A <span className='inline-code'>client</span> folder containing a React/Vite project</li>
-                        <li>An empty <span className='inline-code'>server</span> folder to import your backend code</li>
-                        <li>A <span className='inline-code'>package.json</span> with a <span className='inline-code'>concurrently</span> script</li>
-                    </ul>  
-                    <p className='ml-4'>
-                        You should import your backend code into the <span className='inline-code'>server</span> folder. This homework is written the expectation that you have already completed homework 6, so you should have all the necessary backend code already written to just import into this starter code. You may need to make some updates to your backend code to make sure it works with the provided frontend, but you should not need to change too much of your existing code. The main focus of this homework is connecting your backend to a frontend, so you should try to reuse as much of your existing code as possible while making the necessary adjustments to work with the frontend.
-                    </p>
-                    <p className='ml-4'>
-                        Since we have both a frontend and a backend to this application, you'll need to install the dependencies on both the frontend and the backend for this application to work. The common practice for this is to have a <span className='inline-code'>package.json</span> file in both the root directory (which contains scripts to run both the frontend and backend concurrently), and a <span className='inline-code'>package.json</span> file in both the <span className='inline-code'>client</span> and <span className='inline-code'>server</span> folders that contain the dependencies for each side of the application. Make sure to run <span className='inline-code'>npm install</span> in both the root directory, and within the <span className='inline-code'>client</span> and <span className='inline-code'>server</span> folders to install all necessary dependencies.
-                    </p>
-                    <p className='ml-4'>
-                        The root directory contains a singular dependency, <span className='inline-code'>concurrently</span>, which allows you to run both the frontend and backend at the same time with a single command. This makes it much more convenient to work with a full stack application, as you can start both the frontend and backend with a single command. For development of this project, run <span className='inline-code'>npm run dev</span> from the root directory after installing all your dependencies, and this should start 2 localhosts to host your frontend and backend within the same terminal.
-                    </p>
-                    <div className='red-block'>
-                        <h4 className='flex-center gap-2 text-2xl font-bold'>NOTE: Installation</h4>
-                        <p className='ml-4'>
-                            There is an incompatibility warning at the moment when you install the frontend of this application (tailwindcss/vite has not updated for Vite 8.0). You may install the frontend with the flag --force (<span className='inline-code'>npm install --force</span>). This should work properly and allow you to install the frontend dependencies, but you may see some warnings in your terminal about peer dependencies. This is a known issue with the current version of Vite and the tailwindcss/vite plugin, and should not cause any issues with the functionality of the application.
-                        </p>
-                    </div>
-                </section>
+            {/* Presentation */}
+            <section id="presentation" className="scroll-mt-48 space-y-4 mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><MdCoPresent />Presentation</h2>
+                <p className="ml-4">
+                    During our last scheduled class on April 23rd, you will be expected to present your final project to the class. This presentation should be around 5-10 minutes long and should include a demo of your project, an overview of the technologies you used, and a reflection on the development process. This is a chance to show off your hard work and creativity, and to share your project with your classmates. More details about the presentation format and expectations will be provided as we get closer to the date, including where to submit the slides for your presentation. You are expected to present in person during class, but if you have an excused absence for that day, please reach out to us and we can work something out for you to present remotely or submit a recorded presentation for the instructor.
+                </p>
+                <p className="ml-4">
+                    Since this presentation is before the final project submission, you are not expected to have a fully polished and completed project by the time of the presentation. However, you should have a working demo that you can show to the class, and you should be able to talk about your development process and the technologies you used in a thoughtful way. This is also a chance to get feedback from your classmates and instructors on your project before the final submission, so we encourage you to be open to constructive criticism and suggestions during your presentation!
+                </p>
             </section>
 
-            {/* Instructions */}
-            <section className="space-y-8 mb-8">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><FaClipboardList />Instructions</h2>
+            {/* Extra Credit */}
+            <section id="extra" className="scroll-mt-48 space-y-4 mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><FaGrinStars />Extra Credit</h2>
+                <p className="ml-4">
+                    You can gain up to 30% extra credit on this final project, usable for the grade of this project or applied to lost points in previous homework grades. We will award 10% extra credit for each unique, new techonology you use that is not covered in this course. These technologies should be substantial libraries or frameworks that add significant functionality to the app. For instance, a small library like <span className='inline-code'>react-hot-toast</span> won't be applicable.
+                </p>
+                <p className="ml-4">
+                    Some ideas for technologies include:
+                </p>
+                <ul className="text-lg ml-12 list-disc">
+                    <li><a href='https://threejs.org/' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">Three.js</a> for 3D</li>
+                    <li><a href='https://motion.dev/' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">Framer Motion</a> or <a href='https://www.react-spring.dev/' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">React Spring</a> for animations</li>
+                    <li><a href='https://github.com/jaredhanson/passport' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">Passport.js</a> for validation</li>
+                    <li><a href='https://www.prisma.io/' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">Prisma</a> or <a href='https://orm.drizzle.team/' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">Drizzle</a> for database interactions</li>
+                    <li><a href='https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">WebSockets</a> or <a href='https://socket.io/' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">Socket.io</a> for real time communication/live data/multiplayer</li>
+                    <li>AI applications that make use of libraries like <a href='https://github.com/openai/openai-node' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">openai-node</a> or <a href='https://github.com/anthropics/anthropic-sdk-typescript' target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">anthropic-sdk-typescript</a> must have a novel use other than a chatbot (which we already did!) Points will not be given for just connecting to an API and returning chat responses, consider prompt engineering, fine tuning, computer vision/images, or other AI integrations.</li>
+                    <li>We will NOT count any UI libraries or frameworks for extra credit. We will need to use at least one UI library for the frontend of this application, any additional will not count towards extra credit (unless there is sufficient complexity in how you plan to use them).</li>
+                </ul> 
+            </section>
 
-                {/* Part 0 */}
-                <section id="zero" className='scroll-mt-48 space-y-4'>
-                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Part 0: Import your Backend and Run the App</h3>
-                    <p className="ml-4">
-                        First, you should check that your fullstack application runs properly with the provided frontend and your existing backend code. Start by importing your backend code into the <span className='inline-code'>server</span> folder of the starter code. You can use the same Redis Cloud database and environment variables that you set up for homework 6 for this assignment as well.
-                    </p>
-                    <p className="ml-4">
-                        Next, you'll need to add CORS configuration to your backend to allow your frontend to make requests to it. Since your frontend and backend will be hosted on different localhosts, you will need to set up CORS in your backend to allow requests from the frontend's localhost. We've provided the <span className='inline-code'>cors</span> package in the backend dependencies, so you should use this package to set up CORS in your backend. Import CORS into your main server file and add the following line:
-                    </p>
-                    <div className="red-block font-mono my-4 text-sm sm:text-xl">
-                        <SyntaxHighlighter
-                        language="typescript"
-                        style={vs}
-                        customStyle={{
-                            background: 'none',
-                            border: 'none',
-                            margin: 0,
-                            padding: 0,
-                        }}
-                        >{`app.use(cors({ origin: 'http://localhost:5173', credentials: true }));`}</SyntaxHighlighter>
+            {/* Rubric */}
+            <section id="rubric" className="scroll-mt-48 space-y-4 mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"> <MdGrade />Rubric</h2>
+
+                <p className="ml-4">
+                    All final projects will be graded with the same rubric, with 4 sections. In total, you can get up to 14 points - and we're hoping everyone can get all points! Below you can see the requirements for getting points in each section.
+                </p>
+
+                {/* Rubric */}
+                <section className='mb-12 pl-3 grid grid-cols-2 gap-6 py-8 text-gray-800'>
+                    <div className="rounded-xl bg-white shadow-md p-8 flex flex-col gap-4 items-center justify-center">
+                        <div className="mb-2">
+                            <h4 className='font-bold'>[3 pts] Backend</h4>
+                            <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
+                                <li>Backend has working API routes that perform basic CRUD operations for the application</li>
+                                <li>Backend code is cleanly organized, is well-documented, and secure (no sensitive information exposed, data is sent in secure/encrypted formats)</li>
+                                <li>App has clean middleware, robust authentication, and fully functional database integration</li>
+                            </ul>  
+                        </div>
+
+                        <div className='blue-block'>
+                            <p className='mb-2'>Authentication and databases are optional if your project is otherwise sufficiently complex in other aspects. Please clarify if this is the case in your proposal.</p>
+                        </div>  
                     </div>
-                    <p className="ml-4">
-                        Once you've installed your backend and installed the dependencies for the frontend, run the command <span className='inline-code'>npm run dev</span> from the root directory to start both the frontend and backend concurrently. This should start two local servers, one for the frontend and one for the backend. The frontend should be hosted on <span className='inline-code'>localhost:5173</span> and the backend should be hosted on <span className='inline-code'>localhost:3000</span>. Check that you can access both the frontend and backend in your browser/postman, and that there are no errors in your terminal. If you run into any issues with this, make sure to check that your environment variables are set up correctly, and that your backend code is properly imported into the <span className='inline-code'>server</span> folder. 
-                    </p>
-                    <p className="ml-4">
-                        If everything is properly installed, your frontend should look like the following picture, at the homepage of the application:
-                    </p>
-                    <Image src={hw7_1} alt="Homepage screenshot" />
-                </section>
-
-                <hr></hr>
-
-                {/* Part 1 */}
-                <section id="one" className='scroll-mt-48 space-y-4'>
-                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Part 1: Routing</h3>
-                    <pre className='red-block ml-4 my-4'>
-                        <b>Files</b>: <span className='inline-code'>App.tsx</span>
-                    </pre>
-                    <p className="ml-4">
-                        You'll notice that your provided <span className='inline-code'>App.tsx</span> has a React Router from <span className='inline-code'>react-router-dom</span> set up for you. However, the only route provided is the Home route ("/"), which just shows a welcome message. The rest of the routes for this application are not set up yet, and you will need to add these routes to the frontend to connect it to your backend. You should add the following routes to the frontend:
-                    </p>
-                    <ul className="text-lg ml-12 list-disc">
-                        <li><span className='inline-code'>/register</span>, going to the page <span className='inline-code'>{`<Register / >`}</span></li>
-                        <li><span className='inline-code'>/login</span>, going to the page <span className='inline-code'>{`<Login / >`}</span></li>
-                        <li><span className='inline-code'>/profile</span>, going to the page <span className='inline-code'>{`<Profile / >`}</span></li>
-                        <li><span className='inline-code'>/posts/:user</span>, going to the page <span className='inline-code'>{`<Posts / >`}</span></li>
-                        <li><span className='inline-code'>/posts/:user/:id</span>, going to the page <span className='inline-code'>{`<PostDetail / >`}</span></li>
-                    </ul>
-                    <p className='ml-4'>
-                        Each of these pages should direct to a different component provided in the starter code as shown above. Make sure to test a few of these routes to be sure that they work properly. The Navbar directs to the registration and login pages initially, but you can also test the profile to see that it shows nothing if you are not logged in. (a normal user would not be allowed to access that page without logging in first)
-                    </p>
-                </section>
-
-                <hr></hr>
-
-                {/* Part 2 */}
-                <section id="two" className='scroll-mt-48 space-y-4'>
-                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Part 2: Registration, Login, and Home</h3>
-                    <pre className='red-block ml-4 my-4'>
-                        <b>Files</b>: <span className='inline-code'>Login.tsx</span>, <span className='inline-code'>Register.tsx</span>, <span className='inline-code'>Home.tsx</span>
-                    </pre>
-                    <p className='ml-4'>
-                        Implement the login and registration features in their respective pages. The starter files have provided you the user interface and components for these pages already, so you just need to fill in the TODOs on each of the pages with connections to the backend. 
-                    </p>
-                    <p className='ml-4'>
-                        For the registration page, you should connect the form to the backend route for registration that you created in homework 6. When a user fills out the registration form and submits it, it should send a request to your backend to create a new user with the provided information. Make sure to handle any errors that may occur during registration (such as username already taken) and display appropriate error messages to the user (on the frontend, not just in the console!). Upon registration, a success message should be shown and the user should be redirected to the login page. Use the provided <span className='inline-code'>navigate</span> function from useNavigate to redirect the user after successful registration.
-                    </p>
-                    <p className='ml-4'>
-                        Similarly for login, you should connect the login form to the backend route for login. Login also involves attaching the JWT token and the current user's username to temporary session cookies. Pay attention to the documention, as you will need to set certain flags in the cookies and set an expiration time for the cookies. Upon successful login, the user should be redirected to the home page.
-                    </p>
-                    <p className='ml-4'>
-                        Test the login and registration features. You should be able to make multiple accounts easily, and then log out of them with the navbar button that shows up. If you don't see new navbar buttons, this means that your JWT token in your cookie has been set incorrectly! Check <span className='inline-code'>util.ts</span> for some helper functions that check for the presence of the JWT token in the cookies, and use these functions to debug your login functionality if you run into any issues. (You'll also find them useful later on!)
-                    </p>
-                    <p className='ml-4'>
-                        Once your are satisfied with your login and registration functionality, implement the homepage TODOs. These TODOs will involve populating the homepage with the blogs available in the database. Each user can only have 1 blog, so this is also a representation of the users in the database. The current logged in user's blog should be displayed on top, while the rest of the blogs should be displayed below (excluding the current user). 
-                    </p>
-                    <p className='ml-4'>
-                        For this home page, you will need an extra route in your backend to get all the blogs in the database (Get /blogs or something like that). This route should query the database for all the blogs, and return them to the frontend to be displayed on the homepage. Make sure to test this route in postman and on the frontend to ensure that it works properly and displays the blogs as expected.
-                    </p>
-                </section>
-
-                <hr></hr>
-
-                {/* Part 3 */}
-                <section id="three" className='scroll-mt-48 space-y-4'>
-                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Part 3: Profile, Posts, and Post Details</h3>
-                    <pre className='red-block ml-4 my-4'>
-                        <b>Files</b>: <span className='inline-code'>Profile.tsx</span>, <span className='inline-code'>Posts.tsx</span>, <span className='inline-code'>PostsDetails.tsx</span>
-                    </pre>
-                    <p className="ml-4">
-                        Now that basic authentication is working and you can see the blogs on the homepage, it's time to implement the core functionality of the blogging platform, which is creating, editing, and deleting blog posts. The profile page is where a user can view and edit their own profile information (such as their display name and bio), while the posts page is where a user can view all the posts for a specific user, and the post details page is where a user can view the details of a specific post and edit or delete that post if it's their own. Implement the TODOs for each of these features in their respective pages.
-                    </p>
-                    <p className='ml-4'>
-                        It may be helpful to see how each of these pages are connected to the components they use, for the sake of seeing how data is being passed down and displayed. While we don't require you to edit anything in the <span className='inline-code'>components</span> folder, understanding their structure can help you implement the features more effectively.
-                    </p>
-                    <p className='ml-4'>
-                        Additionally, pay close attention to the provided states and parameters in the starter code. If a state is defined, it will likely get used somewhere in within the code to update a frontend component! 
-                    </p>
-                    <p className='ml-4'>
-                        At the end of this process, you should have a fully functional blogging platform! Refer to the video demo below to see and example of all of the features of this app that you will need to implement. 
-                    </p>
-                    <div className="flex justify-center my-4">
-                        <iframe
-                            src="https://drive.google.com/file/d/1WVMcDRGJ3MDqgYnZ1XM6YQCFwblHUw7x/view?usp=sharing"
-                            width="640"
-                            height="360"
-                            allowFullScreen
-                            title="Google Drive Video Demo"
-                        ></iframe>
+                        
+                    <div className="rounded-xl bg-white shadow-md p-8 flex flex-col gap-4 items-center justify-center">
+                        <div className="mb-2">
+                            <h4 className='font-bold'>[3 pts] Front-end</h4>
+                            <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
+                                <li>Frontend uses at least one UI library, framework, or component library for customized styling</li>
+                                <li>Frontend is a multi-page app with some form of routing, or is a sufficiently complex single-page app</li>
+                                <li>Frontend follows good UI/UX practices for accessibility, is easy to navigate, and is not able to be broken by normal users.</li>
+                            </ul>  
+                        </div>
                     </div>
-                </section>
-
-                <hr></hr>
-                
-                {/* Part 4 */}
-                <section id="four" className='scroll-mt-48 space-y-4'>
-                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Part 4: Reflection Questions</h3>
-                    <p className="ml-4">
-                        For the final part of this assignment, you'll be writing a reflection on the security and optimization features of this application. The design of this application on the frontend was intentionally made to reflect certain web vulnerabilities and optimization issues. Additionally, we did not require you to update much of the backend for this assignment.
-                    </p>
-                    <p className='ml-4'>
-                        Within your README file (questions provided within the starter code), you will answer the following questions:
-                    </p>
-                    <ul className="text-lg ml-12 list-disc">
-                        <li>What security vulnerabilities may be present in this application? How would you go about fixing these vulnerabilities? Please be specific as to what feature may be causing the vulnerability, how an attacker may exploit it, and what steps you would take to mitigate the risk.</li>
-                        <li> What are some possible optimization and UI/UX issues, either in the current backend and frontend code? Given time, would you design the frontend or backend any differently to improve them? If applicable, describe any changes you've already made to them in your final submission.</li>
-                        <li>Imagine you want to deploy this application. Research and describe a possible plan to deploy this application efficiently. This can involve considerations such as refactoring the code to different frameworks or considering the architecture of different deployment environments as well. </li>
-                    </ul>
-                    <p className='ml-4'>
-                        You don't need to write a formal essay for each question, but we are looking for thoughtful and detailed responses that show that you have a good understanding of security, optimization, and deployment considerations for this app.
-                    </p>
+                        
+                    <div className="rounded-xl bg-white shadow-md p-8 flex flex-col gap-4 items-center justify-center">
+                        <div className="mb-2">
+                            <h4 className='font-bold'><b>[3 pts]</b> Full-Stack & Deployment</h4>
+                            <ul className="text-lg mb-4 ml-6 list-disc text-gray-900">
+                                <li>Frontend and backend connect seamlessly without bugs</li>
+                                <li>App is deployed to a production environment at an accessible URL</li>
+                                <li>Users are able to interact with the app at the deployed URL for the intended functionality of the app without encountering errors or issues</li>
+                            </ul>  
+                        </div>
+                    </div>
+                        
+                    <div className="rounded-xl bg-white shadow-md p-8 flex flex-col gap-4 items-center justify-center">
+                        <div className="mb-2">
+                            <h4 className='font-bold'><b>[5 pts]</b> Project Goals + Submission</h4>
+                            <ul className="text-lg mb-4 ml-6 list-decimal text-gray-900">
+                                <li>Submitted Proposal by April 2nd</li>
+                                <li>Submitted milestone 1 by April 16th</li>
+                                <li>Submitted milestone 2 by April 23rd</li>
+                                <li>Presented a final project during class on April 23rd</li>
+                                <li>Submitted the final project code by April 29th</li>
+                            </ul>  
+                        </div>
+                    </div>
                 </section>
             </section>
 
             {/* Submission */}
-            <section id="submission" className="scroll-mt-48 space-y-8 mb-8">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"> <MdGrade />Submission</h2>
-                
-                <section className='space-y-4'>
-                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>README</h3>
-                    <p className="ml-4">
-                        Answer the provided reflection questions within the starter code README file. In this reflection, you will also indicate whether or not you used AI, and also document your usage of AI as well. Please don't forget this step, as it is important feedback for the homework and the content of the course! 
-                    </p> 
-                </section>
-                 
-                <section className='space-y-4'>
-                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-2 text-indigo-600'>Submission</h3>
-                    <p className='ml-4'>
-                        Submit your code through Gradescope as a <span className='inline-code'>.zip</span> file that contains your project. Make sure your project includes all files you worked on during this homework and your <span className='inline-code'>README.md</span> file. Make sure the submitted file structure within your submission is <span className='red-bold'>exactly or similar</span> to the file structure you used to run and develop the project. Points will be taken off for malformed project structures in the final submission! Additionally, <span className='red-bold'>do not</span> include the <span className='inline-code'>.env</span> folder in your submission! We will be grading your project with our own database to test how your backend interacts with it, so there is no need to include your own environment variables in the submission.
-                    </p>
-                    <p className='ml-4'>
-                        Before you submit, make sure you lint your code for style errors using the command <span className='inline-code'>npm run lint</span>. You should run each of the linters for both the frontend and backend separately to check for any linting errors. 
-                    </p>
-                    <p className='ml-4'>
-                        For this homework, we've provided a rubric file named <span className='inline-code'>RUBRIC.md</span> in the starter code. Make sure to read through it carefully and ensure that your submission meets all the requirements outlined in the rubric. This will help you maximize your score and ensure that you've covered all necessary aspects of the assignment.
-                    </p>
+            <section id="suggestions" className="scroll-mt-48 space-y-8 mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-4 flex gap-2"> <FaPlug />Suggestions</h2>
+
+                <p className="ml-4">
+                    This is a selection of approved proposals and various project ideas to help inspire you for your final project! These are truncated versions of proposals, so please use these as a reference but go into more detail in your own proposals so we can understand your project and give you feedback on it.
+                </p>
+
+                {/* Examples */}
+                <section className='text-gray-800'>
+                    <div className="grid grid-cols-2 gap-6 py-8">
+                        <div className="rounded-xl bg-white shadow-md p-8 flex flex-col gap-4">
+                            <h4 className="text-2xl font-semibold text-gray-700 text-center">FridgeFriend</h4>
+                            <p>FridgeFriend is here to simplify your kitchen experience by providing a seamless platform to organize your groceries, monitor your fridge inventory, and explore delightful culinary possibilities.</p>
+                            <p><b>Tech Stack:</b> React + React Router, Express, MongoDB + Mongoose</p>
+                            <ul className='list-disc ml-4'>
+                                <li> Milestone 1: Backend API and basic frontend</li>
+                                <li> Milestone 2: Complete Frontend Components </li>
+                            </ul>
+                            <p><b>New tech:</b></p>
+                            <ul className='list-disc ml-4'>
+                                <li> AI Image analysis to suggest items based on uploaded images (+10% extra credit) </li>
+                            </ul>
+                        </div>
+                        <div className="rounded-xl bg-white shadow-md p-8 flex flex-col gap-4">
+                            <h4 className="text-2xl font-semibold text-gray-700 text-center">Trivia Website</h4>
+                            <p>A trivia website that allows users to improve their general knowledge by answering trivia questions. They’ll be able to type answers to random trivia questions that pop up. There’ll also be a leaderboard for both accuracy and number of questions answered. Some additional features could be categorizing questions based on topic/difficulty using NLP techniques.</p>
+                            <p><b>Tech Stack:</b> Postgres, ExpressJS, and React</p>
+                            <ul className='list-disc ml-4'>
+                                <li> Milestone 1: All backend routes and question categorization logic</li>
+                                <li> Milestone 2: Complete frontend components and integrate with backend </li>
+                            </ul>
+                            <p><b>New tech:</b></p>
+                            <ul className='list-disc ml-4'>
+                                <li> Prisma ORM (+10% extra credit) </li>
+                                <li> AI/NLP to categorize questions (+10% extra credit) </li>
+                            </ul>
+                        </div>
+                        <div className="rounded-xl bg-white shadow-md p-8 flex flex-col gap-4">
+                            <h4 className="text-2xl font-semibold text-gray-700 text-center">3D Snake</h4>
+                            <p>A web app that lets you play a multiplayer, head-to-head game of 3D Snake.</p>
+                            <p><b>Tech Stack:</b> Three.js, socket.io, PostgreSQL, Prisma</p>
+                            <ul className='list-disc ml-4'>
+                                <li> Milestone 1: Backend + socket.io </li>
+                                <li> Milestone 2: Frontend and Three.js integration </li>
+                            </ul>
+                            <p><b>New tech:</b></p>
+                            <ul className='list-disc ml-4'>
+                                <li> Three.js for rendering of game (+10% extra credit) </li>
+                                <li> Socket.io for real-time multiplayer (+10%) (+10% extra credit) </li>
+                                <li> Prisma for database interactions (+10% extra credit) </li>
+                            </ul>
+                        </div>
+                        <div className="rounded-xl bg-white shadow-md p-8 flex flex-col gap-4">
+                            <h4 className="text-2xl font-semibold text-gray-700">VidToScore</h4>
+                            <p>A web application that extracts musical scores or sheet music from video content and converts them into a downloadable PDF format. Includes Youtube video URL input and preview, a video editor interface, frame extraction, and PDF generation/download functionality.</p>
+                            <p><b>Tech Stack:</b> React, Python/Flask</p>
+                            <ul className='list-disc ml-4'>
+                                <li> Milestone 1: Backend Video Processing </li>
+                                <li> Milestone 2: Frontend Core Interface </li>
+                            </ul>
+                            <p><b>New tech:</b></p>
+                            <ul className='list-disc ml-4'>
+                                <li> Flask Backend (+10% extra credit) </li>
+                            </ul>
+                        </div>
+                    </div>  
                 </section>
             </section>
         </div>
