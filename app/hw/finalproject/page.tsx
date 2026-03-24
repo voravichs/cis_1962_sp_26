@@ -1,6 +1,5 @@
 import SideNav from '@/components/Sidenav';
-import { FaPlug, FaClipboardList} from "react-icons/fa";
-import { TbCircleNumber0Filled, TbCircleNumber1Filled, TbCircleNumber2Filled, TbCircleNumber3Filled, TbCircleNumber4Filled} from 'react-icons/tb';
+import { FaPlug, FaClipboardList, FaGrinStars} from "react-icons/fa";
 import { MdGrade } from "react-icons/md";
 import schedule from '@/data/schedule';
 
@@ -12,41 +11,34 @@ import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import Image from 'next/image';
 import hw7_1 from '@/assets/hw7-1.png'
+import { VscDebugStart } from 'react-icons/vsc';
 
 const SECTIONS = [
   {
-    id: "introduction",
-    icon: <FaPlug className="inline-block text-3xl" />
+    id: "proposal",
+    icon: <VscDebugStart className="inline-block text-3xl" />
   },
   {
-    id: "zero",
-    icon: <TbCircleNumber0Filled className="inline-block text-3xl" />
+    id: "milestones",
+    icon: <FaClipboardList className="inline-block text-3xl" />
   },
   {
-    id: "one",
-    icon: <TbCircleNumber1Filled className="inline-block text-3xl" />
-  },
-  {
-    id: "two",
-    icon: <TbCircleNumber2Filled className="inline-block text-3xl" />
-  },
-  {
-    id: "three",
-    icon: <TbCircleNumber3Filled className="inline-block text-3xl" />
-  },
-  {
-    id: "four",
-    icon: <TbCircleNumber4Filled className="inline-block text-3xl" />
+    id: "extra",
+    icon: <FaGrinStars className="inline-block text-3xl" />
   },
   {
     id: "submission",
     icon: <MdGrade className="inline-block text-3xl" />
+  },
+  {
+    id: "suggestions",
+    icon: <FaPlug className="inline-block text-3xl" />
   }
 ];
 
 export const metadata: Metadata = {
-  title: "HW7 | CIS 1962",
-  description: "Homework 7 Page of CIS 1962 for Spring 2026 at the University of Pennsylvania",
+  title: "Final Project | CIS 1962",
+  description: "Final Project Page of CIS 1962 for Spring 2026 at the University of Pennsylvania",
 };
 
 export default function HW7() {
@@ -57,8 +49,8 @@ export default function HW7() {
       
         <div className="mx-auto text-lg">
             {/* Title */}
-            <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Homework 7: Blog Part 2</h1>
-            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-4'>Due March 26th at 11:59 PM</h3>
+            <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Final Project: Blog Part 2</h1>
+            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-4'>Due April  at 11:59 PM</h3>
 
             <div className='red-block font-mono'><span className='font-bold'>Topics:</span> Full Stack Development, Blogging, Cookies, Security, Routing</div>
 

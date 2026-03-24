@@ -151,15 +151,16 @@ const schedule = [
     topic: "Accessbility and More",
     slides: "",
     code: "",
+    due: "HW7 Due!",
     homework:   { 
       id: 'Final Project',
-      title: "Final Project",
+      title: "Proposal",
       assigned: new Date(2026, 2, 26),
-      due: new Date(2026, 3, 23),
+      due: new Date(2026, 3, 2),
       durationWeeks: 2,
       detailsUrl: "",
       starter: "",
-      icon: "❓"
+      icon: "🚧"
     },
   },
   {
@@ -168,7 +169,7 @@ const schedule = [
     topic: "NextJS",
     slides: "",
     code: "",
-    due: "HW7 Due!",
+    due: "Final Project Proposal Due!",
   },
   {
     id: 12,
@@ -176,6 +177,15 @@ const schedule = [
     topic: "PWAs, Mobile Dev, and the State of JavaScript",
     slides: "",
     code: "",
+    homework:   { 
+      id: 'Final Project',
+      title: "Milestone 1 DUE",
+      due: new Date(2026, 3, 9),
+      durationWeeks: 2,
+      detailsUrl: "",
+      starter: "",
+      icon: "1️⃣"
+    },
   },
   {
     id: 13,
@@ -183,6 +193,15 @@ const schedule = [
     topic: "TBD",
     slides: "",
     code: "",
+    homework:   { 
+      id: 'Final Project',
+      title: "Milestone 2 DUE",
+      due: new Date(2026, 3, 16),
+      durationWeeks: 2,
+      detailsUrl: "",
+      starter: "",
+      icon: "2️⃣"
+    },
   },
   {
     id: 14,
@@ -190,6 +209,15 @@ const schedule = [
     topic: "Project Presentations",
     slides: "",
     code: "",
+    homework:   { 
+      id: 'Final Project',
+      title: "Final Project DUE",
+      due: new Date(2026, 3, 23),
+      durationWeeks: 2,
+      detailsUrl: "",
+      starter: "",
+      icon: "📽️"
+    },
   }
 ];
 
