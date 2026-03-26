@@ -46,9 +46,8 @@ export default function FinalProject() {
         <div className="mx-auto text-lg">
             {/* Title */}
             <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Final Project</h1>
-            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Proposal: Due April 2nd</h3>
-            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Milestone 1: Due April 16th</h3>
-            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Milestone 2: Due April 23rd</h3>
+            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Proposal: Due April 5th</h3>
+            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Milestone: Due April 16th</h3>
             <h3 className='text-lg sm:text-xl md:text-2xl opacity-60'>Presentations: Due April 23rd</h3>
             <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-8'>Final Deadline: Due May 4th</h3>
 
@@ -58,7 +57,7 @@ export default function FinalProject() {
                     Your final project for CIS 1962 will be a culmination of all that you learned within this course. This will be an full-stack open-ended project that must include a front-end and back-end component with deployment at the end, but otherwise is an opportunity to apply what you learned in a creative way to make something cool! You can use what you've learned in this class, or do a deep dive into new technologies, frameworks, or libraries to create something truly unique. 
                 </p>
                 <p className="ml-4">
-                    There are a few deadlines to keep track track of: a proposal will be due a week after this final project is announced, on April 2nd. Short milestone check-ins will be due April 16th and April 23rd to check in on your progress towards completing the final project. Then, we will present your projects in class during our final scheduled class on April 23rd. Your final submission will be due on May 4th (a day after reading days). <span className='red-bold'>All submissions will be done through Canvas assignments, either as text documents or a link to your final GitHub repo. </span>
+                    There are a few deadlines to keep track track of: a proposal will be due a week after this final project is announced, on April 2nd. A short milestone check-in will be due April 16th to check in on your progress towards completing the final project. Then, we will present your projects in class during our final scheduled class on April 23rd. Your final submission will be due on May 4th (a day after reading days). <span className='red-bold'>All submissions will be done through Gradescope assignments, either as text documents or a link to your final GitHub repo. </span>
                 </p>
                 <p className="ml-4">
                     This project is intended to be done <span className='red-bold'>solo</span> or as a <span className='red-bold'>pair</span>. You will indicate this to us during your project proposals. Feel free to use Ed Discussion to find a group member if you desire for your project ideas. You will be submitting your final project as a GitHub repo, so make sure you familiarize yourself with GitHub collaboration techniques like pull requests, code reviews, and branches if you intend to work in a group. <span className='red-bold'>Only 1 student of a pair has to submit for the group for all assignments.</span>
@@ -90,10 +89,10 @@ export default function FinalProject() {
             <section id="milestones" className="scroll-mt-48 space-y-4 mb-8">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"><FaClipboardList />Milestone</h2>
                 <p className="ml-4">
-                    It is important to pace yourself and give yourself enough time to develop and research new technologies for this final project. This is why we've explicitly required two milestone check-ins and for you to schedule your goals for them in advance in the proposal.
+                    It is important to pace yourself and give yourself enough time to develop and research new technologies for this final project. This is why we've explicitly required a milestone check-in and for you to schedule your goals for it in advance in the proposal.
                 </p>
                 <p className="ml-4">
-                    You will submit your milestones as a text documents responding to the below questions to Canvas:
+                    You will submit your milestone as a text document responding to the below questions to Gradescope:
                 </p>
                 <ul className="text-lg ml-12 list-disc">
                     <li>Have you met your goals for this milestone that you defined in your proposal?</li>
@@ -138,7 +137,7 @@ export default function FinalProject() {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-2 flex gap-2"> <MdGrade />Rubric</h2>
 
                 <p className="ml-4">
-                    All final projects will be graded with the same rubric, with 4 sections. In total, you can get up to 14 points - and we're hoping everyone can get all points! Below you can see the requirements for getting points in each section.
+                    All final projects will be graded with the same rubric, with 4 sections. In total, you can get up to 13 points - and we're hoping everyone can get all points! Below you can see the requirements for getting points in each section.
                 </p>
 
                 {/* Rubric */}
@@ -182,11 +181,10 @@ export default function FinalProject() {
                         
                     <div className="rounded-xl bg-white shadow-md p-8 flex flex-col gap-4 items-center justify-center">
                         <div className="mb-2">
-                            <h4 className='font-bold'><b>[5 pts]</b> Project Goals + Submission</h4>
+                            <h4 className='font-bold'><b>[4 pts]</b> Project Goals + Submission</h4>
                             <ul className="text-lg mb-4 ml-6 list-decimal text-gray-900">
                                 <li>Submitted Proposal by April 2nd</li>
-                                <li>Submitted milestone 1 by April 16th</li>
-                                <li>Submitted milestone 2 by April 23rd</li>
+                                <li>Submitted milestone by April 16th</li>
                                 <li>Presented a final project during class on April 23rd</li>
                                 <li>Submitted the final project code by April 29th</li>
                             </ul>  
@@ -200,7 +198,7 @@ export default function FinalProject() {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl text-indigo-600 font-bold mb-4 flex gap-2"> <FaPlug />Suggestions</h2>
 
                 <p className="ml-4">
-                    This is a selection of approved proposals and various project ideas to help inspire you for your final project! These are truncated versions of proposals, so please use these as a reference but go into more detail in your own proposals so we can understand your project and give you feedback on it.
+                    This is a selection of approved proposals and various project ideas to help inspire you for your final project! These are truncated versions of proposals, so please use these as a reference but go into more detail in your own proposals so we can understand your project and give you feedback on it. These examples have a milestone 2, but you can consider the project presentation date as the milestone 2 for your own project and set your goals accordingly.
                 </p>
 
                 {/* Examples */}

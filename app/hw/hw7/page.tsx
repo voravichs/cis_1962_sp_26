@@ -58,7 +58,7 @@ export default function HW7() {
         <div className="mx-auto text-lg">
             {/* Title */}
             <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Homework 7: Blog Part 2</h1>
-            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-4'>Due March 26th at 11:59 PM</h3>
+            <h3 className='text-lg sm:text-xl md:text-2xl opacity-60 mb-4'>Due April 5th at 11:59 PM</h3>
 
             <div className='red-block font-mono'><span className='font-bold'>Topics:</span> Full Stack Development, Blogging, Cookies, Security, Routing</div>
 

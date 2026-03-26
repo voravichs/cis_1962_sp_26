@@ -138,7 +138,7 @@ const schedule = [
       id: 'HW7',
       title: "Blog Part 2",
       assigned: new Date(2026, 2, 19),
-      due: new Date(2026, 2, 26),
+      due: new Date(2026, 3, 5),
       durationWeeks: 1,
       detailsUrl: "/hw/hw7",
       starter: "/hw-starter/cis-1962-hw7-sp26-blogp2.zip",
@@ -148,9 +148,9 @@ const schedule = [
   {
     id: 10,
     date: "3/26",
-    topic: "Accessbility and More",
-    slides: "",
-    code: "",
+    topic: "Monitoring, Accessibility, PWAs, and Mobile Applications",
+    slides: "/lectures/Lec10_1962_sp26.pdf",
+    code: "https://edstem.org/us/courses/91614/lessons/162384/edit/slides/954291",
     due: "HW7 Due!",
     homework:   { 
       id: 'Final Project',
@@ -158,7 +158,7 @@ const schedule = [
       assigned: new Date(2026, 2, 26),
       due: new Date(2026, 3, 2),
       durationWeeks: 2,
-      detailsUrl: "",
+      detailsUrl: "/hw/finalproject",
       starter: "",
       icon: "🚧"
     },
@@ -174,7 +174,7 @@ const schedule = [
   {
     id: 12,
     date: "4/9",
-    topic: "PWAs, Mobile Dev, and the State of JavaScript",
+    topic: "TBD",
     slides: "",
     code: "",
     homework:   { 
@@ -182,7 +182,7 @@ const schedule = [
       title: "Milestone 1 DUE",
       due: new Date(2026, 3, 9),
       durationWeeks: 1,
-      detailsUrl: "",
+      detailsUrl: "/hw/finalproject",
       starter: "",
       icon: "1️⃣"
     },
@@ -198,7 +198,7 @@ const schedule = [
       title: "Milestone 2 DUE",
       due: new Date(2026, 3, 16),
       durationWeeks: 1,
-      detailsUrl: "",
+      detailsUrl: "/hw/finalproject",
       starter: "",
       icon: "2️⃣"
     },
@@ -214,7 +214,7 @@ const schedule = [
       title: "Final Project Submissions",
       due: new Date(2026, 3, 29),
       durationWeeks: 2,
-      detailsUrl: "",
+      detailsUrl: "/hw/finalproject",
       starter: "",
       icon: "📽️"
     },
