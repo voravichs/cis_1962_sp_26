@@ -150,8 +150,7 @@ const schedule = [
     date: "3/26",
     topic: "Monitoring, Accessibility, PWAs, and Mobile Applications",
     slides: "/lectures/Lec10_1962_sp26.pdf",
-    code: "https://edstem.org/us/courses/91614/lessons/162384/edit/slides/954291",
-    due: "HW7 Due!",
+    code: "https://edstem.org/us/courses/91614/lessons/162384/slides/954291",
     homework:   { 
       id: 'Final Project',
       title: "Proposal",
@@ -169,7 +168,7 @@ const schedule = [
     topic: "NextJS",
     slides: "",
     code: "",
-    due: "Final Project Proposal Due!",
+    due: "HW7 & Final Project Proposal Due! (4/5)",
   },
   {
     id: 12,
