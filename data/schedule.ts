@@ -211,7 +211,7 @@ const schedule = [
     homework:   { 
       id: 'Final Project',
       title: "Final Project Submissions",
-      due: new Date(2026, 3, 29),
+      due: new Date(2026, 4, 4),
       durationWeeks: 2,
       detailsUrl: "/hw/finalproject",
       starter: "",
