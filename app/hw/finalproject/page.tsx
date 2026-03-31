@@ -77,7 +77,7 @@ export default function FinalProject() {
                     <li>Are you working solo or as a pair? If you are working as a pair, who are the group members?</li>
                     <li>Write a pitch for your final project. This should include a clear description of the project's goals and what it will provide for users.</li>
                     <li>Describe the tech stack for this project, including the main frontend and backend technologies you will use, and what your plan for deploying the app will be.</li>
-                    <li>Include your goals for what you would like to be done with before the scheduled milestone check-ins. For these milestones, you should consider prioritizing the back-end functionality first before the front-end, but it is up to you to pace yourself and hold yourself to your own scheduled goals.</li>
+                    <li>Include your goals for what you would like to be done with before the scheduled milestone check-in. For this milestone, you should consider prioritizing the back-end functionality first before the front-end, but it is up to you to pace yourself and hold yourself to your own scheduled goals.</li>
                     <li>If you intend to use unique, new technologies we will not discuss in this course (see Extra Credit section), include them within your proposal so that we can verify whether or not it will count for extra credit!</li>
                 </ul>  
                 <p className="ml-4">
