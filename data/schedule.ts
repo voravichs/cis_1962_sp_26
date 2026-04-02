@@ -166,8 +166,8 @@ const schedule = [
     id: 11,
     date: "4/2",
     topic: "NextJS",
-    slides: "",
-    code: "",
+    slides: "/lectures/Lec11_1962_sp26.pdf",
+    code: "https://edstem.org/us/courses/91614/lessons/163507/slides/961370",
     due: "HW7 & Final Project Proposal Due! (4/5)",
   },
   {
