@@ -57,7 +57,7 @@ export default function FinalProject() {
                     Your final project for CIS 1962 will be a culmination of all that you learned within this course. This will be an full-stack open-ended project that must include a front-end and back-end component with deployment at the end, but otherwise is an opportunity to apply what you learned in a creative way to make something cool! You can use what you've learned in this class, or do a deep dive into new technologies, frameworks, or libraries to create something truly unique. 
                 </p>
                 <p className="ml-4">
-                    There are a few deadlines to keep track track of: a proposal will be due a week after this final project is announced, on April 2nd. A short milestone check-in will be due April 16th to check in on your progress towards completing the final project. Then, we will present your projects in class during our final scheduled class on April 23rd. Your final submission will be due on May 4th (a day after reading days). <span className='red-bold'>All submissions will be done through Gradescope assignments, either as text documents or a link to your final GitHub repo. </span>
+                    There are a few deadlines to keep track track of: a proposal will be due a week after this final project is announced, on April 2nd. A short milestone check-in will be due April 16th to check in on your progress towards completing the final project. Then, we will present your projects in class during our final scheduled class on April 23rd. Your final submission will be due on May 4th (a day after reading days). <span className='red-bold'>All submissions will be done through Canvas assignments, either as text documents or a link to your final GitHub repo. </span>
                 </p>
                 <p className="ml-4">
                     This project is intended to be done <span className='red-bold'>solo</span> or as a <span className='red-bold'>pair</span>. You will indicate this to us during your project proposals. Feel free to use Ed Discussion to find a group member if you desire for your project ideas. You will be submitting your final project as a GitHub repo, so make sure you familiarize yourself with GitHub collaboration techniques like pull requests, code reviews, and branches if you intend to work in a group. <span className='red-bold'>Only 1 student of a pair has to submit for the group for all assignments.</span>
@@ -92,7 +92,7 @@ export default function FinalProject() {
                     It is important to pace yourself and give yourself enough time to develop and research new technologies for this final project. This is why we've explicitly required a milestone check-in and for you to schedule your goals for it in advance in the proposal.
                 </p>
                 <p className="ml-4">
-                    You will submit your milestone as a text document responding to the below questions to Gradescope:
+                    You will submit your milestone as a text document responding to the below questions to Canvas:
                 </p>
                 <ul className="text-lg ml-12 list-disc">
                     <li>Have you met your goals for this milestone that you defined in your proposal?</li>

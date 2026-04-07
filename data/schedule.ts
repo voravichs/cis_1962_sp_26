@@ -178,12 +178,12 @@ const schedule = [
     code: "",
     homework:   { 
       id: 'Final Project',
-      title: "Milestone 1 DUE",
+      title: "Milestone",
       due: new Date(2026, 3, 9),
       durationWeeks: 1,
       detailsUrl: "/hw/finalproject",
       starter: "",
-      icon: "1️⃣"
+      icon: "🚩"
     },
   },
   {
@@ -192,15 +192,6 @@ const schedule = [
     topic: "TBD",
     slides: "",
     code: "",
-    homework:   { 
-      id: 'Final Project',
-      title: "Milestone 2 DUE",
-      due: new Date(2026, 3, 16),
-      durationWeeks: 1,
-      detailsUrl: "/hw/finalproject",
-      starter: "",
-      icon: "2️⃣"
-    },
   },
   {
     id: 14,
@@ -210,12 +201,28 @@ const schedule = [
     code: "",
     homework:   { 
       id: 'Final Project',
-      title: "Final Project Submissions",
-      due: new Date(2026, 4, 4),
+      title: "Final Project Presentation",
+      due: new Date(2026, 3, 23),
       durationWeeks: 2,
       detailsUrl: "/hw/finalproject",
       starter: "",
       icon: "📽️"
+    },
+  },
+  {
+    id: "--",
+    date: "4/29",
+    topic: "READING DAYS",
+    slides: "",
+    code: "",
+    homework:   { 
+      id: 'Final Project',
+      title: "Final Project Submission",
+      due: new Date(2026, 4, 4),
+      durationWeeks: 2,
+      detailsUrl: "/hw/finalproject",
+      starter: "",
+      icon: "🏁"
     },
   }
 ];
