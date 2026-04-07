@@ -176,15 +176,6 @@ const schedule = [
     topic: "TBD",
     slides: "",
     code: "",
-    homework:   { 
-      id: 'Final Project',
-      title: "Milestone",
-      due: new Date(2026, 3, 9),
-      durationWeeks: 1,
-      detailsUrl: "/hw/finalproject",
-      starter: "",
-      icon: "🚩"
-    },
   },
   {
     id: 13,
@@ -192,6 +183,15 @@ const schedule = [
     topic: "TBD",
     slides: "",
     code: "",
+    homework:   { 
+      id: 'Final Project',
+      title: "Milestone",
+      due: new Date(2026, 3, 16),
+      durationWeeks: 1,
+      detailsUrl: "/hw/finalproject",
+      starter: "",
+      icon: "🚩"
+    },
   },
   {
     id: 14,
