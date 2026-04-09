@@ -173,9 +173,9 @@ const schedule = [
   {
     id: 12,
     date: "4/9",
-    topic: "TBD",
-    slides: "",
-    code: "",
+    topic: "Live Interaction: Websockets & Socket.io",
+    slides: "/lectures/Lec12_1962_sp26.pdf",
+    code: "https://edstem.org/us/courses/91614/lessons/163811/slides/963385",
   },
   {
     id: 13,
