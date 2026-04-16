@@ -181,7 +181,7 @@ const schedule = [
     id: 13,
     date: "4/16",
     topic: "The State of JavaScript",
-    slides: "/lectures/Lec13_2962_sp26.pdf",
+    slides: "/lectures/Lec13_1962_sp26.pdf",
     code: "https://edstem.org/us/courses/91614/lessons/164119/slides/965210",
     homework:   { 
       id: 'Final Project',
